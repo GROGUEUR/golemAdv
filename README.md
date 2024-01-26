@@ -1,5 +1,5 @@
 # golemAdv
-1-Nom membres
+Membres de l'équipe : François Lépine, Luka Cognard, Warrick Bonga, Lenny Borry
 Projet de fin d'études L2 Informatique Le Mans Université 2023-2024
 Titre du jeu : Golem Adventure
 4-Descriptif en quelques lignes + lien vers descriptif détaillé
