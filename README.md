@@ -4,13 +4,13 @@
 Golem Adventure est un RPG dans lequel on incarne un golem qui cherche à réinstaurer une paix durable dans la vallée.
 
 # Auteurs
-François Lépine
+- François Lépine
 
-Luka Cognard
+- Luka Cognard
 
-Warrick Bonga
+- Warrick Bonga
 
-Lenny Borry
+- Lenny Borry
 
 # Description
 Ce jeu est notre projet de fin d'études de 
