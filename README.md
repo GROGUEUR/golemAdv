@@ -21,7 +21,7 @@ Voici un lien vers le descriptif détaillé du projet :
  https://github.com/GROGUEUR/golemAdv/blob/Doc/Descriptif_Golem_Adventure.pdf
 
 
-Nous l'avons débuté le 19/01/2024, et la soutenance est prévue le 24/04/2024
+Nous l'avons débuté le 19/01/2024, et la soutenance est prévue le 25/04/2024
 
 # Temps de travail
 
