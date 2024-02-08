@@ -18,7 +18,7 @@ L2 Informatique 2023-2024 à Le Mans Université
 
 Voici un lien vers le descriptif détaillé du projet :
 
- https://github.com/GROGUEUR/golemAdv/blob/Doc/Descriptif_Golem_Adventure.pdf
+ https://github.com/GROGUEUR/golemAdv/blob/Doc/Golem-Adventure.txt
 
 
 Nous l'avons débuté le 19/01/2024, et la soutenance est prévue le 25/04/2024
