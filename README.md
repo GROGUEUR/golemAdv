@@ -4,13 +4,13 @@
 Golem Adventure est un RPG dans lequel on incarne un golem qui cherche à réinstaurer une paix durable dans la vallée.
 
 # Auteurs
-- François Lépine (@GROGUEUR)
+- François Lépine [(@GROGUEUR)](https://github.com/GROGUEUR).
 
-- Luka Cognard (@Ge0mega)
+- Luka Cognard [(@Ge0mega)](https://github.com/Ge0mega).
 
-- Warrick Bonga (@XevBW)
+- Warrick Bonga [(@XevBW)](https://github.com/XevBW).
 
-- Lenny Borry (@LennyB972)
+- Lenny Borry [(@LennyB972)](https://github.com/LennyB972).
 
 # Description
 Ce jeu est notre projet de fin d'études de 
