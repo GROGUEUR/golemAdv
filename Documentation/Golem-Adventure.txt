@@ -1,0 +1,42 @@
+Incarnez un Golem et propagez la paix dans la vallée !!
+
+Golem Adventure est un RPG dans lequel un caillou ayant pris conscience au fond d'une grotte va parcourir le monde dans un unique but:
+Rendre celui-ci paisible.
+
+Vous allez rencontrer des alliés qui partageront votre route, parcourir des donjons remplis de monstres plus redoutables les uns que les autres, et traverser des paysages variés.
+Explorez le monde afin de résoudre les mystères qui le composent !!
+
+Comme tout RPG (Jeu de Rôle), Golem Adventure aura un système d'équipement sur les personnages. Chaque ennemi vaincu vous rapporte de l'expérience 
+ainsi que de la monnaie du jeu. Cette monnaie vous permet d'acheter des équipements, le contenu des boutiques variera en fonction de votre progression dans l'aventure. 
+L'expérience vous permet de gagner en niveaux, et à chaque gain de niveau vos statistiques vont augmenter mais vous allez également gagner des points de compétences. 
+A vous d'utiliser ces points pour améliorer les statistiques que vous voulez !!
+
+Votre équipe s'agrandira au cours de l'aventure, lorsque vous croiserez des PNJ (Personnage Non Jouable) qui deviendront vos alliés. 
+Chacun des membres de votre équipe a sa propre jauge d'XP, ses propres équipements
+ainsi que ses propres compétences.
+
+Il y a 6 équipements sur un personnage:
+  Un casque
+  Une armure
+  Des bottes
+  Un talisman
+  Deux Armes
+
+Vous pourrez lire ce qu'apporte chaque équipement dans le wiki dédié à ceux-ci. 
+
+Il existe 7 statistiques:
+  Les PV (Points de Vie)
+  Le Mana : Représente la quantité de sorts qu'on peut utiliser (Un sort coûte une certaine quantité de mana)
+  L'intelligence : Plus cette stat est élevée, plus les sorts feront de dégats.
+  Le Physique : Plus cette stat est élevée, plus les attaques au corps à corps feront de dégats.
+  La Défense Magique : Réduit les dégats des sorts ennemis.
+  La Défense Physique : Réduit les dégats des attaques au corps à corps des ennemis.
+  La Vitesse : Décide de l'ordre des attaques dans un combat.
+
+Lors d'un combat, chaque personnage dispose d'une jauge de vitesse. Au début du combat, cette jauge démarre à la valeur de la vitesse du personnage.
+(Si un perso a 30 de vitesse, la jauge est replie à 30% au début du combat.)
+Cette jauge se remplit au fil du temps. Dès qu'un personnage a sa jauge remplie, c'est à son tour d'attaquer. 
+Vous allez alors devoir choisir une attaque parmi celles que vous possédez, et vous allez choisir sur quel adversaire vous attaquez.
+Après votre attaque, la jauge de vitesse de votre perso retombe à sa valeur initiale (et non à 0 !!).
+
+Pour plus de détails sur le déroulement des combats, veuillez lire le wiki consacré à ceux-ci.
