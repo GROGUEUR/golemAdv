@@ -1,4 +1,4 @@
-#include "texture.h"
+#include "../lib/texture.h"
 /**
 * fonction loadTexture qui s'occupera de charger l'image en avec une surface
 * puis d'utiliser cet surface pour créer une texture
