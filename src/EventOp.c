@@ -1,4 +1,4 @@
-#include "EventOp.h"
+#include "../lib/EventOp.h"
 
 /**
 * fonction DetectEventsOp qui s'occupera de gérer la détection
