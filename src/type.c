@@ -1,14 +1,17 @@
-#include "type.h"
-#include "texture.h"
+#include "../lib/type.h"
+#include "../lib/texture.h"
 #include <stdio.h>
 #include <string.h>
 
+/** fonction créer un perso renvoie NULL si la création n'as pas fonctionner */
 int creer_perso(perso_t * perso, char * nom, char * classe,SDL_Renderer* ecran){
 	strcpy(perso->Nom,nom);
 	perso->lvl=1;
 	perso->Xplvl=20;
 	perso->Xp=0;
+	perso->PtComp=0;
 	int i;
+	/** change les stats de base selon la classe du perso */
 	if(!strcmp(classe,"Golem")){
 		strcpy(perso->Classe,classe);
 		perso->PvMax=30;
@@ -19,6 +22,7 @@ int creer_perso(perso_t * perso, char * nom, char * classe,SDL_Renderer* ecran){
 		perso->Res=5;
 		perso->For=15;
 		perso->Int=0;
+		perso->Vit=5;
 		perso->MarcheHori=loadTexture("./Ressource/GolemHori.png",ecran);
 		perso->MarcheVert=loadTexture("./Ressource/GolemVert.png",ecran);
 		perso->IdleAnim=loadTexture("./Ressource/GolemIdle.png",ecran);
@@ -34,10 +38,11 @@ int creer_perso(perso_t * perso, char * nom, char * classe,SDL_Renderer* ecran){
 		perso->Res=10;
 		perso->For=5;
 		perso->Int=15;
-		/*perso->MarcheHori=loadTexture("./Ressource/MageHori.png",ecran);
+		perso->Vit=10;
+		perso->MarcheHori=loadTexture("./Ressource/MageHori.png",ecran);
 		perso->MarcheVert=loadTexture("./Ressource/MageVert.png",ecran);
 		perso->IdleAnim=loadTexture("./Ressource/MageIdle.png",ecran);
-		perso->AttAnim=loadTexture("./Ressource/MageAtt.png",ecran);*/
+		perso->AttAnim=loadTexture("./Ressource/MageAtt.png",ecran);
 		
 	}
 	else if(!strcmp(classe,"Guerrier")){
@@ -50,6 +55,7 @@ int creer_perso(perso_t * perso, char * nom, char * classe,SDL_Renderer* ecran){
 		perso->Res=10;
 		perso->For=10;
 		perso->Int=10;
+		perso->Vit=15;
 		perso->MarcheHori=loadTexture("./Ressource/GuerrierHori.png",ecran);
 		perso->MarcheVert=loadTexture("./Ressource/GuerrierVert.png",ecran);
 		perso->IdleAnim=loadTexture("./Ressource/GuerrierIdle.png",ecran);
@@ -61,8 +67,24 @@ int creer_perso(perso_t * perso, char * nom, char * classe,SDL_Renderer* ecran){
 		printf("Erreur Classe invalide");
 		return 1;
 	}
+	/** initialise les tableau de pointeurs */
 	for(i=0;i<TAILLE_EQUIP;i++){
 		perso->stuff[i]=NULL;
 	}
+	for(i=0;i<NB_ARMES;i++){
+		perso->armes[i]=NULL;
+	}
+	for(i=0;i<NB_ATT;i++){
+		perso->attaques[i]=NULL;
+	}
 	return 0;
+}
+
+void lvl_up(perso_t* perso){
+	if(perso->Xp>=perso->Xplvl){
+		perso->lvl+=1;
+		perso->PtComp+=1;
+		perso->Xp-=perso->Xplvl;
+		perso->Xplvl+=10;
+	}	
 }
