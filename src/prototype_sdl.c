@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "EventOp.h"
-#include "texture.h"
+#include "../lib/EventOp.h"
+#include "../lib/texture.h"
 
 int main(int argc, char** argv){
     /** initialisation de x pour les coordonnée src et i pour les boucles  */
