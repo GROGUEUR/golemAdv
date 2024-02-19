@@ -50,6 +50,7 @@ typedef struct perso_s{
 	int lvl;
 	int Xplvl;
 	int Xp;
+	int PtComp
 	float PvMax;
 	float Pv;
 	float ManaMax;
