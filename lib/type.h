@@ -103,5 +103,5 @@ typedef struct mob_s{
 
 int creer_perso(perso_t *,char *, char *,SDL_Renderer*);
 int creer_mob(mob_t *,char *,SDL_Renderer*,int);
-
+void lvl_up(perso_t*);
 #endif
