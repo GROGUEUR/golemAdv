@@ -9,12 +9,15 @@
 #define NB_ARMES 2
 #define NB_ATT 4
 
+/** déclaration du type scene pour différencier les events, affichage etc... */
 typedef enum scene_s{MENUP=0,PLAYSAVE,PARAMETRE,CREDITS,CINEMDEB,OP,PAUSE,INVENTORY,EQUIPEMENT,STAT,FIGHT,CINEMEND}scene_t;
 
+/** déclaration des type de stuff entre multiplicateur et somme */
 typedef enum typeStuff_s{BASE,TALISMANT}typeStuff_t;
 
 typedef enum effet_s{SOIN=0,TAUX_CRIT,FOR,INT,DEF,RES,MANA,VIT,ATTAQUE}effet_t;
 
+/** déclaration du type equipement pour donner les stats aux stuff */
 typedef struct equipement_s{
 	typeStuff_t typeEquipement;
 	float Pv;
@@ -26,7 +29,7 @@ typedef struct equipement_s{
 }equipement_t;
 
 typedef struct attaque_s{
-    char[3] type_att;
+    char type_att[3];
     effet_t effet;
 	float qte_effet;
 	int duree_effet;
@@ -39,6 +42,8 @@ typedef struct arme_s{
 	attaque_t att;
 	SDL_Texture * artwork;
 }
+
+/** déclaration du type perso pour les stats, animation, etc... */
 typedef struct perso_s{
 	char Nom[20];
 	char Classe[20];
@@ -64,6 +69,7 @@ typedef struct perso_s{
 
 }perso_t;
 
+/** déclaration du type pnj pour leur texture dialogue etc */
 typedef struct pnj_s{
 	SDL_Texture* TexturePnj;
 	SDL_Texture* TextureDial;
