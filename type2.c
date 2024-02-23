@@ -177,3 +177,17 @@ void utiliser_obj(inventaire_t *Inv,perso_t *perso,int iObj){
 	Inv->nbObjActu-=1;
 	
 }
+
+/** fonction supprime un objet de l'inventaire*/
+void jeter_obj(inventaire_t *Inv,int iObj){
+	if(Inv->nbObjActu>0){
+		Inv->sac[iObj]=Inv->sac[Inv->nbObjActu-1];
+		Inv->sac[Inv->nbObjActu-1]=NULL;
+		Inv->nbObjActu-=1;
+	}
+}
+
+void ajouter_obj(inventaire_t *Inv,objet_t * allObj,int iObj){
+	Inv->sac[Inv->nbObjActu]=&allObj[iObj];
+	Inv->nbObjActu+=1;
+}
