@@ -147,7 +147,7 @@ int charger_perso(perso_t* perso,SDL_Renderer* ecran,char* nom,char* classe,int 
 /** fonction qui va créer un objet_t avec ça texture entré en paramètre */
 void creer_all_objet(objet_t allObj[9], SDL_Renderer* ecran){
 	float tabVal[18]={20,0,50,0,500,0,0,20,0,50,0,500,20,20,50,50,500,500};
-	char tabNom[9][13]={"Potion PV","G.Potion PV","Potion PV max","Potion PM","G.Potion PM","Potion PM max","Elixir","G.Elixir","Elixir max"};
+	char tabNom[9][14]={"Potion PV","G.Potion PV","PotionPV max","Potion PM","G.Potion PM","Potion PM max","Elixir","G.Elixir","Elixir max"};
 	char tabDesc[9][100]={"Potion PV","G.Potion PV","Potion PV max","Potion PM","G.Potion PM","Potion PM max","Elixir","G.Elixir","Elixir max"};
 	int couts[9]={5,15,40,5,15,40,15,30,75};
 	char tabChemin[9][35]={"../Ressource/PotPv.png","../Ressource/GPotPv.png","../Ressource/PotPvMax.png","../Ressource/PotPm.png","../Ressource/GPotPm.png","../Ressource/PotPmMax.png","../Ressource/Elix.png","../Ressource/GElix.png","../Ressource/ElixMax.png"};

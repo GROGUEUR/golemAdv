@@ -115,8 +115,10 @@ typedef struct objet_s{
 }objet_t;
 
 typedef struct inventaire_s{
+	int nbObjActu;
 	objet_t * sac[10];
 	equipement_t * stuff[36];
+	arme_t * armes[18];
 }inventaire_t;
 
 /** déclaration des fonction par rapport aux personnage et objet */
