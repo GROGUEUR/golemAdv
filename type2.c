@@ -163,14 +163,17 @@ void creer_all_objet(objet_t allObj[9], SDL_Renderer* ecran){
 }
 
 /** fonction qui va utiliser l'objet et le retiré de l'inventaire*/
-void utiliser_obj(objet_t *obj,perso_t *perso){
-	perso->Pv+=obj->valPv;
-	perso->Mana+=obj->valMp;
+void utiliser_obj(inventaire_t *Inv,perso_t *perso,int iObj){
+	perso->Pv+=Inv->sac[iObj]->valPv;
+	perso->Mana+=Inv->sac[iObj]->valMp;
 	if(perso->Pv>perso->PvMax){
 		perso->Pv=perso->PvMax;
 	}
 	if(perso->Mana>perso->ManaMax){
 		perso->Mana=perso->ManaMax;
 	}
-	obj=NULL;
+	Inv->sac[iObj]=Inv->sac[Inv->nbObjActu-1];
+	Inv->sac[Inv->nbObjActu-1]=NULL;
+	Inv->nbObjActu-=1;
+	
 }

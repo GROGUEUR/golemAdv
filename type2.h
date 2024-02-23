@@ -127,6 +127,6 @@ int creer_perso(perso_t *,char *, char *,SDL_Renderer*);
 int charger_perso(perso_t*,SDL_Renderer*,char*,char*,int,int,int,int,float,float,float,float,float,float,float,float,float,char*,char*,char*,char*);
 void lvl_up(perso_t*);
 void creer_all_objet(objet_t *, SDL_Renderer* );
-void utiliser_obj(objet_t *,perso_t *);
+void utiliser_obj(inventaire_t *,perso_t *,int);
 /*int creer_mob(mob_t *,char *,SDL_Renderer*,int);*/
 #endif
