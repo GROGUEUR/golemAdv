@@ -5,8 +5,20 @@ COGNARD Luka
 LÉPINE François
 
 Son :
-Musique du menu principal : Daniel Summer - Medieval Times
-https://www.youtube.com/watch?v=r0vYWIFEJ5U
+- Musique du menu principal : Daniel Summer - Medieval Times
+  https://www.youtube.com/watch?v=r0vYWIFEJ5U
+
+- Cinématique de début de jeu : Alkakrab - Medieval 05
+  https://alkakrab.itch.io
+
+- Thème des plaines : Alkakrab - Medieval 07
+  https://alkakrab.itch.io
+
+- Thème des boss : Fictium Sound Design - Stellar Conflict
+  https://fictiumsounddesign.com
+
+- Thème du boss final : Fictium Sound Design - Dethronement
+  https://fictiumsounddesign.com
 
 Images :
 Golem Pixel Art : Icyprus
