@@ -35,7 +35,7 @@ int copie_fichier_mob_txt(char * fichier_mob_origine,char* fichier_mob_destinati
     return 0;
 }
 
-int charger_map_mobs(char * MOBS_LIGNE,char * MOBS_TXT,char * MOBS_TXT2,char * MAP,int collisions[125][500]){
+int charger_map_mobs(char * MOBS_LIGNE,char * MOBS_TXT,char * MOBS_TXT2,char * MAP,int collisions[125][250]){
 
     /** Ouvre le fichier mobs_ligne qui contient les créatures */
     SDL_Surface* MOBS = loadTileset(MOBS_LIGNE);
@@ -326,7 +326,7 @@ int charger_map_mobs(char * MOBS_LIGNE,char * MOBS_TXT,char * MOBS_TXT2,char * M
     return 0;
 }
 
-int detruire_mob(int coordo_x_mob_suppr,int coordo_y_mob_suppr,char * MOBS_TXT,int collisions[125][500]){
+int detruire_mob(int coordo_x_mob_suppr,int coordo_y_mob_suppr,char * MOBS_TXT,int collisions[125][250]){
     /** Ouverture du fichier */
     FILE *source = fopen(MOBS_TXT, "r");
     if (source == NULL) {
@@ -334,10 +334,10 @@ int detruire_mob(int coordo_x_mob_suppr,int coordo_y_mob_suppr,char * MOBS_TXT,i
         return 0;
     }
 
-    int hauteur;
-    fscanf(source,"%*d %d",&hauteur);
+    int hauteur,largeur;
+    fscanf(source,"%d %d",&largeur,&hauteur);
+    int type_mob;
 
-    char ligne[hauteur]; /** Le nombre de ligne sur le fichier .txt */
 
     /** Ouvrir un fichier temporaire en mode écriture */
     FILE *temp = fopen("temp.txt", "w");
@@ -347,17 +347,21 @@ int detruire_mob(int coordo_x_mob_suppr,int coordo_y_mob_suppr,char * MOBS_TXT,i
         fclose(source);
         return 1;
     }
+    
+    fprintf(temp,"%d %d\n",&largeur,&hauteur);
 
     /** Lire chaque ligne du fichier source */
-    while (fgets(ligne, sizeof(ligne), source) != NULL) {
+    while (source!= EOF) {
         int coordo1, coordo2;
 
         /** Extraire les deux derniers chiffres de la ligne */
-        sscanf(ligne, "%*d %d %d", &coordo1, &coordo2);
+        fscanf(source, "%d %d %d",&type_mob ,&coordo1, &coordo2);
 
         /** Si les deux derniers chiffres ne correspondent pas à ceux spécifiés, écrire la ligne dans le fichier temporaire */
-        if (coordo1 != coordo_x_mob_suppr || coordo2!= coordo_y_mob_suppr) {
-            fputs(ligne, temp);
+        if (coordo1 == coordo_x_mob_suppr && coordo2== coordo_y_mob_suppr) {  
+        }
+        else{
+            fprintf(temp,"%d %d %d\n",&type_mob,&coordo1,&coordo2);
         }
     }
 
