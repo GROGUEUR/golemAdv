@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [! -d "Golem_Adventures1.9.6officiel" ];then
+if [ ! -d "Golem_Adventures1.9.6officiel" ];then
     mkdir Golem_Adventures1.9.6officiel
     cd Golem_Adventures1.9.6officiel
 
