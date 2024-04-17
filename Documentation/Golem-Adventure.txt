@@ -40,3 +40,5 @@ Vous allez alors devoir choisir une attaque parmi celles que vous possédez, et 
 Après votre attaque, la jauge de vitesse de votre perso retombe à sa valeur initiale (et non à 0 !!).
 
 Pour plus de détails sur le déroulement des combats, veuillez lire le wiki consacré à ceux-ci.
+
+Pour jouer au jeu il suffit d'installer intsall_run_game.sh, de faire un chmod +x intsall_run_game.sh puis d'éxecuter le programme.
