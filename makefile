@@ -61,7 +61,14 @@ clean:
 
 mrproper: clean
 	rm -f ${BIN_DIR}${PROG}
+	rm -f Ressource/cinem*.png
 	rm -f Ressource/Mapping/map/*.png
+
+cinematic:
+	wget -P Ressource/ https://raw.githubusercontent.com/GROGUEUR/golemAdv/main/Pixel_Arts/cinem1.png
+	wget -P Ressource/ https://raw.githubusercontent.com/GROGUEUR/golemAdv/main/Pixel_Arts/cinem2.png
+	wget -P Ressource/ https://raw.githubusercontent.com/GROGUEUR/golemAdv/main/Pixel_Arts/cinem3.png
+	wget -P Ressource/ https://raw.githubusercontent.com/GROGUEUR/golemAdv/main/Pixel_Arts/cinem4.png
 
 save: mrproper
 	tar -cvzf ../Golem_Adventures1.9.6officiel.tar.gz *
