@@ -61,6 +61,10 @@ clean:
 
 mrproper: clean
 	rm -f ${BIN_DIR}${PROG}
+	rm -f Ressource/Mapping/map/*.png
+
+save: mrproper
+	tar -cvzf ../Golem_Adventures1.9.6officiel.tar.gz *
 
 run: clean all
 	cd $(BIN_DIR) && ./$(PROG)
