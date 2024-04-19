@@ -4,7 +4,7 @@ if [ ! -d "Golem_Adventure" ];then
     mkdir Golem_Adventure
     cd Golem_Adventure
 
-    wget -P . https://raw.githubusercontent.com/GROGUEUR/golemAdv/main/Golem_Adventures.tar.gz
+    wget -P . https://raw.githubusercontent.com/GROGUEUR/golemAdv/main/Golem_Adventure.tar.gz
 
     # Dézipper l'archive
     tar -xvzf Golem_Adventure.tar.gz
