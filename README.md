@@ -25,7 +25,7 @@ Nous l'avons débuté le 19/01/2024, et la soutenance est prévue le 25/04/2024
 
 # Installation du jeu
   Pour installer le jeu Golem Adventure, il vous suffit de télécharger le fichier install_run_game.sh, puis une fois téléchargé,
-  rentrez cette commande "sh install_run_game.sh" dans le terminal, dans le même répertoire que le fichier.
+  rentrez cette commande "chmod +x install_run_game.sh" dans le terminal, dans le même répertoire que le fichier.
   Cela installera tous les fichiers nécessaires, puis compilera et lancera le jeu.
   Voilà, vous pouvez désormais partir à l'aventure accompagné de votre Golem préféré !
 
