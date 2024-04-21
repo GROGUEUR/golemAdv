@@ -35,23 +35,23 @@ Nous l'avons débuté le 19/01/2024, et la soutenance est prévue le 25/04/2024
  - La commande make mrproper supprimeras tout les fichiers systemes ainsi que les images de cinématiques.
  - 
 # Comment jouer ?
-- Menu princpale et menu pause\n
-   Dans ces menus tout ce fait a la sourit cliquer sur le bouton séléctionner pour naviguer dans le menu et démarrer une partie.
+- Menu princpale et menu pause
+  - Dans ces menus tout ce fait a la sourit cliquer sur le bouton séléctionner pour naviguer dans le menu et démarrer une partie.
 - le menu pour entrer votre pseudo
-   Ici vous entrerez votre pseudo aux clavier puis appuyer sur la touche ENTRER pour valider, si vous voulez gardez le nom par défault appuyer simplement sur la touche échap.
+  - Ici vous entrerez votre pseudo aux clavier puis appuyer sur la touche ENTRER pour valider, si vous voulez gardez le nom par défault appuyer simplement sur la touche échap.
 - les cinématiques
-   Pour faire défiler la cinématique appuyer sur la touche ENTRER, si vous voulez passer la cinématique cliquer avec votre sourit sur le bouton skip.
+  - Pour faire défiler la cinématique appuyer sur la touche ENTRER, si vous voulez passer la cinématique cliquer avec votre sourit sur le bouton skip.
 - L'Open-world !
-   Ici vous pourrez vous déplacer avec les touche Z,Q,S,D respectivement vers le haut,gauche,bas,droite et Pour faire pause appuyer sur échap.
+  - Ici vous pourrez vous déplacer avec les touche Z,Q,S,D respectivement vers le haut,gauche,bas,droite et Pour faire pause appuyer sur échap.
    Pour accéder a l'inventaire du sac, des équipements/armes u des statistiques devos personnage appuyer sur I,E ou T sinon vous pouvez cliquer sur les icones afficher en bas a droite de l'écran.
    Pour intérragir avec un pnj, ou entrer dans une structure appuyer sur la touche F, pour continuer un dialogue de même utiliser la touche F,
    si il y a un choix par exemple avec un vendeur vous pouvez choisir avec les flèches du haut et du bas, pour valider votre choix appuyer sur la touche ENTRER.
 - L'inventaire et les statistiques
-   De même dans ces menu tout ce fait a la sourit en sélectionnant l'objet/équipement/armes puis en choisissant de le jeter, équiper ou utiliser en cliquant avec la sourit.
+  - De même dans ces menu tout ce fait a la sourit en sélectionnant l'objet/équipement/armes puis en choisissant de le jeter, équiper ou utiliser en cliquant avec la sourit.
    Pour utiliser un objet les nom de personnage seront afficher en blanc si il est possible d'utiliser cet objet sur lui, vous aurez alors seulement a cliquer sur le personnage souhaiter,
    sinon pour fermer cet fenêtre appuyer sur la touche échap.
 - Les combats !
-   Encore une fois sela se fait avec la sourit pour choisir le personnage si il attaque ou utilise un objet.
+  - Encore une fois sela se fait avec la sourit pour choisir le personnage si il attaque ou utilise un objet.
 
 # Temps de travail
 
