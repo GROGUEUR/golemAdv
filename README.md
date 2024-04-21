@@ -33,7 +33,7 @@ Nous l'avons débuté le 19/01/2024, et la soutenance est prévue le 25/04/2024
  - La commande make run dans votre terminale cela téléchargeras, les images nécessaire, compileras et lancera le jeux.
  - La commande make save supprimeras tout les fichiers systemes ainsi que les images de cinématiques puis le compressera en tar.gz.
  - La commande make mrproper supprimeras tout les fichiers systemes ainsi que les images de cinématiques.
- - 
+   
 # Comment jouer ?
 - Menu princpale et menu pause
   - Dans ces menus tout ce fait a la sourit cliquer sur le bouton séléctionner pour naviguer dans le menu et démarrer une partie.
