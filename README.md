@@ -35,7 +35,7 @@ Nous l'avons débuté le 19/01/2024, et la soutenance est prévue le 25/04/2024
  - La commande make mrproper supprimeras tout les fichiers systemes ainsi que les images de cinématiques.
  - 
 # Comment jouer ?
-- Menu princpale et menu pause
+- Menu princpale et menu pause\n
    Dans ces menus tout ce fait a la sourit cliquer sur le bouton séléctionner pour naviguer dans le menu et démarrer une partie.
 - le menu pour entrer votre pseudo
    Ici vous entrerez votre pseudo aux clavier puis appuyer sur la touche ENTRER pour valider, si vous voulez gardez le nom par défault appuyer simplement sur la touche échap.
