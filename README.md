@@ -55,7 +55,7 @@ Nous avons travaillé du 19/01/24 au 24/04/24, soit 3 mois et 5 jours ou 96 jour
 
 # Librairies requises
 
-Pour pouvoir lancer le jeu il faut être sous linux et avoir les librairies SDL2_ttf,SDL2_mixer,SDL2_image,SDL2.
+Pour pouvoir lancer le jeu il faut être sous linux et avoir les librairies SDL2_ttf, SDL2_mixer, SDL2_image et SDL2.
 
 # Liens externes
 Diagramme de Gantt : 
