@@ -53,6 +53,10 @@ Golem Adventure est un RPG dans lequel le joueur incarne un golem qui cherche à
 
 Nous avons travaillé du 19/01/24 au 24/04/24, soit 3 mois et 5 jours ou 96 jours.
 
+# Librairies requises
+
+Pour pouvoir lancer le jeu il faut être sous linux et avoir les librairies SDL2_ttf,SDL2_mixer,SDL2_image,SDL2.
+
 # Liens externes
 Diagramme de Gantt : 
 
