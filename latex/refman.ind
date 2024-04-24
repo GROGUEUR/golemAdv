@@ -1,0 +1,333 @@
+\begin{theindex}
+
+  \item {achat\_possible}
+    \subitem {EventOp.c}, \hyperpage{76}
+    \subitem {EventOp.h}, \hyperpage{21}
+  \item {afficher\_arme}
+    \subitem {type.c}, \hyperpage{111}
+    \subitem {type.h}, \hyperpage{57}
+  \item {afficher\_map}
+    \subitem {fmap.c}, \hyperpage{94}
+    \subitem {fmap.h}, \hyperpage{43}
+  \item {ajouter\_arme}
+    \subitem {type.c}, \hyperpage{111}
+    \subitem {type.h}, \hyperpage{57}
+  \item {ajouter\_stuff}
+    \subitem {type.c}, \hyperpage{111}
+    \subitem {type.h}, \hyperpage{57}
+  \item {arme\_s}, \hyperpage{5}
+  \item {attaque\_s}, \hyperpage{5}
+
+  \indexspace
+
+  \item {chargement\_barre\_pv}
+    \subitem {EventOp.c}, \hyperpage{76}
+    \subitem {EventOp.h}, \hyperpage{22}
+  \item {charger\_map}
+    \subitem {fmap.c}, \hyperpage{94}
+    \subitem {fmap.h}, \hyperpage{43}
+  \item {charger\_map\_biblio}
+    \subitem {fbibliotheque.h}, \hyperpage{41}
+  \item {charger\_map\_mobs}
+    \subitem {fmobs.c}, \hyperpage{96}
+  \item {charger\_map\_pnj}
+    \subitem {fpnj.c}, \hyperpage{99}
+    \subitem {fpnj.h}, \hyperpage{46}
+  \item {charger\_map\_pnj\_biblio}
+    \subitem {fbibliotheque.h}, \hyperpage{41}
+  \item {chargerSave}
+    \subitem {utils.c}, \hyperpage{115}
+    \subitem {utils.h}, \hyperpage{63}
+  \item {cinematic\_start}
+    \subitem {EventOp.c}, \hyperpage{77}
+    \subitem {EventOp.h}, \hyperpage{22}
+  \item {combat.c}
+    \subitem {degats\_mob}, \hyperpage{67}
+    \subitem {DetectEventsFight}, \hyperpage{67}
+    \subitem {ReactEventsFight}, \hyperpage{70}
+  \item {combat.h}
+    \subitem {degats\_mob}, \hyperpage{12}
+    \subitem {DetectEventsFight}, \hyperpage{12}
+    \subitem {ReactEventsFight}, \hyperpage{15}
+  \item {copie\_fichier\_mob\_txt}
+    \subitem {fmobs.c}, \hyperpage{97}
+  \item {creer\_all\_equipement}
+    \subitem {type.c}, \hyperpage{111}
+    \subitem {type.h}, \hyperpage{58}
+  \item {creer\_all\_objet}
+    \subitem {type.c}, \hyperpage{112}
+  \item {creer\_all\_sprite\_equipement}
+    \subitem {type.c}, \hyperpage{112}
+    \subitem {type.h}, \hyperpage{58}
+  \item {creer\_mob}
+    \subitem {type.c}, \hyperpage{112}
+    \subitem {type.h}, \hyperpage{58}
+  \item {creer\_perso}
+    \subitem {type.c}, \hyperpage{112}
+    \subitem {type.h}, \hyperpage{58}
+
+  \indexspace
+
+  \item {degats\_mob}
+    \subitem {combat.c}, \hyperpage{67}
+    \subitem {combat.h}, \hyperpage{12}
+  \item {DetectEventsFight}
+    \subitem {combat.c}, \hyperpage{67}
+    \subitem {combat.h}, \hyperpage{12}
+  \item {DetectEventsInvSac}
+    \subitem {EventOp.c}, \hyperpage{78}
+    \subitem {EventOp.h}, \hyperpage{24}
+  \item {DetectEventsInvStuff}
+    \subitem {EventOp.c}, \hyperpage{79}
+    \subitem {EventOp.h}, \hyperpage{24}
+  \item {DetectEventsOp}
+    \subitem {EventOp.c}, \hyperpage{80}
+    \subitem {EventOp.h}, \hyperpage{26}
+  \item {DetectEventsStats}
+    \subitem {EventOp.c}, \hyperpage{81}
+    \subitem {EventOp.h}, \hyperpage{27}
+  \item {detruire\_mob}
+    \subitem {fmobs.c}, \hyperpage{98}
+
+  \indexspace
+
+  \item {entrerNom}
+    \subitem {utils.c}, \hyperpage{115}
+    \subitem {utils.h}, \hyperpage{64}
+  \item {equipement\_s}, \hyperpage{6}
+  \item {equiper\_arme}
+    \subitem {type.c}, \hyperpage{113}
+    \subitem {type.h}, \hyperpage{59}
+  \item {equiper\_stuff}
+    \subitem {type.c}, \hyperpage{113}
+    \subitem {type.h}, \hyperpage{59}
+  \item {EventOp.c}
+    \subitem {achat\_possible}, \hyperpage{76}
+    \subitem {chargement\_barre\_pv}, \hyperpage{76}
+    \subitem {cinematic\_start}, \hyperpage{77}
+    \subitem {DetectEventsInvSac}, \hyperpage{78}
+    \subitem {DetectEventsInvStuff}, \hyperpage{79}
+    \subitem {DetectEventsOp}, \hyperpage{80}
+    \subitem {DetectEventsStats}, \hyperpage{81}
+    \subitem {EventSell}, \hyperpage{82}
+    \subitem {EventShop}, \hyperpage{83}
+    \subitem {ReactEventsInvSac}, \hyperpage{86}
+    \subitem {ReactEventsInvStuff}, \hyperpage{87}
+    \subitem {ReactEventsOp}, \hyperpage{89}
+    \subitem {ReactEventsStats}, \hyperpage{91}
+    \subitem {transitionFondu}, \hyperpage{93}
+  \item {EventOp.h}
+    \subitem {achat\_possible}, \hyperpage{21}
+    \subitem {chargement\_barre\_pv}, \hyperpage{22}
+    \subitem {cinematic\_start}, \hyperpage{22}
+    \subitem {DetectEventsInvSac}, \hyperpage{24}
+    \subitem {DetectEventsInvStuff}, \hyperpage{24}
+    \subitem {DetectEventsOp}, \hyperpage{26}
+    \subitem {DetectEventsStats}, \hyperpage{27}
+    \subitem {EventSell}, \hyperpage{27}
+    \subitem {EventShop}, \hyperpage{29}
+    \subitem {ReactEventsInvSac}, \hyperpage{31}
+    \subitem {ReactEventsInvStuff}, \hyperpage{33}
+    \subitem {ReactEventsOp}, \hyperpage{35}
+    \subitem {ReactEventsStats}, \hyperpage{37}
+    \subitem {transitionFondu}, \hyperpage{39}
+  \item {EventSell}
+    \subitem {EventOp.c}, \hyperpage{82}
+    \subitem {EventOp.h}, \hyperpage{27}
+  \item {EventShop}
+    \subitem {EventOp.c}, \hyperpage{83}
+    \subitem {EventOp.h}, \hyperpage{29}
+
+  \indexspace
+
+  \item {fbibliotheque.h}
+    \subitem {charger\_map\_biblio}, \hyperpage{41}
+    \subitem {charger\_map\_pnj\_biblio}, \hyperpage{41}
+  \item {fmap.c}
+    \subitem {afficher\_map}, \hyperpage{94}
+    \subitem {charger\_map}, \hyperpage{94}
+  \item {fmap.h}
+    \subitem {afficher\_map}, \hyperpage{43}
+    \subitem {charger\_map}, \hyperpage{43}
+  \item {fmobs.c}
+    \subitem {charger\_map\_mobs}, \hyperpage{96}
+    \subitem {copie\_fichier\_mob\_txt}, \hyperpage{97}
+    \subitem {detruire\_mob}, \hyperpage{98}
+  \item {fpnj.c}
+    \subitem {charger\_map\_pnj}, \hyperpage{99}
+  \item {fpnj.h}
+    \subitem {charger\_map\_pnj}, \hyperpage{46}
+
+  \indexspace
+
+  \item {GolemAdventure.c}
+    \subitem {main}, \hyperpage{100}
+
+  \indexspace
+
+  \item {Image}, \hyperpage{6}
+  \item {init\_and\_reinit\_inv}
+    \subitem {type.c}, \hyperpage{113}
+    \subitem {type.h}, \hyperpage{59}
+  \item {init\_menu.h}
+    \subitem {menuCredits}, \hyperpage{48}
+    \subitem {menuPause}, \hyperpage{48}
+    \subitem {menuPlay}, \hyperpage{49}
+    \subitem {menuPrincipal}, \hyperpage{50}
+    \subitem {menuSettings}, \hyperpage{51}
+  \item {inventaire\_s}, \hyperpage{7}
+
+  \indexspace
+
+  \item {jeter\_stuff}
+    \subitem {type.c}, \hyperpage{113}
+    \subitem {type.h}, \hyperpage{59}
+
+  \indexspace
+
+  \item {lib/combat.h}, \hyperpage{11}, \hyperpage{19}
+  \item {lib/EventOp.h}, \hyperpage{20}, \hyperpage{40}
+  \item {lib/fbibliotheque.h}, \hyperpage{40}, \hyperpage{42}
+  \item {lib/fmap.h}, \hyperpage{43, 44}
+  \item {lib/fmobs.h}, \hyperpage{45}
+  \item {lib/fpnj.h}, \hyperpage{45, 46}
+  \item {lib/init\_menu.h}, \hyperpage{47}, \hyperpage{52}
+  \item {lib/texture.h}, \hyperpage{52}, \hyperpage{54}
+  \item {lib/type.h}, \hyperpage{54}, \hyperpage{60}
+  \item {lib/utils.h}, \hyperpage{62}, \hyperpage{66}
+  \item {lib\_menu.c}
+    \subitem {menuCredits}, \hyperpage{103}
+    \subitem {menuPause}, \hyperpage{103}
+    \subitem {menuPlay}, \hyperpage{104}
+    \subitem {menuPrincipal}, \hyperpage{105}
+    \subitem {menuSettings}, \hyperpage{106}
+  \item {loadTexture}
+    \subitem {texture.c}, \hyperpage{108}
+    \subitem {texture.h}, \hyperpage{53}
+  \item {loadTextureFont}
+    \subitem {texture.c}, \hyperpage{108}
+    \subitem {texture.h}, \hyperpage{53}
+
+  \indexspace
+
+  \item {main}
+    \subitem {GolemAdventure.c}, \hyperpage{100}
+  \item {menuCredits}
+    \subitem {init\_menu.h}, \hyperpage{48}
+    \subitem {lib\_menu.c}, \hyperpage{103}
+  \item {menuPause}
+    \subitem {init\_menu.h}, \hyperpage{48}
+    \subitem {lib\_menu.c}, \hyperpage{103}
+  \item {menuPlay}
+    \subitem {init\_menu.h}, \hyperpage{49}
+    \subitem {lib\_menu.c}, \hyperpage{104}
+  \item {menuPrincipal}
+    \subitem {init\_menu.h}, \hyperpage{50}
+    \subitem {lib\_menu.c}, \hyperpage{105}
+  \item {menuSettings}
+    \subitem {init\_menu.h}, \hyperpage{51}
+    \subitem {lib\_menu.c}, \hyperpage{106}
+  \item {mob\_s}, \hyperpage{7}
+
+  \indexspace
+
+  \item {nouvelleSave}
+    \subitem {utils.c}, \hyperpage{116}
+    \subitem {utils.h}, \hyperpage{64}
+
+  \indexspace
+
+  \item {objet\_s}, \hyperpage{8}
+
+  \indexspace
+
+  \item {perso\_s}, \hyperpage{8}
+  \item {pnj\_s}, \hyperpage{9}
+
+  \indexspace
+
+  \item {ReactEventsFight}
+    \subitem {combat.c}, \hyperpage{70}
+    \subitem {combat.h}, \hyperpage{15}
+  \item {ReactEventsInvSac}
+    \subitem {EventOp.c}, \hyperpage{86}
+    \subitem {EventOp.h}, \hyperpage{31}
+  \item {ReactEventsInvStuff}
+    \subitem {EventOp.c}, \hyperpage{87}
+    \subitem {EventOp.h}, \hyperpage{33}
+  \item {ReactEventsOp}
+    \subitem {EventOp.c}, \hyperpage{89}
+    \subitem {EventOp.h}, \hyperpage{35}
+  \item {ReactEventsStats}
+    \subitem {EventOp.c}, \hyperpage{91}
+    \subitem {EventOp.h}, \hyperpage{37}
+
+  \indexspace
+
+  \item {sauvegarder}
+    \subitem {utils.c}, \hyperpage{116}
+    \subitem {utils.h}, \hyperpage{65}
+  \item {src/combat.c}, \hyperpage{66}
+  \item {src/EventOp.c}, \hyperpage{74}
+  \item {src/fmap.c}, \hyperpage{93}
+  \item {src/fmobs.c}, \hyperpage{95}
+  \item {src/fpnj.c}, \hyperpage{98}
+  \item {src/GolemAdventure.c}, \hyperpage{100}
+  \item {src/lib\_menu.c}, \hyperpage{102}
+  \item {src/test\_unit.c}, \hyperpage{107}
+  \item {src/texture.c}, \hyperpage{107}
+  \item {src/type.c}, \hyperpage{109}
+  \item {src/utils.c}, \hyperpage{114}
+
+  \indexspace
+
+  \item {team\_s}, \hyperpage{9}
+  \item {texture.c}
+    \subitem {loadTexture}, \hyperpage{108}
+    \subitem {loadTextureFont}, \hyperpage{108}
+  \item {texture.h}
+    \subitem {loadTexture}, \hyperpage{53}
+    \subitem {loadTextureFont}, \hyperpage{53}
+  \item {transitionFondu}
+    \subitem {EventOp.c}, \hyperpage{93}
+    \subitem {EventOp.h}, \hyperpage{39}
+  \item {type.c}
+    \subitem {afficher\_arme}, \hyperpage{111}
+    \subitem {ajouter\_arme}, \hyperpage{111}
+    \subitem {ajouter\_stuff}, \hyperpage{111}
+    \subitem {creer\_all\_equipement}, \hyperpage{111}
+    \subitem {creer\_all\_objet}, \hyperpage{112}
+    \subitem {creer\_all\_sprite\_equipement}, \hyperpage{112}
+    \subitem {creer\_mob}, \hyperpage{112}
+    \subitem {creer\_perso}, \hyperpage{112}
+    \subitem {equiper\_arme}, \hyperpage{113}
+    \subitem {equiper\_stuff}, \hyperpage{113}
+    \subitem {init\_and\_reinit\_inv}, \hyperpage{113}
+    \subitem {jeter\_stuff}, \hyperpage{113}
+  \item {type.h}
+    \subitem {afficher\_arme}, \hyperpage{57}
+    \subitem {ajouter\_arme}, \hyperpage{57}
+    \subitem {ajouter\_stuff}, \hyperpage{57}
+    \subitem {creer\_all\_equipement}, \hyperpage{58}
+    \subitem {creer\_all\_sprite\_equipement}, \hyperpage{58}
+    \subitem {creer\_mob}, \hyperpage{58}
+    \subitem {creer\_perso}, \hyperpage{58}
+    \subitem {equiper\_arme}, \hyperpage{59}
+    \subitem {equiper\_stuff}, \hyperpage{59}
+    \subitem {init\_and\_reinit\_inv}, \hyperpage{59}
+    \subitem {jeter\_stuff}, \hyperpage{59}
+
+  \indexspace
+
+  \item {utils.c}
+    \subitem {chargerSave}, \hyperpage{115}
+    \subitem {entrerNom}, \hyperpage{115}
+    \subitem {nouvelleSave}, \hyperpage{116}
+    \subitem {sauvegarder}, \hyperpage{116}
+  \item {utils.h}
+    \subitem {chargerSave}, \hyperpage{63}
+    \subitem {entrerNom}, \hyperpage{64}
+    \subitem {nouvelleSave}, \hyperpage{64}
+    \subitem {sauvegarder}, \hyperpage{65}
+
+\end{theindex}

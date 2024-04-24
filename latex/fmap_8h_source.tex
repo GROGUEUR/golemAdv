@@ -1,0 +1,20 @@
+\doxysection{fmap.\+h}
+\hypertarget{fmap_8h_source}{}\label{fmap_8h_source}\index{lib/fmap.h@{lib/fmap.h}}
+\mbox{\hyperlink{fmap_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_image.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_mixer.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ WINDOW\_WIDTH\ 1360}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ WINDOW\_HEIGHT\ 780}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ SDL\_Surface*\ loadTileset(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ saveSurfaceAsPNG(SDL\_Surface*\ surface,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fmap_8h_a845a00fcf97aa5b2541f96fe3e98662b}{charger\_map}}(\textcolor{keywordtype}{char}\ *\ CARTE\_LIGNE,\textcolor{keywordtype}{char}\ *\ CARTE\_TXT,\textcolor{keywordtype}{char}\ *\ nom\_carte,\ \textcolor{keywordtype}{int}\ tab[125][250]);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fmap_8h_a271780afb3401907954bb4e4d6b74d50}{afficher\_map}}(\textcolor{keywordtype}{int}\ coordo\_x,\textcolor{keywordtype}{int}\ coordo\_y,SDL\_Renderer*\ renderer,SDL\_Texture*);}
+
+\end{DoxyCode}

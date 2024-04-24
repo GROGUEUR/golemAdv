@@ -1,0 +1,220 @@
+\doxysection{src/lib\+\_\+menu.c File Reference}
+\hypertarget{lib__menu_8c}{}\label{lib__menu_8c}\index{src/lib\_menu.c@{src/lib\_menu.c}}
+
+
+programme gérant les Menus.  
+
+
+{\ttfamily \#include \"{}../lib/init\+\_\+menu.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{lib__menu_8c_a9e4296a71edd8a1be1c3989dbe65e0a4}\label{lib__menu_8c_a9e4296a71edd8a1be1c3989dbe65e0a4} 
+void {\bfseries read\+Save\+Name} (char name\mbox{[}20\mbox{]}, FILE \texorpdfstring{$\ast$}{*}save)
+\begin{DoxyCompactList}\small\item\em Lecture du nom d\textquotesingle{}une sauvegarde. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lib__menu_8c_a53efb9a68af0342f2fe0e0d3776c5573}{menu\+Principal}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em Menu principal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lib__menu_8c_ad2a19d5cfc204141eebf266166088051}{menu\+Play}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em Menu PLAY. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lib__menu_8c_aace83576be71c0d4fca3ff3af3be2fb4}{menu\+Settings}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em Menu SETTINGS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lib__menu_8c_a8b66105de09552f296a1c8a01aa0a5f8}{menu\+Credits}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em Menu CREDITS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lib__menu_8c_a61a0b38a202312637ca4afcc91e55ce1}{menu\+Pause}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}map, SDL\+\_\+\+Rect dest)
+\begin{DoxyCompactList}\small\item\em Menu PAUSE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant les Menus. 
+
+\begin{DoxyAuthor}{Author}
+Warrick Bonga. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+8.\+6 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{lib__menu_8c_a8b66105de09552f296a1c8a01aa0a5f8}\label{lib__menu_8c_a8b66105de09552f296a1c8a01aa0a5f8} 
+\index{lib\_menu.c@{lib\_menu.c}!menuCredits@{menuCredits}}
+\index{menuCredits@{menuCredits}!lib\_menu.c@{lib\_menu.c}}
+\doxysubsubsection{\texorpdfstring{menuCredits()}{menuCredits()}}
+{\footnotesize\ttfamily int menu\+Credits (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Menu CREDITS. 
+
+Chargement de l\textquotesingle{}image du bouton retour par defaut
+
+Chargement de l\textquotesingle{}image du bouton retour au survol
+
+Chargement de l\textquotesingle{}image du bouton retour lors du clic
+
+Effacement de l\textquotesingle{}écran
+
+Affichage de l\textquotesingle{}image appropriée
+
+Affichage sur l\textquotesingle{}écran
+
+Libération des ressources\Hypertarget{lib__menu_8c_a61a0b38a202312637ca4afcc91e55ce1}\label{lib__menu_8c_a61a0b38a202312637ca4afcc91e55ce1} 
+\index{lib\_menu.c@{lib\_menu.c}!menuPause@{menuPause}}
+\index{menuPause@{menuPause}!lib\_menu.c@{lib\_menu.c}}
+\doxysubsubsection{\texorpdfstring{menuPause()}{menuPause()}}
+{\footnotesize\ttfamily int menu\+Pause (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{map,  }\item[{SDL\+\_\+\+Rect}]{dest }\end{DoxyParamCaption})}
+
+
+
+Menu PAUSE. 
+
+Chargement de l\textquotesingle{}image de sauvegarde par defaut
+
+Chargement de l\textquotesingle{}image du bouton quitter par defaut
+
+Chargement de l\textquotesingle{}image Options par defaut
+
+Chargement de l\textquotesingle{}image du bouton retour par défaut
+
+Chargement de l\textquotesingle{}image de sauvegarde au survol
+
+Chargement de l\textquotesingle{}image du bouton quitter au survol
+
+Chargement de l\textquotesingle{}image Options au survol
+
+Chargement de l\textquotesingle{}image du bouton retour au survol
+
+Chargement de l\textquotesingle{}image de sauvegarde lors du clic
+
+Chargement de l\textquotesingle{}image du bouton quitter lors du clic
+
+Chargement de l\textquotesingle{}image Options lors du clic
+
+Chargement de l\textquotesingle{}image du bouton retour lors du clic
+
+condition d\textquotesingle{}arrêt \+: sélection d\textquotesingle{}un choix du menu de pause OU appui sur \mbox{[}échap\mbox{]}
+
+Effacement de l\textquotesingle{}écran
+
+Affichage de l\textquotesingle{}image appropriée
+
+Affichage sur l\textquotesingle{}écran
+
+Libération des ressources\Hypertarget{lib__menu_8c_ad2a19d5cfc204141eebf266166088051}\label{lib__menu_8c_ad2a19d5cfc204141eebf266166088051} 
+\index{lib\_menu.c@{lib\_menu.c}!menuPlay@{menuPlay}}
+\index{menuPlay@{menuPlay}!lib\_menu.c@{lib\_menu.c}}
+\doxysubsubsection{\texorpdfstring{menuPlay()}{menuPlay()}}
+{\footnotesize\ttfamily int menu\+Play (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Menu PLAY. 
+
+Chargement du fond du menu play
+
+Chargement de l\textquotesingle{}image de la sauvegarde 1 par défaut
+
+Chargement de l\textquotesingle{}image de la sauvegarde 2 par défaut
+
+Chargement de l\textquotesingle{}image de la sauvegarde 3 par défaut
+
+Chargement de l\textquotesingle{}image de la sauvegarde 1 au survol
+
+Chargement de l\textquotesingle{}image de la sauvegarde 2 au survol
+
+Chargement de l\textquotesingle{}image de la sauvegarde 3 au survol
+
+Chargement de l\textquotesingle{}image de la sauvegarde 1 au clic
+
+Chargement de l\textquotesingle{}image de la sauvegarde 2 au clic
+
+Chargement de l\textquotesingle{}image de la sauvegarde 3 au clic
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option lancement par défaut
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option écrasement par défaut
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option retour par défaut
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option lancement au survol
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option écrasement au survol
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option retour au survol
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option lancement au clic
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option écrasement au clic
+
+Chargement de l\textquotesingle{}image de l\textquotesingle{}option retour au clic
+
+condition d\textquotesingle{}arrêt \+: chargement d\textquotesingle{}une sauvegarde (vide ou commencée) OU retour à l\textquotesingle{}écran-\/titre
+
+Effacement de l\textquotesingle{}écran
+
+Affichage de l\textquotesingle{}image appropriée
+
+Affichage sur l\textquotesingle{}écran
+
+Libération des ressources\Hypertarget{lib__menu_8c_a53efb9a68af0342f2fe0e0d3776c5573}\label{lib__menu_8c_a53efb9a68af0342f2fe0e0d3776c5573} 
+\index{lib\_menu.c@{lib\_menu.c}!menuPrincipal@{menuPrincipal}}
+\index{menuPrincipal@{menuPrincipal}!lib\_menu.c@{lib\_menu.c}}
+\doxysubsubsection{\texorpdfstring{menuPrincipal()}{menuPrincipal()}}
+{\footnotesize\ttfamily int menu\+Principal (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Menu principal. 
+
+Fonctions des menus. Chargement de l\textquotesingle{}image Play par defaut
+
+Chargement de l\textquotesingle{}image Settings par defaut
+
+Chargement de l\textquotesingle{}image Credits par defaut
+
+Chargement de l\textquotesingle{}image Play au survol
+
+Chargement de l\textquotesingle{}image Settings au survol
+
+Chargement de l\textquotesingle{}image Credits au survol
+
+Chargement de l\textquotesingle{}image Play lors du clic
+
+Chargement de l\textquotesingle{}image Settings lors du clic
+
+Chargement de l\textquotesingle{}image Credits lors du clic
+
+condition d\textquotesingle{}arrêt \+: choix d\textquotesingle{}un menu
+
+Effacement de l\textquotesingle{}écran
+
+Affichage de l\textquotesingle{}image appropriée
+
+Affichage sur l\textquotesingle{}écran
+
+Libération des ressources\Hypertarget{lib__menu_8c_aace83576be71c0d4fca3ff3af3be2fb4}\label{lib__menu_8c_aace83576be71c0d4fca3ff3af3be2fb4} 
+\index{lib\_menu.c@{lib\_menu.c}!menuSettings@{menuSettings}}
+\index{menuSettings@{menuSettings}!lib\_menu.c@{lib\_menu.c}}
+\doxysubsubsection{\texorpdfstring{menuSettings()}{menuSettings()}}
+{\footnotesize\ttfamily int menu\+Settings (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Menu SETTINGS. 
+
+Chargement de l\textquotesingle{}image du bouton retour par defaut
+
+Chargement de l\textquotesingle{}image du bouton retour au survol
+
+Chargement de l\textquotesingle{}image du bouton retour lors du clic
+
+Effacement de l\textquotesingle{}écran
+
+Affichage de l\textquotesingle{}image appropriée
+
+Affichage sur l\textquotesingle{}écran
+
+Libération des ressources

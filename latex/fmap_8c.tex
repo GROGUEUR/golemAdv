@@ -1,0 +1,96 @@
+\doxysection{src/fmap.c File Reference}
+\hypertarget{fmap_8c}{}\label{fmap_8c}\index{src/fmap.c@{src/fmap.c}}
+
+
+programme gérant la Map  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \"{}../lib/fmap.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{fmap_8c_a1d87a255c0cb0ee88c2ddbf12d15b7c4}\label{fmap_8c_a1d87a255c0cb0ee88c2ddbf12d15b7c4} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries load\+Tileset} (const char \texorpdfstring{$\ast$}{*}filename)
+\item 
+\Hypertarget{fmap_8c_a4cf405bc6429816e621c78aadfab2a1b}\label{fmap_8c_a4cf405bc6429816e621c78aadfab2a1b} 
+int {\bfseries save\+Surface\+As\+PNG} (SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}surface, const char \texorpdfstring{$\ast$}{*}filename)
+\item 
+int \mbox{\hyperlink{fmap_8c_a845a00fcf97aa5b2541f96fe3e98662b}{charger\+\_\+map}} (char \texorpdfstring{$\ast$}{*}CARTE\+\_\+\+LIGNE, char \texorpdfstring{$\ast$}{*}CARTE\+\_\+\+TXT, char \texorpdfstring{$\ast$}{*}nom\+\_\+carte, int tab\mbox{[}125\mbox{]}\mbox{[}250\mbox{]})
+\item 
+int \mbox{\hyperlink{fmap_8c_a9db2c4f97ced0569617bb910f73ad876}{afficher\+\_\+map}} (int coordo\+\_\+x, int coordo\+\_\+y, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}texture\+\_\+carte)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant la Map 
+
+\begin{DoxyAuthor}{Author}
+François Lépine. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+8.\+6 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{fmap_8c_a9db2c4f97ced0569617bb910f73ad876}\label{fmap_8c_a9db2c4f97ced0569617bb910f73ad876} 
+\index{fmap.c@{fmap.c}!afficher\_map@{afficher\_map}}
+\index{afficher\_map@{afficher\_map}!fmap.c@{fmap.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_map()}{afficher\_map()}}
+{\footnotesize\ttfamily int afficher\+\_\+map (\begin{DoxyParamCaption}\item[{int}]{coordo\+\_\+x,  }\item[{int}]{coordo\+\_\+y,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{texture\+\_\+carte }\end{DoxyParamCaption})}
+
+Définir la portion de l\textquotesingle{}image à afficher
+
+Largeur de la portion à afficher
+
+Hauteur de la portion à afficher
+
+Définir le rectangle de destination
+
+Utiliser la même largeur que la source
+
+Utiliser la même hauteur que la source\Hypertarget{fmap_8c_a845a00fcf97aa5b2541f96fe3e98662b}\label{fmap_8c_a845a00fcf97aa5b2541f96fe3e98662b} 
+\index{fmap.c@{fmap.c}!charger\_map@{charger\_map}}
+\index{charger\_map@{charger\_map}!fmap.c@{fmap.c}}
+\doxysubsubsection{\texorpdfstring{charger\_map()}{charger\_map()}}
+{\footnotesize\ttfamily int charger\+\_\+map (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{CARTE\+\_\+\+LIGNE,  }\item[{char \texorpdfstring{$\ast$}{*}}]{CARTE\+\_\+\+TXT,  }\item[{char \texorpdfstring{$\ast$}{*}}]{nom\+\_\+carte,  }\item[{int}]{tab\mbox{[}125\mbox{]}\mbox{[}250\mbox{]} }\end{DoxyParamCaption})}
+
+Ouverture du fichier
+
+Ouvre le fichier tuiles\+\_\+plaine qui contient les tuiles
+
+Gestion de l\textquotesingle{}erreur
+
+Variables pour stocker les nombres
+
+Définir la portion de l\textquotesingle{}image à afficher
+
+Largeur de la portion à afficher
+
+Hauteur de la portion à afficher
+
+Définir le rectangle de destination
+
+Utiliser la même largeur que la source
+
+Utiliser la même hauteur que la source
+
+Récupération de la largeur det de la hauteur
+
+Création de la variable qui va créer le .png contenant l\textquotesingle{}image de la map
+
+Parcours du fichier contenant la carte en numéro de tuile
+
+Décalage de l\textquotesingle{}affichage (x et y) sur la map pour pouvoir afficher toute la map
+
+Affichage de la tuile
+
+On va pour chaque tuile enregistrer dans un tableau
+
+Fermeture du fichier
+
+Sauvegarde de la carte en png

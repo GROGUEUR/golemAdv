@@ -1,0 +1,187 @@
+\doxysection{type.\+h}
+\hypertarget{type_8h_source}{}\label{type_8h_source}\index{lib/type.h@{lib/type.h}}
+\mbox{\hyperlink{type_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ TYPE\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ TYPE\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_image.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_mixer.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ TAILLE\_NOM\ 25}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ TAILLE\_EQUIP\ 4}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ NB\_ARMES\ 2}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ NB\_ATT\ 4}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ NB\_INV\_EQUIPEMENTS\ 36}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ NB\_INV\_ARMES\ 18}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ NB\_INV\_OBJETS\ 10}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ NB\_TEAM\_PERSOS\ 3}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ ALL\_OBJETS\ 9}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ ALL\_EQUIPEMENTS\ 30}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ ALL\_ARMES\ 28}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structperso__s}{perso\_s}}\ \mbox{\hyperlink{structperso__s}{perso\_t}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{type_8h_a56f1bc30fc302bd66339224b09849285}{scene\_s}}\{MENUP=0,PLAYSAVE,PARAMETRE,CREDITS,CINEMDEB,OP,PAUSE,INVENTORY,EQUIPEMENT,STAT,FIGHT,CINEMEND,SHOP,SELL\}\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\_t}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{type_8h_a9a6da085a031152bf5ff9e97085c562f}{typeStuff\_s}}\{CASQUE=0,PLASTRON,BOTTE,TALISMANT\}\mbox{\hyperlink{type_8h_ae84c17b40d8cb796d321eb3a525c2bd7}{typeStuff\_t}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{type_8h_a5d4ba2e2a71456e2b19c5ec0eb58ea1f}{typeArmes\_s}}\{EPEE=0,ARC,BATON,CAILLOU\}\mbox{\hyperlink{type_8h_a5a6f2bd71311c9b1ab680427f375cc31}{typeArmes\_t}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ effet\_s\{SOIN=0,TAUX\_CRIT,FOR,INT,DEF,RES,MANA,VIT,ATTAQUE\}effet\_t;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ type\_att\_s\{PHY=0,MAG,STA,ERR\}type\_att\_t;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structequipement__s}{equipement\_s}}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{char}\ nom[TAILLE\_NOM];}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{char}\ desc[100];}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{type_8h_ae84c17b40d8cb796d321eb3a525c2bd7}{typeStuff\_t}}\ typeEquipement;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structequipement__s_ab831b3bbfb89dba57eed3549446c243d}{numId}};}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{structperso__s}{perso\_t}}*\ persoEquiper;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ Pv;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ Mana;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ Def;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\ Res;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{float}\ For;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{float}\ Int;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{float}\ Vit;}
+\DoxyCodeLine{00061\ \ \ \ \ SDL\_Texture\ *\ artwork;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structequipement__s_a8ba5d42f19ccd66940525da1eccc596a}{cout}};}
+\DoxyCodeLine{00064\ \}\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\_t}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structattaque__s}{attaque\_s}}\{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{char}\ nom[TAILLE\_NOM];}
+\DoxyCodeLine{00068\ \ \ \ \ type\_att\_t\ type\_att;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{char}\ desc[100];}
+\DoxyCodeLine{00070\ \ \ \ \ effet\_t\ effet;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ qte\_effet;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ duree\_effet;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_cible;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ precision;}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00076\ \}\mbox{\hyperlink{structattaque__s}{attaque\_t}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structarme__s}{arme\_s}}\{}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{char}\ nom[TAILLE\_NOM];}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{char}\ desc[100];}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structarme__s_ab8e7a110bcc90e29e52de0e6714333b3}{numId}};}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{structperso__s}{perso\_t}}*\ persoEquiper;}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{type_8h_a5a6f2bd71311c9b1ab680427f375cc31}{typeArmes\_t}}\ typeArme;}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{structattaque__s}{attaque\_t}}\ att;}
+\DoxyCodeLine{00088\ \ \ \ \ SDL\_Texture\ *\ artwork;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structarme__s_af5ee2104f256f65887cbe8d0d5857503}{cout}};}
+\DoxyCodeLine{00091\ \}\mbox{\hyperlink{structarme__s}{arme\_t}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structperso__s}{perso\_s}}\{}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{char}\ Nom[TAILLE\_NOM];}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{char}\ Classe[20];}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ lvl;}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ Xplvl;}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ Xp;}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ PtComp;}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{float}\ PvMax;}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{float}\ Pv;}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{float}\ ManaMax;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{float}\ Mana;}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{float}\ Def;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{float}\ Res;}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{float}\ For;}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{float}\ Int;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{float}\ Vit;}
+\DoxyCodeLine{00110\ \ \ \ \ SDL\_Texture*\ MarcheHori;}
+\DoxyCodeLine{00111\ \ \ \ \ SDL\_Texture*\ MarcheFront;}
+\DoxyCodeLine{00112\ \ \ \ \ SDL\_Texture*\ MarcheBack;}
+\DoxyCodeLine{00113\ \ \ \ \ SDL\_Texture*\ IdleAnim;}
+\DoxyCodeLine{00114\ \ \ \ \ SDL\_Texture*\ AttAnim;}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{structequipement__s}{equipement\_t}}\ *\ stuff[TAILLE\_EQUIP];}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{structarme__s}{arme\_t}}\ *\ armes[NB\_ARMES];}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{structattaque__s}{attaque\_t}}\ attaques[NB\_ATT];}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpnj__s}{pnj\_s}}\{}
+\DoxyCodeLine{00123\ \ \ \ \ SDL\_Texture*\ Dialogue[6];}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ NbDialogue;}
+\DoxyCodeLine{00125\ \}\mbox{\hyperlink{type_8h_af2a8e2285c3f2e52659c4534e7b1131a}{pnj\_t}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmob__s}{mob\_s}}\{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{char}\ nom[TAILLE\_NOM];}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ lvl;}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ Xp\_don;}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{float}\ PvMax;}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{float}\ Pv;}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{float}\ ManaMax;}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{float}\ Mana;}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{float}\ Def;}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{float}\ Res;}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{float}\ For;}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{float}\ Int;}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{float}\ Vit;}
+\DoxyCodeLine{00140\ \ \ \ \ SDL\_Texture*\ IdleAnim;}
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{structattaque__s}{attaque\_t}}\ attaques[NB\_ATT];}
+\DoxyCodeLine{00142\ \}\mbox{\hyperlink{structmob__s}{mob\_t}};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structobjet__s}{objet\_s}}\{}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{char}\ nom[13];}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{char}\ desc[100];}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{float}\ valPv;}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{float}\ valMp;}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ cout;}
+\DoxyCodeLine{00151\ \ \ \ \ SDL\_Texture*\ sprite;}
+\DoxyCodeLine{00152\ \}\mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\_t}};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00155\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structinventaire__s}{inventaire\_s}}\{}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ nbObjActu;}
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{structobjet__s}{objet\_t}}\ *\ sac[NB\_INV\_OBJETS];}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ nbEquActu;}
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{structequipement__s}{equipement\_t}}\ *\ equipements[NB\_INV\_EQUIPEMENTS];}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ nbArmActu;}
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{structarme__s}{arme\_t}}\ *\ armes[NB\_INV\_ARMES];}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ bourse;}
+\DoxyCodeLine{00163\ \}\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\_t}};}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structteam__s}{team\_s}}\{}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{int}\ nbPerso;}
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{structperso__s}{perso\_t}}\ *team[NB\_TEAM\_PERSOS];}
+\DoxyCodeLine{00169\ \}\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\_t}};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00172\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_afcfa172193b962b4eceb67fe73babf75}{creer\_perso}}(\mbox{\hyperlink{structperso__s}{perso\_t}}\ *,\textcolor{keywordtype}{char}\ *,\ \textcolor{keywordtype}{char}\ *,SDL\_Renderer*,\textcolor{keywordtype}{float}\ *\ statPerso);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_ab8b316e5c75d18c5209e82b88bd23af2}{lvl\_up}}(\mbox{\hyperlink{structperso__s}{perso\_t}}*,\textcolor{keywordtype}{float}\ *\ statPerso);}
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_ae55d5b49ada63e414deb8ced907e124d}{aff\_perso}}(\mbox{\hyperlink{structperso__s}{perso\_t}}\ perso);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_a892805a520c19a5c8eb99775dbee4842}{equiper\_stuff}}(\mbox{\hyperlink{structequipement__s}{equipement\_t}}*\ equipement,\ \mbox{\hyperlink{structperso__s}{perso\_t}}*\ perso);}
+\DoxyCodeLine{00178\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_a01ea98b0d084adcba638980a668f6881}{desequiper\_stuff}}(\textcolor{keywordtype}{int}\ iStuff,\ \mbox{\hyperlink{structperso__s}{perso\_t}}*\ perso);}
+\DoxyCodeLine{00179\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_a92f672ce734704a1903515bace9b3149}{utiliser\_obj}}(\mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *,\mbox{\hyperlink{structperso__s}{perso\_t}}\ *,\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_a073d0dd3e501995d049343cdeae128dd}{join\_team}}(\mbox{\hyperlink{structteam__s}{team\_t}}\ *,\mbox{\hyperlink{structperso__s}{perso\_t}}\ *);}
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ init\_reinit\_\_team(\mbox{\hyperlink{structteam__s}{team\_t}}\ *);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00186\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_a52da463aec8ef550760ebf9447861e10}{creer\_all\_objet}}(\mbox{\hyperlink{structobjet__s}{objet\_t}}\ *,\ SDL\_Renderer*\ );}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00189\ \mbox{\hyperlink{structattaque__s}{attaque\_t}}\ \mbox{\hyperlink{type_8h_af9bcf9d05db7fca1bed5a2b4654bcf0d}{creer\_attaque}}(\textcolor{keywordtype}{char}\ nom[TAILLE\_NOM],type\_att\_t\ type\_att,\ \textcolor{keywordtype}{char}\ desc[100],\ effet\_t\ effet,\ \textcolor{keywordtype}{int}\ qte\_effet,\ \textcolor{keywordtype}{int}\ duree\_effet,\ \textcolor{keywordtype}{int}\ nb\_cible,\ \textcolor{keywordtype}{int}\ precision);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_aa7988041b6b91e81bd92a4e2ae3495ce}{creer\_all\_sprite\_equipement}}(SDL\_Texture*\ allSprite[ALL\_EQUIPEMENTS],\ SDL\_Renderer*\ ecran);}
+\DoxyCodeLine{00193\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_a0a51cf11af4fa5ccb8a4dd51330730dd}{creer\_all\_equipement}}(\mbox{\hyperlink{structequipement__s}{equipement\_t}}\ allStuff[ALL\_EQUIPEMENTS][3],SDL\_Texture*\ allSprite[ALL\_EQUIPEMENTS]);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_ae1e7839ef429a608e34886b8ee8c3d1b}{init\_and\_reinit\_inv}}(\mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *\ inv);}
+\DoxyCodeLine{00198\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_a6fa8010394338e727ebfb3fa2e314663}{jeter\_obj}}(\mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *,\textcolor{keywordtype}{int}\ );}
+\DoxyCodeLine{00199\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_a898cd8ef603c55f06521a5b020d7e67c}{ajouter\_obj}}(\mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *,\mbox{\hyperlink{structobjet__s}{objet\_t}}\ *,\textcolor{keywordtype}{int}\ );}
+\DoxyCodeLine{00200\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_af27e73d590d9264b44259cd636c41841}{ajouter\_stuff}}(\mbox{\hyperlink{structequipement__s}{equipement\_t}}\ allStuff[ALL\_EQUIPEMENTS][3],\mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *,\textcolor{keywordtype}{int}\ iStuff);}
+\DoxyCodeLine{00201\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_a3f5db8a1974a2f5c9ed356e6bbb6f141}{jeter\_stuff}}(\mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *Inv,\textcolor{keywordtype}{int}\ iStuff);}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00204\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_a18eb900cdf900bd1c3d175da8851942a}{afficher\_arme}}(\mbox{\hyperlink{structarme__s}{arme\_t}}*\ arme);}
+\DoxyCodeLine{00205\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_a95f520656fda7c4e11c7037ffe627a4d}{creer\_all\_arme}}(\mbox{\hyperlink{structarme__s}{arme\_t}}\ armes[ALL\_ARMES][3],SDL\_Renderer*\ ecran);}
+\DoxyCodeLine{00206\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_aba24d449d2c35165fe953d8aa1646c50}{creer\_all\_att\_arme}}(\mbox{\hyperlink{structarme__s}{arme\_t}}\ armes[ALL\_ARMES][3]);}
+\DoxyCodeLine{00207\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{type_8h_a5f71758cece871ff13f159816f0c119d}{equiper\_arme}}(\mbox{\hyperlink{structarme__s}{arme\_t}}*\ arme,\ \mbox{\hyperlink{structperso__s}{perso\_t}}*\ perso);}
+\DoxyCodeLine{00208\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_a89eaa235a99b57a993c2f737acb6ee5a}{desequiper\_arme}}(\mbox{\hyperlink{structarme__s}{arme\_t}}\ *\ arme,\ \mbox{\hyperlink{structperso__s}{perso\_t}}*\ perso);}
+\DoxyCodeLine{00209\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_a85cef7eb2e928ef7b91c4cf98868b5f7}{ajouter\_arme}}(\mbox{\hyperlink{structarme__s}{arme\_t}}\ allArmes[ALL\_ARMES][3],\mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *inv,\textcolor{keywordtype}{int}\ indArm);}
+\DoxyCodeLine{00210\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{type_8h_a9dd85d3177d05eb68f51a0149f107b7a}{jeter\_arme}}(\mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *Inv,\mbox{\hyperlink{structarme__s}{arme\_t}}*\ arme);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00213\ \mbox{\hyperlink{structmob__s}{mob\_t}}*\ \mbox{\hyperlink{type_8h_af10515f14bad7b9fba5d0d2f950b77a9}{creer\_mob}}(\textcolor{keywordtype}{char}\ *\ nom,SDL\_Renderer*\ ecran,\textcolor{keywordtype}{int}\ lvl);}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

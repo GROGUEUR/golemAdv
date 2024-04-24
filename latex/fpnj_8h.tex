@@ -1,0 +1,73 @@
+\doxysection{lib/fpnj.h File Reference}
+\hypertarget{fpnj_8h}{}\label{fpnj_8h}\index{lib/fpnj.h@{lib/fpnj.h}}
+
+
+programme gérant les fonctions pour les pnj sur la Map  
+
+
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+mixer.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fpnj_8h_a385f5ebed98beffcbbea6a478f007cb6}{charger\+\_\+map\+\_\+pnj}} (char \texorpdfstring{$\ast$}{*}PNJ\+\_\+\+LIGNE, char \texorpdfstring{$\ast$}{*}PNJ\+\_\+\+TXT, char \texorpdfstring{$\ast$}{*}MAP, char \texorpdfstring{$\ast$}{*}nom\+\_\+carte, int collisions\mbox{[}125\mbox{]}\mbox{[}250\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant les fonctions pour les pnj sur la Map 
+
+\begin{DoxyAuthor}{Author}
+François Lépine. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+9.\+5 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{fpnj_8h_a385f5ebed98beffcbbea6a478f007cb6}\label{fpnj_8h_a385f5ebed98beffcbbea6a478f007cb6} 
+\index{fpnj.h@{fpnj.h}!charger\_map\_pnj@{charger\_map\_pnj}}
+\index{charger\_map\_pnj@{charger\_map\_pnj}!fpnj.h@{fpnj.h}}
+\doxysubsubsection{\texorpdfstring{charger\_map\_pnj()}{charger\_map\_pnj()}}
+{\footnotesize\ttfamily int charger\+\_\+map\+\_\+pnj (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{PNJ\+\_\+\+LIGNE,  }\item[{char \texorpdfstring{$\ast$}{*}}]{PNJ\+\_\+\+TXT,  }\item[{char \texorpdfstring{$\ast$}{*}}]{MAP,  }\item[{char \texorpdfstring{$\ast$}{*}}]{nom\+\_\+carte,  }\item[{int}]{collisions\mbox{[}125\mbox{]}\mbox{[}250\mbox{]} }\end{DoxyParamCaption})}
+
+Ouverture du fichier
+
+Ouvre le fichier pnj\+\_\+ligne qui contient les pnj
+
+Gestion de l\textquotesingle{}erreur
+
+Ouvre le fichier de la carte du jeu pour y ajouter les pnj
+
+Gestion de l\textquotesingle{}erreur
+
+Variables pour stocker les nombres
+
+Définir la portion de l\textquotesingle{}image à afficher
+
+Largeur de la portion à afficher
+
+Hauteur de la portion à afficher
+
+Définir le rectangle de destination
+
+Utiliser la même largeur que la source
+
+Utiliser la même hauteur que la source
+
+Récupération de la largeur det de la hauteur
+
+Parcours du fichier contenant la carte en numéro de tuile
+
+Affichage de la tuile
+
+Fermeture du fichier
+
+Sauvegarde de la carte en png

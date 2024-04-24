@@ -1,0 +1,192 @@
+\doxysection{lib/utils.h File Reference}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{lib/utils.h@{lib/utils.h}}
+
+
+programme gérant les fonctions pour les sauvegardes et l\textquotesingle{}entrée du pseudo du joueur.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include \"{}../lib/type.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/texture.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/fmap.\+h\"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{utils_8h_a498d9f026138406895e9a34b504ac6a6}\label{utils_8h_a498d9f026138406895e9a34b504ac6a6} 
+\#define {\bfseries WINDOW\+\_\+\+WIDTH}~1360
+\item 
+\Hypertarget{utils_8h_a5473cf64fa979b48335079c99532e243}\label{utils_8h_a5473cf64fa979b48335079c99532e243} 
+\#define {\bfseries WINDOW\+\_\+\+HEIGHT}~780
+\item 
+\Hypertarget{utils_8h_a35be84e9d079df30664be87008be9512}\label{utils_8h_a35be84e9d079df30664be87008be9512} 
+\#define {\bfseries LETTER\+\_\+\+WIDTH}~20
+\item 
+\Hypertarget{utils_8h_a55a40fdf480dbb6cda528deb2711bc7b}\label{utils_8h_a55a40fdf480dbb6cda528deb2711bc7b} 
+\#define {\bfseries LETTER\+\_\+\+HEIGHT}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{utils_8h_ab4ddbcd25b34f12a4bec6acf34d344af}\label{utils_8h_ab4ddbcd25b34f12a4bec6acf34d344af} 
+void {\bfseries entrer\+Lettre} (SDL\+\_\+\+Event event, char \texorpdfstring{$\ast$}{*}name, int \texorpdfstring{$\ast$}{*}indice, SDL\+\_\+\+Color color, int \texorpdfstring{$\ast$}{*}quit)
+\begin{DoxyCompactList}\small\item\em Fonction de détection de chaque touche utile du clavier pour entrer un nom \+: condition qui permet de vérifier si la longueur est bien inférieure à la taille du nom maximale (TAILLE\+\_\+\+NOM -\/ 1) pour pouvoir insérer un caractère condition qui permet de vérifier si la longueur est bien supérieure à 0 pour pouvoir supprimer un caractère condition qui permet de vérifier si la longueur est bien supérieure à 1 pour pouvoir valider le nom si et seulement si l\textquotesingle{}indice pointe sur le début de la chaîne, la lettre sera en majuscule. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{utils_8h_a6dc704ce19abb1a6c50505e72d152d4b}{entrer\+Nom}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}entrée du nom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_a1ac7a4673ba4306e20908f1e52b7da93}{sauvegarder}} (int nb\+\_\+save, int id\+Map, int x, int y, \mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} team, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} inv, int lore\+Pos, \mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}} all\+Pot\mbox{[}ALL\+\_\+\+OBJETS\mbox{]}, \mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}} all\+Stuff\mbox{[}ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]}, \mbox{\hyperlink{structarme__s}{arme\+\_\+t}} all\+Armes\mbox{[}ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}Map, SDL\+\_\+\+Rect dest)
+\begin{DoxyCompactList}\small\item\em Fonction de sauvegarde de la progression. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_a3bee318d6b698ee0a3b1594e2853d007}{charger\+Save}} (int nb\+\_\+save, int \texorpdfstring{$\ast$}{*}id\+Map, int \texorpdfstring{$\ast$}{*}x, int \texorpdfstring{$\ast$}{*}y, \mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}team, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, int \texorpdfstring{$\ast$}{*}lore\+Pos, \mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}} all\+Pot\mbox{[}ALL\+\_\+\+OBJETS\mbox{]}, \mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}} all\+Stuff\mbox{[}ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]}, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} all\+Perso\mbox{[}NB\+\_\+\+TEAM\+\_\+\+PERSOS\mbox{]}, \mbox{\hyperlink{structarme__s}{arme\+\_\+t}} all\+Armes\mbox{[}ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]}, float stats\mbox{[}NB\+\_\+\+TEAM\+\_\+\+PERSOS\mbox{]}\mbox{[}8\mbox{]}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em Fonction de chargement de la sauvegarde. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_a7ba35cfd097d5ee9ff0a5544f18a13af}{nouvelle\+Save}} (int nb\+\_\+save, char \texorpdfstring{$\ast$}{*}nom)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}initialisation de la sauvegarde. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant les fonctions pour les sauvegardes et l\textquotesingle{}entrée du pseudo du joueur. 
+
+\begin{DoxyAuthor}{Author}
+Warrick Bonga. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+9.\+8 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8h_a3bee318d6b698ee0a3b1594e2853d007}\label{utils_8h_a3bee318d6b698ee0a3b1594e2853d007} 
+\index{utils.h@{utils.h}!chargerSave@{chargerSave}}
+\index{chargerSave@{chargerSave}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{chargerSave()}{chargerSave()}}
+{\footnotesize\ttfamily void charger\+Save (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+save,  }\item[{int \texorpdfstring{$\ast$}{*}}]{id\+Map,  }\item[{int \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int \texorpdfstring{$\ast$}{*}}]{y,  }\item[{\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{team,  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{int \texorpdfstring{$\ast$}{*}}]{lore\+Pos,  }\item[{\mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}}}]{all\+Pot\mbox{[}\+ALL\+\_\+\+OBJETS\mbox{]},  }\item[{\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}}}]{all\+Stuff\mbox{[}\+ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]},  }\item[{\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}}}]{all\+Perso\mbox{[}\+NB\+\_\+\+TEAM\+\_\+\+PERSOS\mbox{]},  }\item[{\mbox{\hyperlink{structarme__s}{arme\+\_\+t}}}]{all\+Armes\mbox{[}\+ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]},  }\item[{float}]{stats\mbox{[}\+NB\+\_\+\+TEAM\+\_\+\+PERSOS\mbox{]}\mbox{[}8\mbox{]},  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Fonction de chargement de la sauvegarde. 
+
+Ouverture du fichier contenant la sauvegarde
+
+Déclaration des indices, de l\textquotesingle{}élément courant et du caractère courant lors de la lecture du fichier
+
+Déclaration des variables provisoires permettant la lecture des statistiques
+
+Chargement de la dernière carte du monde sauvegardée ainsi que la position du personnage dessus
+
+Chargement des personnages et de leurs statistiques
+
+Chargement des objets de l\textquotesingle{}inventaire (potions)
+
+Chargement de l\textquotesingle{}équipement de l\textquotesingle{}inventaire (armure) et de la bourse (montant de la monnaie du jeu)
+
+Chargement des armes de l\textquotesingle{}inventaire
+
+Chargement de l\textquotesingle{}avancement dans l\textquotesingle{}histoire du jeu
+
+Fermeture du fichier contenant la sauvegarde\Hypertarget{utils_8h_a6dc704ce19abb1a6c50505e72d152d4b}\label{utils_8h_a6dc704ce19abb1a6c50505e72d152d4b} 
+\index{utils.h@{utils.h}!entrerNom@{entrerNom}}
+\index{entrerNom@{entrerNom}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{entrerNom()}{entrerNom()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} entrer\+Nom (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}entrée du nom. 
+
+Déclaration des variables d\textquotesingle{}event et d\textquotesingle{}arrêt de la boucle
+
+Déclaration des chaînes de caractères de la fenêtre (en-\/tête et règles d\textquotesingle{}entrée du nom)
+
+Déclaration de la couleur blanche avec le type personalisé de SDL
+
+Création des textures des textes déclarés plus haut
+
+Création et allocation des zones des textures + copie dans renderer
+
+Déclaration du nom et de l\textquotesingle{}indice d\textquotesingle{}écriture dans le nom
+
+Premier bourrage de la chaîne du nom pour éviter un affichage de caractères aléatoires
+
+Boucle d\textquotesingle{}entrée du nom
+
+L\textquotesingle{}entrée de lettres s\textquotesingle{}activera au moment de l\textquotesingle{}appui sur une des touches disponibles (cf. fonction entrer\+Lettre)
+
+Pour éviter une erreur lorsque la largeur de la texture vaut 0, le premier caractère du nom vaut \textquotesingle{}\+\_\+\textquotesingle{} lorsque celui-\/ci est vide
+
+Écriture du nom sur l\textquotesingle{}écran
+
+Rafraîchissement de l\textquotesingle{}écran
+
+Libération en mémoire des textures
+
+Appuyer sur échap retourne le nom \"{}\+Golem\"{} par défaut
+
+Bourrage de la place allouée non utilisée
+
+Renvoi de l\textquotesingle{}adresse du nom\Hypertarget{utils_8h_a7ba35cfd097d5ee9ff0a5544f18a13af}\label{utils_8h_a7ba35cfd097d5ee9ff0a5544f18a13af} 
+\index{utils.h@{utils.h}!nouvelleSave@{nouvelleSave}}
+\index{nouvelleSave@{nouvelleSave}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{nouvelleSave()}{nouvelleSave()}}
+{\footnotesize\ttfamily void nouvelle\+Save (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+save,  }\item[{char \texorpdfstring{$\ast$}{*}}]{nom }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}initialisation de la sauvegarde. 
+
+Création du dossier contenant les sauvegardes
+
+Ouverture du fichier d\textquotesingle{}initialisation de la sauvegarde
+
+Initialisation de la première carte du monde ainsi que la position du personnage au départ
+
+Initialisation du personnage de départ et de ses statistiques
+
+Intialisation de l\textquotesingle{}emplacement des objets de l\textquotesingle{}inventaire (potions)
+
+Intialisation de l\textquotesingle{}emplacement de l\textquotesingle{}équipement de l\textquotesingle{}inventaire (armure) et de la bourse (montant de la monnaie du jeu)
+
+Initialisation de l\textquotesingle{}emplacement des armes de l\textquotesingle{}inventaire
+
+Initialisation de la valeur représentant l\textquotesingle{}avancement dans l\textquotesingle{}histoire du jeu
+
+Fermeture du fichier d\textquotesingle{}initialisation de la sauvegarde\Hypertarget{utils_8h_a1ac7a4673ba4306e20908f1e52b7da93}\label{utils_8h_a1ac7a4673ba4306e20908f1e52b7da93} 
+\index{utils.h@{utils.h}!sauvegarder@{sauvegarder}}
+\index{sauvegarder@{sauvegarder}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarder()}{sauvegarder()}}
+{\footnotesize\ttfamily void sauvegarder (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+save,  }\item[{int}]{id\+Map,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}}}]{team,  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}}}]{inv,  }\item[{int}]{lore\+Pos,  }\item[{\mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}}}]{all\+Pot\mbox{[}\+ALL\+\_\+\+OBJETS\mbox{]},  }\item[{\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}}}]{all\+Stuff\mbox{[}\+ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]},  }\item[{\mbox{\hyperlink{structarme__s}{arme\+\_\+t}}}]{all\+Armes\mbox{[}\+ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]},  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{Map,  }\item[{SDL\+\_\+\+Rect}]{dest }\end{DoxyParamCaption})}
+
+
+
+Fonction de sauvegarde de la progression. 
+
+Déclaration de l\textquotesingle{}image pour la fenêtre de la sauvegarde
+
+Déclaration des images textuelles pendant et après la sauvegarde
+
+Ouverture du fichier contenant la sauvegarde
+
+Déclaration des indices
+
+Affichage du texte pendant la sauvegarde
+
+Sauvegarde de la dernière carte du monde chargée ainsi que la position du personnage dessus
+
+Sauvegarde des personnages et de leurs statistiques
+
+Sauvegarde des objets de l\textquotesingle{}inventaire (potions)
+
+Sauvegarde de l\textquotesingle{}équipement de l\textquotesingle{}inventaire (armure) et de la bourse (montant de la monnaie du jeu)
+
+Sauvegarde des armes de l\textquotesingle{}inventaire
+
+Sauvegarde de l\textquotesingle{}avancement dans l\textquotesingle{}histoire du jeu
+
+Affichage du texte après la sauvegarde
+
+Affichage du texte jusqu\textquotesingle{}à qu\textquotesingle{}un clic de souris soit détecté
+
+Destruction des textures
+
+Fermeture du fichier contenant la sauvegarde

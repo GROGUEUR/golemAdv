@@ -1,0 +1,25 @@
+\doxysection{utils.\+h}
+\hypertarget{utils_8h_source}{}\label{utils_8h_source}\index{lib/utils.h@{lib/utils.h}}
+\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <sys/stat.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../lib/type.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../lib/texture.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../lib/fmap.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ WINDOW\_WIDTH\ 1360}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ WINDOW\_HEIGHT\ 780}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ LETTER\_WIDTH\ 20}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ LETTER\_HEIGHT\ 50}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8h_ab4ddbcd25b34f12a4bec6acf34d344af}{entrerLettre}}(SDL\_Event\ event,\ \textcolor{keywordtype}{char}\ *\ name,\ \textcolor{keywordtype}{int}\ *\ indice,\ \ SDL\_Color\ color,\ \textcolor{keywordtype}{int}\ *\ quit);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{utils_8h_a6dc704ce19abb1a6c50505e72d152d4b}{entrerNom}}(SDL\_Renderer\ *\ renderer);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8h_a1ac7a4673ba4306e20908f1e52b7da93}{sauvegarder}}(\textcolor{keywordtype}{int}\ nb\_save,\ \textcolor{keywordtype}{int}\ idMap,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \mbox{\hyperlink{structteam__s}{team\_t}}\ team,\ \mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ inv,\ \textcolor{keywordtype}{int}\ lorePos,\ \mbox{\hyperlink{structobjet__s}{objet\_t}}\ allPot[ALL\_OBJETS],\ \mbox{\hyperlink{structequipement__s}{equipement\_t}}\ allStuff[ALL\_EQUIPEMENTS][3],\ \mbox{\hyperlink{structarme__s}{arme\_t}}\ allArmes[ALL\_ARMES][3],\ SDL\_Renderer\ *\ renderer,SDL\_Texture\ *\ Map,\ SDL\_Rect\ dest);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8h_a3bee318d6b698ee0a3b1594e2853d007}{chargerSave}}(\textcolor{keywordtype}{int}\ nb\_save,\ \textcolor{keywordtype}{int}\ *idMap,\ \textcolor{keywordtype}{int}\ *x,\ \textcolor{keywordtype}{int}\ *y,\ \mbox{\hyperlink{structteam__s}{team\_t}}\ *\ team,\ \mbox{\hyperlink{structinventaire__s}{inventaire\_t}}\ *\ inv,\textcolor{keywordtype}{int}\ *lorePos,\ \mbox{\hyperlink{structobjet__s}{objet\_t}}\ allPot[ALL\_OBJETS],\ \mbox{\hyperlink{structequipement__s}{equipement\_t}}\ allStuff[ALL\_EQUIPEMENTS][3],\ \mbox{\hyperlink{structperso__s}{perso\_t}}\ allPerso[NB\_TEAM\_PERSOS],\ \mbox{\hyperlink{structarme__s}{arme\_t}}\ allArmes[ALL\_ARMES][3],\ \textcolor{keywordtype}{float}\ stats[NB\_TEAM\_PERSOS][8],\ SDL\_Renderer\ *\ renderer);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8h_a7ba35cfd097d5ee9ff0a5544f18a13af}{nouvelleSave}}(\textcolor{keywordtype}{int}\ nb\_save,\ \textcolor{keywordtype}{char}\ *\ nom);}
+
+\end{DoxyCode}

@@ -1,0 +1,157 @@
+\doxysection{src/\+Golem\+Adventure.c File Reference}
+\hypertarget{GolemAdventure_8c}{}\label{GolemAdventure_8c}\index{src/GolemAdventure.c@{src/GolemAdventure.c}}
+
+
+programme principal gérant tout le jeu.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \"{}../lib/\+Event\+Op.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/utils.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/init\+\_\+menu.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/combat.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{GolemAdventure_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme principal gérant tout le jeu. 
+
+\begin{DoxyAuthor}{Author}
+Cognard Luka, Bonga Warrick, François Lépine, Lenny Borry. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+9.\+5 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{GolemAdventure_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{GolemAdventure_8c_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{GolemAdventure.c@{GolemAdventure.c}!main@{main}}
+\index{main@{main}!GolemAdventure.c@{GolemAdventure.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+initialisation de x pour les coordonnées src et i pour les boucles ~\newline
+ ainsi que de w et h pour récupérer la longueur et largeur de la fenêtre
+
+Initialisation de SDL pour les VIDEO, EVENTS et AUDIO
+
+Création de la fenêtre
+
+Initialisation de SDL\+\_\+\+IMAGE
+
+Initialisation de SDL\+\_\+\+TTF
+
+Initialisation de SDL\+\_\+\+Mixer
+
+Création d\textquotesingle{}un SDL\+\_\+\+Renderer utilisant l\textquotesingle{}accélération matérielle
+
+chargement des textures du perso, etc ...
+
+déclaration des destinations du perso, map, block et pnj ainsi que des variables pour la musique
+
+création et initialisation d\textquotesingle{}un tableau sélectionnant tous les sprites de l\textquotesingle{}animation de marche
+
+déclaration de quit\+Op et quit\+Menu étant les variables booléennes qui mettent fin respectivement à la boucle de l\textquotesingle{}open world et des menus déclaration key\+Pressed pour gérer les touches déclaration Action pour les interactions déclaration Mouse\+Hover, Mouseclick pour gérer la souris déclaration yon\+Throw gérant la boîte d\textquotesingle{}interaction pour jeter un objet déclaration yon\+Use gérant la boîte d\textquotesingle{}interaction pour utiliser un objet déclaration tableau use\+Ok étant à 1 si l\textquotesingle{}objet n\textquotesingle{}est pas utilisable sur un personnage, à 0 sinon
+
+déclaration de la scène où est le jeu
+
+création de tous les objets du jeu
+
+création de tous les équipements du jeu en 3 fois, pour éviter d\textquotesingle{}avoir le même équipement sur plusieurs perso
+
+création de tous les personnages possibles
+
+déclaration de l\textquotesingle{}équipe en jeu pour tester
+
+déclaration et initialisation de l\textquotesingle{}inventaire
+
+ajoute de l\textquotesingle{}équipement dans l\textquotesingle{}inventaire pour tester
+
+création de toutes les armes
+
+déclaration de la destination et des dimensions puis chargement de la texture pour la cinématique du début
+
+boucle entière du jeu
+
+boucle menu
+
+boucle open world
+
+récupération de la longueur et de la largeur de la fenêtre
+
+Regarde sur quelle scène nous sommes pour gérer les événements et l\textquotesingle{}affichage
+
+Open World
+
+activation de la musique
+
+détection des événements
+
+réaction aux événements
+
+nettoyage de l\textquotesingle{}écran et affichage de la map
+
+cas de la map open world
+
+cas de la map bibliothèque
+
+Menu Pause
+
+destruction des textures des personnages et des map puis réinitialistion de toutes les variables
+
+réaction aux événements
+
+Menu Inventaire sac
+
+met la touche de déplacement utilisée à son état d\textquotesingle{}arrêt pour afficher le personnage dans la bonne direction
+
+nettoyage de l\textquotesingle{}écran et affichage de la map
+
+Menu Inventaire des stats
+
+met la touche de déplacement utilisée à son état d\textquotesingle{}arrêt pour afficher le personnage dans la bonne direction
+
+garde le numéro de page entre le nombre de persos et la page 1
+
+nettoyage de l\textquotesingle{}écran et affichage de la map
+
+Menu Inventaire des équipements
+
+met la touche de déplacement utilisée à son état d\textquotesingle{}arrêt pour afficher le personnage dans la bonne direction
+
+garde le numéro de page entre le nombre max de pages calculé et la page 1
+
+garde le numéro de pages entre le nombre de perso et la page 1
+
+empêche le joueur de sélectionner une zone d\textquotesingle{}équipement ou d\textquotesingle{}arme où il n\textquotesingle{}y a rien
+
+Menu du magasin pour acheter de l\textquotesingle{}équipement, des armes et des objets
+
+nettoyage de l\textquotesingle{}écran et affichage de la map
+
+Menu de vente pour vendre notre équipement et nos armes
+
+nettoyage de l\textquotesingle{}écran et affichage de la map
+
+met la touche de déplacement utilisée à son état d\textquotesingle{}arrêt pour afficher le personnage dans la bonne direction
+
+Mise à jour de l\textquotesingle{}écran
+
+réinitialisation de l\textquotesingle{}inventaire
+
+Libération de la mémoire associée aux Musiques
+
+Libération de la mémoire associée aux textures
+
+Libération de la mémoire du SDL\+\_\+\+Renderer
+
+fermeture de toutes les extensions SDL, IMG, TTF et AUDIO

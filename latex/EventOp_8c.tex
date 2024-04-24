@@ -1,0 +1,948 @@
+\doxysection{src/\+Event\+Op.c File Reference}
+\hypertarget{EventOp_8c}{}\label{EventOp_8c}\index{src/EventOp.c@{src/EventOp.c}}
+
+
+programme gérant les events dans l\textquotesingle{}open-\/world  
+
+
+{\ttfamily \#include \"{}../lib/\+Event\+Op.\+h\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{EventOp_8c_ae0e9e7bda530279c8fe65762b658d3fb}{transition\+Fondu}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, int largeur\+\_\+ecran, int hauteur\+\_\+ecran, int duree)
+\begin{DoxyCompactList}\small\item\em Fonction pour réaliser une transition en fondu. \end{DoxyCompactList}\item 
+\Hypertarget{EventOp_8c_ab73bb9327304158717ef1383d09b8b85}\label{EventOp_8c_ab73bb9327304158717ef1383d09b8b85} 
+void {\bfseries chargement} (\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} futur\+Scene)
+\begin{DoxyCompactList}\small\item\em fonction faisant l\textquotesingle{}écran de chargement entre certaines scènes ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_a4d29c0e35a4bc5fa3f7e84aed1253966}{cinematic\+\_\+start}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, int \texorpdfstring{$\ast$}{*}next, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}P1, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}P2, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}P3, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}P4, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}story\+P1, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}story\+P2, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}story\+P3, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}story\+P4, int \texorpdfstring{$\ast$}{*}skip\+On, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Map1, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Map2, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Map3, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Map4, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Map5, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Map6, int colli\mbox{[}125\mbox{]}\mbox{[}250\mbox{]})
+\begin{DoxyCompactList}\small\item\em fonction gérant l\textquotesingle{}affichage et les événements de la cinématique de début de jeu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_aa7158c480c248e58034ca5305985c64e}{Detect\+Events\+Op}} (int \texorpdfstring{$\ast$}{*}Mouse\+Over, int \texorpdfstring{$\ast$}{*}Key\+Is\+Pressed, int \texorpdfstring{$\ast$}{*}Action, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, int w, int h, int \texorpdfstring{$\ast$}{*}choice\+Shop, int \texorpdfstring{$\ast$}{*}vendeur, int \texorpdfstring{$\ast$}{*}numperso)
+\begin{DoxyCompactList}\small\item\em fonction Detect\+Events\+Op qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes sur l\textquotesingle{}open\+World \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_a8dbba05d294e1567ede16782064a60ba}{chargement\+\_\+barre\+\_\+pv}} (int pourcent, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pv\+Jauge, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pv\+Actu, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer)
+\begin{DoxyCompactList}\small\item\em fonction chargement\+\_\+barre\+\_\+pv qui s\textquotesingle{}occupe de charger la bonne texture pour la barre de PV selon le \% de PV actuel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_ad107beca1908ccf94cdcd22ad50ec65c}{React\+Events\+Op}} (int \texorpdfstring{$\ast$}{*}avancement\+\_\+quete, int Mouse\+Over, int Key\+Is\+Pressed, int \texorpdfstring{$\ast$}{*}Action, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}Perso, SDL\+\_\+\+Rect marche\+Hori\mbox{[}3\mbox{]}\mbox{[}8\mbox{]}, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}dest, int \texorpdfstring{$\ast$}{*}i, int w, int h, \mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} team, int biome, int choice\+Shop, int \texorpdfstring{$\ast$}{*}vendeur, int colli\mbox{[}125\mbox{]}\mbox{[}250\mbox{]}, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}vendeur\+Dialo\+Texture\mbox{[}5\mbox{]}, int \texorpdfstring{$\ast$}{*}map, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}savedest, int numperso)
+\begin{DoxyCompactList}\small\item\em fonction React\+Events\+Op qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur l\textquotesingle{}open\+World \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_a693fbafbe8d31abb2f13c2b7677cf6fe}{Detect\+Events\+Inv\+Sac}} (int \texorpdfstring{$\ast$}{*}use\+Ok, int \texorpdfstring{$\ast$}{*}yon\+Use, int \texorpdfstring{$\ast$}{*}yon\+Throw, int \texorpdfstring{$\ast$}{*}Mouse\+Click, int \texorpdfstring{$\ast$}{*}Mouse\+Over, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, int w, int h, SDL\+\_\+\+Rect dest\+Throw\+Button)
+\begin{DoxyCompactList}\small\item\em fonction Detect\+Events\+Inv\+Sac qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes sur le menu d\textquotesingle{}inventaire sur le sac \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_a8ffd8cc6434fb620f293f6b93368259a}{React\+Events\+Inv\+Sac}} (int \texorpdfstring{$\ast$}{*}use\+Ok, int \texorpdfstring{$\ast$}{*}yon\+Use, int \texorpdfstring{$\ast$}{*}yon\+Throw, int Mouse\+Click, int Key\+Is\+Pressed, int Mouse\+Over, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, int w, int h, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}dest\+Throw\+Button, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}team)
+\begin{DoxyCompactList}\small\item\em fonction React\+Events\+Inv\+Sac qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur le menu d\textquotesingle{}inventaire sur le sac \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_a903c5acde8ea90f1f86c3da5d65c58b6}{Detect\+Events\+Stats}} (int \texorpdfstring{$\ast$}{*}num\+Page, int \texorpdfstring{$\ast$}{*}Mouse\+Click, int \texorpdfstring{$\ast$}{*}Mouse\+Over, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, int w, int h, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}dest\+Stat\+Action, \mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}team, float Stats\mbox{[}3\mbox{]}\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em fonction Detect\+Events\+Stats qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes sur le menu des stats des personnages \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_ab8dd4290d87342f449448fd9aa42fc14}{React\+Events\+Stats}} (int num\+Page, int Mouse\+Click, int Key\+Is\+Pressed, int Mouse\+Over, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, int w, int h, \mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}team, float Stats\mbox{[}3\mbox{]}\mbox{[}8\mbox{]}, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}dest\+Stat\+Action)
+\begin{DoxyCompactList}\small\item\em fonction React\+Events\+Inv\+Sac qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur le menu d\textquotesingle{}inventaire sur le sac \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_ab52f21752569d8e6d5b0cdfe57c88182}{Detect\+Events\+Inv\+Stuff}} (int \texorpdfstring{$\ast$}{*}yon\+Throw, int \texorpdfstring{$\ast$}{*}Mouse\+Click, int \texorpdfstring{$\ast$}{*}Mouse\+Over, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, int w, int h, SDL\+\_\+\+Rect dest\+Throw\+Button, int \texorpdfstring{$\ast$}{*}num\+Page, int \texorpdfstring{$\ast$}{*}num\+Page\+Perso, int \texorpdfstring{$\ast$}{*}slot, int \texorpdfstring{$\ast$}{*}e\+Ou\+Stuff)
+\begin{DoxyCompactList}\small\item\em fonction Detect\+Events\+Inv\+Stuff qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes sur le menu d\textquotesingle{}inventaire pour les équipements/armes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_a4ef40b77080a697cda694691d212dce6}{React\+Events\+Inv\+Stuff}} (int \texorpdfstring{$\ast$}{*}yon\+Throw, int Mouse\+Click, int Mouse\+Over, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, int w, int h, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}dest\+Throw\+Button, \mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}team, int num\+Page, int num\+Page\+Perso, int slot, int \texorpdfstring{$\ast$}{*}e\+Ou\+Stuff)
+\begin{DoxyCompactList}\small\item\em fonction React\+Events\+Inv\+Stuff qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur le menu d\textquotesingle{}inventaire pour les équipements/armes \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{EventOp_8c_ad582e8ff689faa9baef5ce1671fa14e4}{achat\+\_\+possible}} (int choice\+Biy, int biome, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, \mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}} all\+Pot\mbox{[}ALL\+\_\+\+OBJETS\mbox{]}, \mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}} all\+Stuff\mbox{[}ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]}, \mbox{\hyperlink{structarme__s}{arme\+\_\+t}} armes\mbox{[}ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em vérifie si on a assez d\textquotesingle{}argent pour acheter l\textquotesingle{}item sélectionné, si on a la place pour le stocker ou si on n\textquotesingle{}a pas 3 fois le même équipement si les conditions sont réunies, on ne touche pas à achat\+Possible, sinon si l\textquotesingle{}une des vérifications ne vaut pas vrai on met achat\+Possible à 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_acb0bd0c1e9d4e7387686ffed2bb421fd}{Event\+Shop}} (int \texorpdfstring{$\ast$}{*}Mouse\+Over, int \texorpdfstring{$\ast$}{*}Action, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, int biome, \mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}} all\+Stuff\mbox{[}ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]}, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, int w, int h, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, \mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}} all\+Pot\mbox{[}ALL\+\_\+\+OBJETS\mbox{]}, int \texorpdfstring{$\ast$}{*}choice\+Biy, \mbox{\hyperlink{structarme__s}{arme\+\_\+t}} armes\mbox{[}ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em fonction Events\+Inv\+Shop qui gère le menu d\textquotesingle{}achat dans le magasin pour acheter équipement, armes et objets \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventOp_8c_a12789afbd501a12c717fa3539f1c0356}{Event\+Sell}} (int \texorpdfstring{$\ast$}{*}Mouse\+Over, int \texorpdfstring{$\ast$}{*}Mouse\+Click, int \texorpdfstring{$\ast$}{*}Action, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, int w, int h, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, int \texorpdfstring{$\ast$}{*}num\+Page)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant les events dans l\textquotesingle{}open-\/world 
+
+\begin{DoxyAuthor}{Author}
+Cognard Luka,François Lépine. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+9.\+8 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{EventOp_8c_ad582e8ff689faa9baef5ce1671fa14e4}\label{EventOp_8c_ad582e8ff689faa9baef5ce1671fa14e4} 
+\index{EventOp.c@{EventOp.c}!achat\_possible@{achat\_possible}}
+\index{achat\_possible@{achat\_possible}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{achat\_possible()}{achat\_possible()}}
+{\footnotesize\ttfamily int achat\+\_\+possible (\begin{DoxyParamCaption}\item[{int}]{choice\+Biy,  }\item[{int}]{biome,  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{\mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}}}]{all\+Pot\mbox{[}\+ALL\+\_\+\+OBJETS\mbox{]},  }\item[{\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}}}]{all\+Stuff\mbox{[}\+ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]},  }\item[{\mbox{\hyperlink{structarme__s}{arme\+\_\+t}}}]{armes\mbox{[}\+ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+vérifie si on a assez d\textquotesingle{}argent pour acheter l\textquotesingle{}item sélectionné, si on a la place pour le stocker ou si on n\textquotesingle{}a pas 3 fois le même équipement si les conditions sont réunies, on ne touche pas à achat\+Possible, sinon si l\textquotesingle{}une des vérifications ne vaut pas vrai on met achat\+Possible à 0 
+
+cas où magasin du biome 1 à 3
+
+cas où magasin du biome 5
+
+cas où magasin du biome 4
+
+cas où magasin du biome 1 à 3
+
+cas où magasin du biome 5
+
+cas où magasin du biome 4
+
+objets
+
+cas différents selon chaque biome
+
+biome 1
+
+biome 2
+
+biome 3
+
+biome 4
+
+biome 5\Hypertarget{EventOp_8c_a8dbba05d294e1567ede16782064a60ba}\label{EventOp_8c_a8dbba05d294e1567ede16782064a60ba} 
+\index{EventOp.c@{EventOp.c}!chargement\_barre\_pv@{chargement\_barre\_pv}}
+\index{chargement\_barre\_pv@{chargement\_barre\_pv}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{chargement\_barre\_pv()}{chargement\_barre\_pv()}}
+{\footnotesize\ttfamily void chargement\+\_\+barre\+\_\+pv (\begin{DoxyParamCaption}\item[{int}]{pourcent,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pv\+Jauge,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pv\+Actu,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer }\end{DoxyParamCaption})}
+
+
+
+fonction chargement\+\_\+barre\+\_\+pv qui s\textquotesingle{}occupe de charger la bonne texture pour la barre de PV selon le \% de PV actuel 
+
+barre verte si le nombre de PV est supérieur ou égal à 50\%
+
+barre jaune si le nombre de PV est supérieur ou égal à 20\% mais est inférieur à 50\%
+
+barre rouge si le nombre de PV est inférieur à 20\%\Hypertarget{EventOp_8c_a4d29c0e35a4bc5fa3f7e84aed1253966}\label{EventOp_8c_a4d29c0e35a4bc5fa3f7e84aed1253966} 
+\index{EventOp.c@{EventOp.c}!cinematic\_start@{cinematic\_start}}
+\index{cinematic\_start@{cinematic\_start}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{cinematic\_start()}{cinematic\_start()}}
+{\footnotesize\ttfamily void cinematic\+\_\+start (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer,  }\item[{int \texorpdfstring{$\ast$}{*}}]{next,  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{P1,  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{P2,  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{P3,  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{P4,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{story\+P1,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{story\+P2,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{story\+P3,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{story\+P4,  }\item[{int \texorpdfstring{$\ast$}{*}}]{skip\+On,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{Map1,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{Map2,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{Map3,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{Map4,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{Map5,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{Map6,  }\item[{int}]{colli\mbox{[}125\mbox{]}\mbox{[}250\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+fonction gérant l\textquotesingle{}affichage et les événements de la cinématique de début de jeu 
+
+création de la variable event qui récupère les événements
+
+boucle d\textquotesingle{}attente d\textquotesingle{}événement
+
+récupération des touchess relâchées
+
+regarde si la touche entrée a été relâchée
+
+récupération de la position de la souris
+
+regarde si la souris est sur le bouton skip
+
+récupération d\textquotesingle{}un bouton relâché venant de la souris
+
+vérifie que la souris est sur le bouton skip pour réagir au clic
+
+passe l\textquotesingle{}histoire, réinitialisation de toutes les variables utilisées ici puis passage sur l\textquotesingle{}écran de chargement vers l\textquotesingle{}OP ~\newline
+
+
+chargement des textures des map
+
+texte de l\textquotesingle{}histoire séparée en 2 parties (ici 1ère partie)
+
+texte de l\textquotesingle{}histoire séparée en 2 parties ici (2ème partie)
+
+chargement des textures des textes
+
+chargement de la texture, déclaration des dimensions et des coordonnées du bouton skip
+
+déclaration des dimensions et des coordonnées des textes
+
+affiche la première partie de l\textquotesingle{}histoire (texte numéro 1, puis 2 après avoir appuyé sur Entrée)
+
+affiche la deuxième partie de l\textquotesingle{}histoire (même processus)
+
+affiche la troisième partie de l\textquotesingle{}histoire (même processus)
+
+affiche la quatrième partie de l\textquotesingle{}histoire (même processus)
+
+fin de l\textquotesingle{}histoire, réinitialisation de toutes les variables utilisées ici puis passage sur l\textquotesingle{}écran de chargement vers l\textquotesingle{}OP ~\newline
+
+
+destruction des images illustrant l\textquotesingle{}histoire
+
+chargement des textures des map
+
+destruction de toutes les textures créées
+
+délai d\textquotesingle{}affichage\Hypertarget{EventOp_8c_a693fbafbe8d31abb2f13c2b7677cf6fe}\label{EventOp_8c_a693fbafbe8d31abb2f13c2b7677cf6fe} 
+\index{EventOp.c@{EventOp.c}!DetectEventsInvSac@{DetectEventsInvSac}}
+\index{DetectEventsInvSac@{DetectEventsInvSac}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{DetectEventsInvSac()}{DetectEventsInvSac()}}
+{\footnotesize\ttfamily void Detect\+Events\+Inv\+Sac (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{use\+Ok,  }\item[{int \texorpdfstring{$\ast$}{*}}]{yon\+Use,  }\item[{int \texorpdfstring{$\ast$}{*}}]{yon\+Throw,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Click,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Over,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{SDL\+\_\+\+Rect}]{dest\+Throw\+Button }\end{DoxyParamCaption})}
+
+
+
+fonction Detect\+Events\+Inv\+Sac qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes sur le menu d\textquotesingle{}inventaire sur le sac 
+
+création de la variable event qui récupère les événements
+
+coordonnés des zones ou se situent les zones d\textquotesingle{}objet dans le menu
+
+boucle d\textquotesingle{}attente d\textquotesingle{}événement
+
+récupération des touches enfoncées
+
+regarde quelle touche est enfoncée
+
+récupération des coordonnées de la souris
+
+regarde si la souris est dans les cases d\textquotesingle{}objet
+
+regarde si la souris est sur le bouton jeter
+
+regarde si la souris est sur le bouton utiliser
+
+regarde si la souris est sur le bouton oui, non ou sur aucun des deux de la boîte de texte pour jeter l\textquotesingle{}objet
+
+regarde si la souris est sur un personnage pouvant utiliser un objet
+
+récupération si le bouton de la souris est lâché
+
+regarde si le bouton est relâché sur une zone d\textquotesingle{}objet de l\textquotesingle{}inventaire
+
+regarde si le bouton est relâché sur le bouton jeter
+
+regarde si le bouton est relâché sur le bouton oui ou non de la boîte de texte pour jeter l\textquotesingle{}objet
+
+regarde si le bouton est relâché sur le bouton utiliser\Hypertarget{EventOp_8c_ab52f21752569d8e6d5b0cdfe57c88182}\label{EventOp_8c_ab52f21752569d8e6d5b0cdfe57c88182} 
+\index{EventOp.c@{EventOp.c}!DetectEventsInvStuff@{DetectEventsInvStuff}}
+\index{DetectEventsInvStuff@{DetectEventsInvStuff}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{DetectEventsInvStuff()}{DetectEventsInvStuff()}}
+{\footnotesize\ttfamily void Detect\+Events\+Inv\+Stuff (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{yon\+Throw,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Click,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Over,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{SDL\+\_\+\+Rect}]{dest\+Throw\+Button,  }\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Page,  }\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Page\+Perso,  }\item[{int \texorpdfstring{$\ast$}{*}}]{slot,  }\item[{int \texorpdfstring{$\ast$}{*}}]{e\+Ou\+Stuff }\end{DoxyParamCaption})}
+
+
+
+fonction Detect\+Events\+Inv\+Stuff qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes sur le menu d\textquotesingle{}inventaire pour les équipements/armes 
+
+création de la variable event qui récupère les événements
+
+coordonnés des zones ou se situent les zones d\textquotesingle{}objet dans le menu
+
+coordonnés du personnage affiché
+
+boucle d\textquotesingle{}attente d\textquotesingle{}événement
+
+récupération des touches relâchées
+
+regarde quelle touche est relâchée
+
+réinitialise toutes les variables utiliser en même temps de changer de scene
+
+récupération des coordonnées de la souris
+
+regarde si la souris est dans les cases des équipements/armes
+
+regarde si la souris est dans un slot d\textquotesingle{}équipement
+
+slot 1 et 2
+
+slot 3 et 4
+
+slot 5 et 6
+
+regarde si la souris est sur le bouton équiper ou déséquiper
+
+bouton équiper
+
+bouton déséquiper
+
+si la souris n\textquotesingle{}est sur aucun bouton ~\newline
+
+
+regarde si la souris est sur le bouton jeter
+
+regarde si la souris est sur le bouton flèche droite ou gauche dans l\textquotesingle{}inventaire
+
+flèche gauche
+
+flèche droite
+
+regarde si la souris est sur le bouton flèche droite ou gauche sur les personnages
+
+flèche gauche
+
+flèche droite
+
+regarde si la souris est sur le bouton oui, non ou sur aucun des deux de la boîte de texte pour jeter l\textquotesingle{}objet
+
+récupération si le bouton de la souris est lâché
+
+regarde si le bouton est relâché sur une zone d\textquotesingle{}objet de l\textquotesingle{}inventaire
+
+regarde si le bouton est relâché sur le bouton équiper ou déséquiper
+
+regarde si le bouton est relâché sur un slot d\textquotesingle{}équipements/armes
+
+regarde si le bouton est relâché sur le bouton jeter
+
+regarde si le bouton est relâché sur le bouton oui ou non de la boîte de texte pour jeter l\textquotesingle{}objet\Hypertarget{EventOp_8c_aa7158c480c248e58034ca5305985c64e}\label{EventOp_8c_aa7158c480c248e58034ca5305985c64e} 
+\index{EventOp.c@{EventOp.c}!DetectEventsOp@{DetectEventsOp}}
+\index{DetectEventsOp@{DetectEventsOp}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{DetectEventsOp()}{DetectEventsOp()}}
+{\footnotesize\ttfamily void Detect\+Events\+Op (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Over,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Key\+Is\+Pressed,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Action,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int \texorpdfstring{$\ast$}{*}}]{choice\+Shop,  }\item[{int \texorpdfstring{$\ast$}{*}}]{vendeur,  }\item[{int \texorpdfstring{$\ast$}{*}}]{numperso }\end{DoxyParamCaption})}
+
+
+
+fonction Detect\+Events\+Op qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes sur l\textquotesingle{}open\+World 
+
+création de la variable event qui récupère les événements
+
+boucle d\textquotesingle{}attente d\textquotesingle{}événement
+
+récupération des touchess enfoncées
+
+regarde quelle touche est enfoncée
+
+change la variable Key\+Is\+Pressed si la touche est maintenue
+
+récupération des coordonnées de la souris
+
+regarde si la souris est dans les cases d\textquotesingle{}objet
+
+récupération des touchess relâchées et changement de Key\+Is\+Pressed
+
+regarde quelle touche a été relâchée et change la variable Key\+Is\+Pressed en fonction de la touche
+
+touche de déplacement z, q, s, d
+
+touche pour changer de personnage
+
+touche d\textquotesingle{}interaction
+
+touche pour faire pause
+
+touche d\textquotesingle{}ouverture d\textquotesingle{}inventaire (sac)
+
+touche d\textquotesingle{}ouverture d\textquotesingle{}inventaire (équipement et armes)
+
+touche d\textquotesingle{}ouverture des stats
+
+touche flèche du haut pour les choix du vendeur
+
+touche flèche du bas pour les choix du vendeur
+
+touche entrée pour valider les choix du vendeur
+
+détection clic souris relaché
+
+icône d\textquotesingle{}inventaire (sac d\textquotesingle{}objet)
+
+icône des stats
+
+icône d\textquotesingle{}inventaire (équipement et armes)\Hypertarget{EventOp_8c_a903c5acde8ea90f1f86c3da5d65c58b6}\label{EventOp_8c_a903c5acde8ea90f1f86c3da5d65c58b6} 
+\index{EventOp.c@{EventOp.c}!DetectEventsStats@{DetectEventsStats}}
+\index{DetectEventsStats@{DetectEventsStats}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{DetectEventsStats()}{DetectEventsStats()}}
+{\footnotesize\ttfamily void Detect\+Events\+Stats (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Page,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Click,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Over,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{dest\+Stat\+Action,  }\item[{\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{team,  }\item[{float}]{Stats\mbox{[}3\mbox{]}\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+fonction Detect\+Events\+Stats qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes sur le menu des stats des personnages 
+
+création de la variable event qui récupère les événements
+
+boucle d\textquotesingle{}attente d\textquotesingle{}événement
+
+récupération des touches enfoncées
+
+regarde quelle touche est enfoncée
+
+récupération des coordonnées de la souris
+
+regarde si la souris est sur les flèches pour changer de perso sur le bouton valider
+
+regarde si la souris est sur un bouton +
+
+regarde si la souris est sur un bouton -\/
+
+regarde si la souris est dans la case + ou -\/ d\textquotesingle{}une stat
+
+récupération si le bouton de la souris est lâché
+
+regarde si le bouton est relâché sur une zone d\textquotesingle{}objet de l\textquotesingle{}inventaire\Hypertarget{EventOp_8c_a12789afbd501a12c717fa3539f1c0356}\label{EventOp_8c_a12789afbd501a12c717fa3539f1c0356} 
+\index{EventOp.c@{EventOp.c}!EventSell@{EventSell}}
+\index{EventSell@{EventSell}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{EventSell()}{EventSell()}}
+{\footnotesize\ttfamily void Event\+Sell (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Over,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Click,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Action,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer,  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Page }\end{DoxyParamCaption})}
+
+déclaration du nombre de pages et des variables pour la taille du texte en largeur et hauteur
+
+création de la variable event qui récupère les événements
+
+boucle d\textquotesingle{}attente d\textquotesingle{}événement
+
+regarde la position de la souris
+
+bouton retour (55) et vendre (54)
+
+regarde si la souris est dans les cases d\textquotesingle{}équipements/armes
+
+regarde si la souris est sur la flèche gauche ou droite
+
+retour aux choix du vendeur si le bouton retour est actionné
+
+bouton vendre actionné seulement si un équipement ou une arme est sélectionné
+
+Mouse\+Click prend la valeur de l\textquotesingle{}équipement ou de l\textquotesingle{}arme sélectionné dans l\textquotesingle{}inventaire
+
+change de page selon la flèche sur laquelle on est
+
+vérification du numéro de page pour éviter de dépasser le nombre de pages ou d\textquotesingle{}être en-\/dessous de 0
+
+déclaration des textures
+
+déclaration des couleurs
+
+déclaration rect
+
+déclaration char pour les prix ainsi que la bourse actuelle
+
+chargement de la texture du texte bourse avec l\textquotesingle{}argent possédé
+
+change l\textquotesingle{}affichage du bouton retour selon si on est dessus ou non
+
+change l\textquotesingle{}affichage du bouton vendre selon si on est dessus ou non, si un équipement ou une arme est sélectionné ou non
+
+affichage des bouton acheter et retour, de la zone d\textquotesingle{}item et de la bourse actuelle en haut à gauche
+
+chargement des textures des noms, descriptions et des prix des équipements/armes dans l\textquotesingle{}inventaire
+
+regarde si on est sur des équipements
+
+regarde si on est sur des armes
+
+sinon si l\textquotesingle{}inventaire a atteint sa limite mettre à NULL
+
+affichage des équipements/armes et de la zone sur laquelle la souris a cliqué ou est positionnée
+
+affiche seulement s\textquotesingle{}il y a un équipements/armes à cet emplacement
+
+affichage de la zone autour des noms selon s\textquotesingle{}il est sélectionné ou non
+
+mise à jour des coordonnées et dimensions des noms des équipements/armes
+
+affichage des noms des équipements/armes
+
+affichage de l\textquotesingle{}item sélectionné
+
+affichage de l\textquotesingle{}image des équipements/armes ainsi que sa description
+
+affichage flèche de gauche dans l\textquotesingle{}inventaire puis libère la mémoire
+
+calcul des coordonnées/dimensions et affichage de la flèche droite dans l\textquotesingle{}inventaire puis libère la mémoire
+
+libération de toutes les textures\Hypertarget{EventOp_8c_acb0bd0c1e9d4e7387686ffed2bb421fd}\label{EventOp_8c_acb0bd0c1e9d4e7387686ffed2bb421fd} 
+\index{EventOp.c@{EventOp.c}!EventShop@{EventShop}}
+\index{EventShop@{EventShop}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{EventShop()}{EventShop()}}
+{\footnotesize\ttfamily void Event\+Shop (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Over,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Action,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer,  }\item[{int}]{biome,  }\item[{\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}}}]{all\+Stuff\mbox{[}\+ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]},  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{\mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}}}]{all\+Pot\mbox{[}\+ALL\+\_\+\+OBJETS\mbox{]},  }\item[{int \texorpdfstring{$\ast$}{*}}]{choice\+Biy,  }\item[{\mbox{\hyperlink{structarme__s}{arme\+\_\+t}}}]{armes\mbox{[}\+ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+fonction Events\+Inv\+Shop qui gère le menu d\textquotesingle{}achat dans le magasin pour acheter équipement, armes et objets 
+
+création de la variable event qui récupère les événements
+
+boucle d\textquotesingle{}attente d\textquotesingle{}événement
+
+regarde la position de la souris
+
+bouton retour (30) et acheter (29)
+
+sur les items de la première étagère
+
+sur les items de la deuxième étagère
+
+sinon sur aucun bouton ou interaction
+
+récupération d\textquotesingle{}un bouton relâché venant de la souris
+
+bouton retour actionné on revient au choix du vendeur
+
+toutes les réactions si le bouton acheter est actionné ou si un item est sélectionné
+
+biome 1
+
+item sélectionné
+
+si le bouton acheter est cliqué et un objet est sélectionné
+
+on vérifie que l\textquotesingle{}achat soit possible à chaque fois
+
+cas d\textquotesingle{}un équipement
+
+cas d\textquotesingle{}un objet
+
+biome 4
+
+item sélectionné
+
+si le bouton acheter est cliqué et un objet est sélectionné
+
+on vérifie que l\textquotesingle{}achat soit possible à chaque fois
+
+cas d\textquotesingle{}un équipement
+
+cas objet
+
+biome 2,3 et 5
+
+item sélectionné
+
+si le bouton acheter est cliqué et un objet est sélectionné
+
+on vérifie que l\textquotesingle{}achat soit possible à chaque fois
+
+cas d\textquotesingle{}un équipement
+
+biome 5
+
+autre biome
+
+cas objet
+
+objets différents dans chaque magasin selon le biome
+
+biome 2
+
+biome 3
+
+biome 5
+
+déclaration texture
+
+déclaration rect
+
+déclaration couleur
+
+déclaration char pour les prix ainsi que la bourse actuelle
+
+change l\textquotesingle{}affichage du bouton retour selon si on est dessus ou non
+
+change l\textquotesingle{}affichage du bouton acheter selon si on est dessus ou non, si on a l\textquotesingle{}argent nécessaire pour l\textquotesingle{}acheter et si on peut le stocker
+
+affichage des boutons acheter et retour, de la zone d\textquotesingle{}item et de la bourse actuelle en haut à gauche
+
+calcul des coordonnées et affichage des items ainsi que leur prix juste en-\/dessous
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+affiche le prix en blanc par défaut, et l\textquotesingle{}affiche en jaune si l\textquotesingle{}item est sélectionné
+
+destruction des textures
+
+délai d\textquotesingle{}affichage\Hypertarget{EventOp_8c_a8ffd8cc6434fb620f293f6b93368259a}\label{EventOp_8c_a8ffd8cc6434fb620f293f6b93368259a} 
+\index{EventOp.c@{EventOp.c}!ReactEventsInvSac@{ReactEventsInvSac}}
+\index{ReactEventsInvSac@{ReactEventsInvSac}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{ReactEventsInvSac()}{ReactEventsInvSac()}}
+{\footnotesize\ttfamily void React\+Events\+Inv\+Sac (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{use\+Ok,  }\item[{int \texorpdfstring{$\ast$}{*}}]{yon\+Use,  }\item[{int \texorpdfstring{$\ast$}{*}}]{yon\+Throw,  }\item[{int}]{Mouse\+Click,  }\item[{int}]{Key\+Is\+Pressed,  }\item[{int}]{Mouse\+Over,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{dest\+Throw\+Button,  }\item[{\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{team }\end{DoxyParamCaption})}
+
+
+
+fonction React\+Events\+Inv\+Sac qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur le menu d\textquotesingle{}inventaire sur le sac 
+
+déclaration de i servant aux boucles for et textwidth, textheight pour les dimensions des textes
+
+chaîne de caractère utilisée pour l\textquotesingle{}affichage des persos avec leur nb de pv et pm ~\newline
+
+
+chargement des textures nécessaires au menu
+
+chargement des textures nécessaires au bouton jeter et sa boîte
+
+chargement des textures nécessaires au bouton utiliser et sa boîte
+
+déclaration des rect correspondant aux coordonnées et dimensions d\textquotesingle{}affichage du menu
+
+déclaration des rect correspondant aux coordonnées et dimensions d\textquotesingle{}affichage des boîtes utiliser et jeter ainsi que des personnages pour la boîte d\textquotesingle{}utilisation
+
+déclaration et initialisation des textures, des noms et descriptions des objets ainsi que la couleur des textes
+
+déclaration et initialisation des textures des textes des personnages dans la boîte d\textquotesingle{}utilisation d\textquotesingle{}objet
+
+déclaration de la variable pour les coordonnées et dimensions des noms d\textquotesingle{}objet
+
+coordonnées et dimensions de la description des objets
+
+coordonnées et destination du bouton jeter
+
+coordonnées et destination du bouton utiliser
+
+affichage du menu
+
+affichage des objets présent ou non ainsi que la zone sur laquelle la souris a cliqué ou est positionné
+
+mise à jour des coordonnées et dimensions des noms d\textquotesingle{}objet
+
+affichage des noms d\textquotesingle{}objet (affiche \"{}. . .\"{} s\textquotesingle{}il n\textquotesingle{}y a pas d\textquotesingle{}objet)
+
+test s\textquotesingle{}il y a un objet à cet emplacement du sac, si oui affiche l\textquotesingle{}image, la description et les boutons jeter et utiliser, sinon affiche le texte \"{}aucun objet\"{}
+
+cas où l\textquotesingle{}objet sélectionné existe dans cet endroit de l\textquotesingle{}inventaire
+
+affichage de l\textquotesingle{}image de l\textquotesingle{}objet ainsi que sa description
+
+regarde yon\+Throw pour gérer l\textquotesingle{}affichage du bouton jeter ainsi que sa boîte d\textquotesingle{}interaction pour jeter un objet
+
+regarde yon\+Use pour gérer l\textquotesingle{}affichage du bouton utiliser ainsi que sa boîte d\textquotesingle{}interaction pour sélectionner un personnage met use\+Ok à 0 si le personnage peut utiliser cet objet, met la variable à 1 sinon
+
+regarde si un personnage a été sélectionné
+
+cas où l\textquotesingle{}objet sélectionné n\textquotesingle{}existe pas dans cet endroit de l\textquotesingle{}inventaire
+
+destruction des textures utilisées pour le menu
+
+destruction des textures utilisées pour le bouton jeter et sa boîte
+
+destruction des textures utilisées pour le bouton utiliser et sa boîte
+
+destruction des textures des noms et descriptions des objets
+
+destruction des textures des noms, pv et pm des personnages\Hypertarget{EventOp_8c_a4ef40b77080a697cda694691d212dce6}\label{EventOp_8c_a4ef40b77080a697cda694691d212dce6} 
+\index{EventOp.c@{EventOp.c}!ReactEventsInvStuff@{ReactEventsInvStuff}}
+\index{ReactEventsInvStuff@{ReactEventsInvStuff}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{ReactEventsInvStuff()}{ReactEventsInvStuff()}}
+{\footnotesize\ttfamily void React\+Events\+Inv\+Stuff (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{yon\+Throw,  }\item[{int}]{Mouse\+Click,  }\item[{int}]{Mouse\+Over,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{dest\+Throw\+Button,  }\item[{\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{team,  }\item[{int}]{num\+Page,  }\item[{int}]{num\+Page\+Perso,  }\item[{int}]{slot,  }\item[{int \texorpdfstring{$\ast$}{*}}]{e\+Ou\+Stuff }\end{DoxyParamCaption})}
+
+
+
+fonction React\+Events\+Inv\+Stuff qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur le menu d\textquotesingle{}inventaire pour les équipements/armes 
+
+déclaration de i servant aux boucles for et textwidth, textheight pour les dimensions des textes
+
+calcule le nombre de pages nécessaire selon le nombre d\textquotesingle{}équipements et d\textquotesingle{}armes
+
+chargement des textures nécessaires au menu
+
+chargement des textures nécessaires au bouton jeter et sa boîte
+
+chargement des textures nécessaires à la boîte ou se situent le personnage et ses slots d\textquotesingle{}équipements/armes
+
+déclaration des rect correspondant aux coordonnées et dimensions d\textquotesingle{}affichage du menu
+
+déclaration des rect correspondant aux coordonnées et dimensions d\textquotesingle{}affichage du perso et des slots d\textquotesingle{}équiepements/armes
+
+déclaration des rect correspondant aux coordonnées et dimensions d\textquotesingle{}affichage des boîtes utiliser et jeter ainsi que des personnages pour la boîte d\textquotesingle{}utilisation
+
+déclaration de la texture et des coordonnés + dimensions des flèches pour changer de page
+
+déclaration de la texture et des coordonnés + dimensions pour les boutons équiper et déséquiper
+
+déclaration et initialisation des textures des noms et descriptions des équipements/armes ainsi que la couleur des texte jaune si équiper, blanc sinon
+
+regarde si la sourie est sur des équipements
+
+mettre à NULL si l\textquotesingle{}inventaire a atteint sa limite
+
+déclaration de la variable pour les coordonnées et dimensions des noms d\textquotesingle{}objet
+
+coordonnées et dimensions de la description des objets
+
+coordonnées et destination du bouton jeter
+
+coordonnées et destination des bouton flèches gauche/droite
+
+affichage du menu
+
+calcul des coordonnées/dimensions de la boîte contenant le personnage et affichage
+
+affichage du personnage selon la page
+
+page 1 Golem
+
+page 2 et 3 Toxo/guerrier et xero/mage
+
+destruction de la texture du golem de face
+
+affichage des slots d\textquotesingle{}équipements
+
+slot 1
+
+afficher un équiement dans le slot s\textquotesingle{}il est équipé
+
+slot 2
+
+slot 3
+
+slot 4
+
+affichage des slots d\textquotesingle{}armes
+
+slot 1
+
+slot 2
+
+affichage des équipements/armes et de la zone sur laquelle la souris a cliqué ou est positionnée
+
+affiche seulement s\textquotesingle{}il y a un équipements/armes à cet emplacement
+
+affichage de la zone autour des noms selon s\textquotesingle{}il est sélectionné ou non
+
+mise à jour des coordonnées et dimensions des noms des équipements/armes
+
+affichage des noms des équipements/armes
+
+test s\textquotesingle{}il y a un équipement ou une arme à cet emplacement d\textquotesingle{}inventaire, si oui affiche l\textquotesingle{}image, la description et le bouton jeter, et les flèches pour changer de page si possible
+
+affichage de l\textquotesingle{}image des équipements/armes ainsi que sa description
+
+regarde yon\+Throw pour gérer l\textquotesingle{}affichage du bouton jeter ainsi que sa boîte d\textquotesingle{}interaction pour jeter un objet
+
+cas où l\textquotesingle{}on a cliqué sur oui
+
+affichage de la flèche de gauche dans l\textquotesingle{}inventaire puis libère la mémoire
+
+calcul des coordonnées/dimensions et affichage de la flèche droite dans l\textquotesingle{}inventaire puis libère la mémoire
+
+calcul des coordonnées/dimensions et affichage de la flèche gauche des persos puis libère la mémoire
+
+calcul des coordonnées/dimensions et affichage de la flèche droite des perso puis libère la mémoire
+
+équipe l\textquotesingle{}équipement ou l\textquotesingle{}arme séléctionné dans l\textquotesingle{}inventaire au personnage correspondant au numéro de page des personnages si le bouton équiper est appuyé
+
+chargement-\/\texorpdfstring{$>$}{>}affichage puis libération de la mémoire pour le bouton équiper
+
+déséquipe l\textquotesingle{}équipement ou l\textquotesingle{}arme séléctionné dans les slots du personnage si le bouton déséquiper est appuyé
+
+chargement-\/\texorpdfstring{$>$}{>}affichage puis libération de la mémoire pour le bouton déséquiper
+
+cas équipement
+
+cas armes
+
+destruction des textures utilisées pour le menu
+
+destruction des textures utilisées pour le bouton jeter et sa boîte
+
+destruction des textures utilisées pour les slots des équipements/armes
+
+destruction des textures des noms et descriptions des objets\Hypertarget{EventOp_8c_ad107beca1908ccf94cdcd22ad50ec65c}\label{EventOp_8c_ad107beca1908ccf94cdcd22ad50ec65c} 
+\index{EventOp.c@{EventOp.c}!ReactEventsOp@{ReactEventsOp}}
+\index{ReactEventsOp@{ReactEventsOp}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{ReactEventsOp()}{ReactEventsOp()}}
+{\footnotesize\ttfamily void React\+Events\+Op (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{avancement\+\_\+quete,  }\item[{int}]{Mouse\+Over,  }\item[{int}]{Key\+Is\+Pressed,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Action,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{Perso,  }\item[{SDL\+\_\+\+Rect}]{marche\+Hori\mbox{[}3\mbox{]}\mbox{[}8\mbox{]},  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{dest,  }\item[{int \texorpdfstring{$\ast$}{*}}]{i,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}}}]{team,  }\item[{int}]{biome,  }\item[{int}]{choice\+Shop,  }\item[{int \texorpdfstring{$\ast$}{*}}]{vendeur,  }\item[{int}]{colli\mbox{[}125\mbox{]}\mbox{[}250\mbox{]},  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{vendeur\+Dialo\+Texture\mbox{[}5\mbox{]},  }\item[{int \texorpdfstring{$\ast$}{*}}]{map,  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{savedest,  }\item[{int}]{numperso }\end{DoxyParamCaption})}
+
+
+
+fonction React\+Events\+Op qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur l\textquotesingle{}open\+World 
+
+déclaration des fonctions React\+Events pour les sets d\textquotesingle{}événement possibles selon la scène déclaration des textes pour les pnj
+
+déclaration de la texture de chaque icône
+
+déclaration de la texture des PV et PM de chaque perso
+
+coordonnées et dimensions des PV et PM de chaque persos
+
+coordonnées et dimensions de chaque icône
+
+déclaration des dimensions et des coordonnées de chaque dialogues
+
+déclaration des dimensions et des coordonnées du perso centré
+
+déclaration des dimensions et des coordonnées de chaque dialogue du vendeur
+
+déclaration de la couleur du texte
+
+bloque le personnage si collision est détecté lors du déplacement vers la gauche
+
+bloque le personnage si collision est détecté lors du déplacement vers la droite
+
+bloque le personnage si collision est détecté lors du déplacement vers le haut
+
+bloque le personnage si collision est détecté lors du déplacement vers le bas
+
+cas où le personnage s\textquotesingle{}arrête vers la droite
+
+cas où le personnage s\textquotesingle{}arrête vers la gauche
+
+cas où le personnage s\textquotesingle{}arrête vers le haut
+
+cas où le personnage s\textquotesingle{}arrête vers le bas
+
+réinitialisation du i pour éviter qu\textquotesingle{}il dépasse la valeur max d\textquotesingle{}un int
+
+teste si le personnage est en face d\textquotesingle{}un pnj vendeur pour faire une interaction une fois la touche f appuyée
+
+teste si le personnage est en face d\textquotesingle{}un pnj pour faire une interaction une fois la touche f appuyée
+
+teste si le personnage est en face d\textquotesingle{}un pnj pour faire une interaction une fois la touche f appuyée
+
+test s\textquotesingle{}il est possible pour le personnage de changer de zone
+
+réinitialise l\textquotesingle{}action s\textquotesingle{}il n\textquotesingle{}y a aucune interaction avec des pnj
+
+chargement des textures selon si la souris est sur l\textquotesingle{}icône ou non
+
+chargement, affichage et destruction des têtes des persos ainsi que leur nombre PV et de PM
+
+cas où 1 perso est dans l\textquotesingle{}équipe
+
+chargement de la barre de PV selon le pourcentage de pv du perso
+
+chargement de la barre de Mana selon le pourcentage de Mana du perso, la barre est grisée si ses PM max sont à 0
+
+cas où 2 persos sont dans l\textquotesingle{}équipe
+
+chargement des têtes des 2 personnages
+
+affichage des têtes des 2 personnage
+
+chargement de la barre de PV selon le pourcentage de pv du perso 1 puis destruction de leur texture
+
+chargement de la barre de PV selon le pourcentage de pv du perso 2
+
+chargement de la barre de Mana selon le pourcentage de Mana du perso 1, la barre est grisée si ses PM max sont à 0
+
+chargement de la barre de Mana selon le pourcentage de Mana du perso 2, la barre est grisée si ses PM max sont à 0
+
+destruction de toutes les textures
+
+cas où 3 persos sont dans l\textquotesingle{}équipe
+
+chargement des têtes des 3 personnages
+
+affichage des têtes des 3 personnages
+
+chargement de la barre de PV selon le pourcentage de pv du perso 1 puis destruction de leur texture
+
+chargement de la barre de PV selon le pourcentage de pv du perso 2 puis destruction de leur texture
+
+chargement de la barre de PV selon le pourcentage de pv du perso 3
+
+chargement de la barre de Mana selon le pourcentage de Mana du perso 1, la barre est grisée si ses PM max sont à 0
+
+chargement de la barre de Mana selon le pourcentage de Mana du perso 2, la barre est grisée si ses PM max sont à 0
+
+chargement de la barre de Mana selon le pourcentage de Mana du perso 2, la barre est grisée si ses PM max sont à 0
+
+destruction de toutes les textures
+
+affichage des icônes
+
+destruction des textures des icônes
+
+délai d\textquotesingle{}affichage\Hypertarget{EventOp_8c_ab8dd4290d87342f449448fd9aa42fc14}\label{EventOp_8c_ab8dd4290d87342f449448fd9aa42fc14} 
+\index{EventOp.c@{EventOp.c}!ReactEventsStats@{ReactEventsStats}}
+\index{ReactEventsStats@{ReactEventsStats}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{ReactEventsStats()}{ReactEventsStats()}}
+{\footnotesize\ttfamily void React\+Events\+Stats (\begin{DoxyParamCaption}\item[{int}]{num\+Page,  }\item[{int}]{Mouse\+Click,  }\item[{int}]{Key\+Is\+Pressed,  }\item[{int}]{Mouse\+Over,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{team,  }\item[{float}]{Stats\mbox{[}3\mbox{]}\mbox{[}8\mbox{]},  }\item[{SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{dest\+Stat\+Action }\end{DoxyParamCaption})}
+
+
+
+fonction React\+Events\+Inv\+Sac qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur le menu d\textquotesingle{}inventaire sur le sac 
+
+déclaration de i servant aux boucles for et textwidth, textheight pour les dimensions des textes
+
+chaîne de caractère utilisée pour l\textquotesingle{}affichage des persos avec leur stats ~\newline
+
+
+stats stockées temporairement pour vérifier certaines conditions pour pouvoir utiliser le bouton + et -\/
+
+chargement des textures nécessaires au menu
+
+déclaration des rect correspondant au coordonnées et dimensions d\textquotesingle{}affichage du menu
+
+déclaration et initialisation des textures des noms et descriptions des objets ainsi que la couleur des textes
+
+déclaration et initialisation des textures des textes des personnages dans la boîte d\textquotesingle{}utilisation d\textquotesingle{}objet
+
+déclaration de la variable pour les coordonnées et dimensions des noms d\textquotesingle{}objet
+
+affichage du menu
+
+création de la texture du nom du perso avec son level
+
+calcul des coordonnées et dimensions du nom du perso avec son lvl
+
+affichage du nom du perso avec son lvl puis libère la mémoire
+
+calcul des coordonnées, dimensions des bouton + et -\/
+
+chargement de la texture puis affichage du bouton + en on ou off en fonction de si l\textquotesingle{}on peut utiliser les bouton ou non pour éviter de dépassez le nombre de pt de compétence à utiliser, et libère la mémoire
+
+chargement de la texture puis affichage du bouton -\/ en on ou off en fonction de si l\textquotesingle{}on peut utiliser les bouton ou non pour éviter de diminuer en-\/dessous des stats de base, et libère la mémoire
+
+récupère les dernières coordonnées des boutons + et -\/ pour la détection d\textquotesingle{}events
+
+mise à jour des coordonnées et dimensions des stats
+
+affichage des stats
+
+calcul des coordonnées, dimensions des points de compétence du personnage sur lequel on est
+
+affichage des points de compétence du personnage
+
+calcul des coordonnées, dimensions, charge les textures puis affichage du bouton valider pour confirmer les points de compétence attribués
+
+calcul des coordonnées, dimensions de la flèche gauche pour changer de perso
+
+affiche les flèches pour changer de perso et assombrit le bouton si la souris est dessus ~\newline
+ n\textquotesingle{}affiche pas la flèche de gauche si nous sommes sur le premier perso et n\textquotesingle{}affiche pas la flèche de droite si nous sommes sur le dernier perso puis libère la mémoire
+
+calcul des coordonnées, dimensions de la flèche droite pour changer de perso puis libère la mémoire
+
+copie des coordonnées des derniers boutons pour les détections d\textquotesingle{}events
+
+destruction des textures utilisées pour le menu
+
+destruction des textures des noms et descriptions des objets
+
+destruction de toutes les textures des boutons\Hypertarget{EventOp_8c_ae0e9e7bda530279c8fe65762b658d3fb}\label{EventOp_8c_ae0e9e7bda530279c8fe65762b658d3fb} 
+\index{EventOp.c@{EventOp.c}!transitionFondu@{transitionFondu}}
+\index{transitionFondu@{transitionFondu}!EventOp.c@{EventOp.c}}
+\doxysubsubsection{\texorpdfstring{transitionFondu()}{transitionFondu()}}
+{\footnotesize\ttfamily void transition\+Fondu (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{int}]{largeur\+\_\+ecran,  }\item[{int}]{hauteur\+\_\+ecran,  }\item[{int}]{duree }\end{DoxyParamCaption})}
+
+
+
+Fonction pour réaliser une transition en fondu. 
+
+déclaration des fonctions Detect\+Events pour les sets d\textquotesingle{}événement possibles selon la scène Nombre d\textquotesingle{}images et délai d\textquotesingle{}affichage
+
+Boucle pour effectuer le fondu
+
+Calculer l\textquotesingle{}alpha en fonction du progrès de la transition
+
+Affichage du fondu
+
+Mettre à jour l\textquotesingle{}affichage
+
+Délai d\textquotesingle{}affichage

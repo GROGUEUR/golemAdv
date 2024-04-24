@@ -1,0 +1,449 @@
+\doxysection{src/combat.c File Reference}
+\hypertarget{combat_8c}{}\label{combat_8c}\index{src/combat.c@{src/combat.c}}
+
+
+programme gérant les combats  
+
+
+{\ttfamily \#include \"{}../lib/\+Event\+Op.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/combat.\+h\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{combat_8c_a885dece41a7a6d4d8b1f39eb7cef5267}{degats\+\_\+mob}} (\mbox{\hyperlink{structmob__s}{mob\+\_\+t}} \texorpdfstring{$\ast$}{*}mob, \mbox{\hyperlink{structattaque__s}{attaque\+\_\+t}} att, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso)
+\begin{DoxyCompactList}\small\item\em fonctions de calcul des degats \end{DoxyCompactList}\item 
+\Hypertarget{combat_8c_a30d33dd0b4b8b7e3206da4094af07860}\label{combat_8c_a30d33dd0b4b8b7e3206da4094af07860} 
+int {\bfseries degats\+\_\+perso} (\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso, \mbox{\hyperlink{structattaque__s}{attaque\+\_\+t}} att, \mbox{\hyperlink{structmob__s}{mob\+\_\+t}} \texorpdfstring{$\ast$}{*}mob)
+\begin{DoxyCompactList}\small\item\em dégâts infligés par les mobs \end{DoxyCompactList}\item 
+\Hypertarget{combat_8c_acb9f16f3a960d270763180909f083de5}\label{combat_8c_acb9f16f3a960d270763180909f083de5} 
+void {\bfseries fin\+\_\+combat} (int vict, \mbox{\hyperlink{structmob__s}{mob\+\_\+t}} \texorpdfstring{$\ast$}{*}mob, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, \mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}team, float stat\+Perso\mbox{[}3\mbox{]}\mbox{[}8\mbox{]}, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, int \texorpdfstring{$\ast$}{*}click, int \texorpdfstring{$\ast$}{*}over)
+\item 
+void \mbox{\hyperlink{combat_8c_a7381f52709ad2b3e5d00869e8a5e860a}{Detect\+Events\+Fight}} (int \texorpdfstring{$\ast$}{*}menu\+\_\+combat, int \texorpdfstring{$\ast$}{*}Mouse\+Click, int \texorpdfstring{$\ast$}{*}Mouse\+Over, int \texorpdfstring{$\ast$}{*}quit, int \texorpdfstring{$\ast$}{*}perso, int \texorpdfstring{$\ast$}{*}obj, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, int w, int h, int \texorpdfstring{$\ast$}{*}W, int \texorpdfstring{$\ast$}{*}H, int \texorpdfstring{$\ast$}{*}atta)
+\begin{DoxyCompactList}\small\item\em fonction Detect\+Events\+Fight qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes en combat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{combat_8c_ab324596bcabef0cb53fb5ed25e45b8bc}{React\+Events\+Fight}} (int \texorpdfstring{$\ast$}{*}p, int perso, int obj, int Mouse\+Click, int Mouse\+Over, int \texorpdfstring{$\ast$}{*}menu\+\_\+combat, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}p\+Renderer, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}fond\+\_\+combat, int w, int h, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, \mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}team, int imob, int H, int W, int atta, float stat\+Perso\mbox{[}3\mbox{]}\mbox{[}8\mbox{]}, \mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}scene, int \texorpdfstring{$\ast$}{*}pv\+Mob)
+\begin{DoxyCompactList}\small\item\em fonction React\+Events\+Inv\+Sac qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur le menu d\textquotesingle{}inventaire sur le sac \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant les combats 
+
+\begin{DoxyAuthor}{Author}
+Lenny Borry. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+9.\+5 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{combat_8c_a885dece41a7a6d4d8b1f39eb7cef5267}\label{combat_8c_a885dece41a7a6d4d8b1f39eb7cef5267} 
+\index{combat.c@{combat.c}!degats\_mob@{degats\_mob}}
+\index{degats\_mob@{degats\_mob}!combat.c@{combat.c}}
+\doxysubsubsection{\texorpdfstring{degats\_mob()}{degats\_mob()}}
+{\footnotesize\ttfamily int degats\+\_\+mob (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmob__s}{mob\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{mob,  }\item[{\mbox{\hyperlink{structattaque__s}{attaque\+\_\+t}}}]{att,  }\item[{\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{perso }\end{DoxyParamCaption})}
+
+
+
+fonctions de calcul des degats 
+
+dégâts infligés par les mobs \Hypertarget{combat_8c_a7381f52709ad2b3e5d00869e8a5e860a}\label{combat_8c_a7381f52709ad2b3e5d00869e8a5e860a} 
+\index{combat.c@{combat.c}!DetectEventsFight@{DetectEventsFight}}
+\index{DetectEventsFight@{DetectEventsFight}!combat.c@{combat.c}}
+\doxysubsubsection{\texorpdfstring{DetectEventsFight()}{DetectEventsFight()}}
+{\footnotesize\ttfamily void Detect\+Events\+Fight (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{menu\+\_\+combat,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Click,  }\item[{int \texorpdfstring{$\ast$}{*}}]{Mouse\+Over,  }\item[{int \texorpdfstring{$\ast$}{*}}]{quit,  }\item[{int \texorpdfstring{$\ast$}{*}}]{perso,  }\item[{int \texorpdfstring{$\ast$}{*}}]{obj,  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int \texorpdfstring{$\ast$}{*}}]{W,  }\item[{int \texorpdfstring{$\ast$}{*}}]{H,  }\item[{int \texorpdfstring{$\ast$}{*}}]{atta }\end{DoxyParamCaption})}
+
+
+
+fonction Detect\+Events\+Fight qui s\textquotesingle{}occupera de gérer la détection des événements quand nous sommes en combat 
+
+création de la variable event qui récupère les événements
+
+coordonnés du rectangle d\textquotesingle{}options en combat
+
+largeur du grand rectangle
+
+largeur des 4 carrés qui coupent le grand rectangle
+
+longueur du rectangle indiquant le nom des persos
+
+largeur du rectangle indiquant le nom des persos
+
+longueur des rectangles \"{}attaque\"{} et \"{}item\"{}
+
+largeur des rectangles \"{}attaque\"{} et \"{}item\"{}
+
+longueur des rectangles de chaque attaque
+
+largeur des rectangles de chaque attaque
+
+longueur des rectangles de chaque objet
+
+largeur des rectangles de chaque objet
+
+longueur du rectangle du nom de l\textquotesingle{}attaque
+
+largeur du rectangle du nom de l\textquotesingle{}attaque
+
+longueur des rectangles \"{}puissance\"{} et \"{}précision\"{}
+
+largeur des rectangles \"{}puissance\"{} et \"{}précision\"{}
+
+taille du carré dans lequel il y aura le logo représentant le type de l\textquotesingle{}attaque
+
+longueur du rectangle de description de l\textquotesingle{}attaque
+
+largeur du rectangle de description de l\textquotesingle{}attaque
+
+longueur du rectangle du nom de l\textquotesingle{}objet
+
+largeur du rectangle du nom de l\textquotesingle{}objet
+
+taille du carré du pixel art de l\textquotesingle{}objet
+
+longueur du rectangle de description de l\textquotesingle{}objet
+
+largeur du rectangle de description de l\textquotesingle{}objet
+
+longueur du rectangle du bouton \"{}utiliser\"{}
+
+largeur du rectangle du bouton \"{}utiliser\"{}
+
+écart vertical entre les boutons indiquant le nom des persos
+
+écart horizontal entre les boutons indiquant le nom des persos
+
+écart vertical entre les boutons \"{}attaque\"{} et \"{}item\"{}
+
+écart horizontal entre les boutons \"{}attaque\"{} et \"{}item\"{}
+
+écart vertical entre les rectangles de chaque attaque
+
+écart horizontal entre les rectangles de chaque attaque
+
+écart vertical entre les rectangles de chaque objet
+
+écart horizontal entre les rectangles de chaque objet
+
+écart vertical entre les rectangles du nom de l\textquotesingle{}attaque et de description de l\textquotesingle{}attaque
+
+écart horizontal entre les rectangles du nom de l\textquotesingle{}attaque, de la puissance et du logo
+
+écart vertical entre les rectangles \"{}puissance\"{} et \"{}précision\"{}
+
+écart vertical entre les rectangles du logo et de description
+
+écart vertical entre les rectangles du nom, du pixel art, de la description et du bouton \"{}utiliser\"{} de l\textquotesingle{}objet
+
+écart horizontal de chaque côté du rectangle nom de l\textquotesingle{}objet
+
+écart horizontal de chaque côté du pixel art de l\textquotesingle{}objet
+
+écart horizontal de chaque côté du rectangle description de l\textquotesingle{}objet
+
+écart horizontal de chaque côté du bouton \"{}utiliser\"{}
+
+taille du carré du bouton retour
+
+écart entre le bouton retour et le bord
+
+boucle d\textquotesingle{}attente d\textquotesingle{}événements
+
+regarde le bouton pour quitter la fenêtre si appuyer met quit à 1 ce qui va arrêter la boucle de jeu
+
+récupération des coordonnées de la souris
+
+regarde si la souris est dans la case des persos
+
+rectangle perso 1
+
+rectangle perso 2
+
+rectangle perso 3
+
+regarde si la souris est dans la case de attaque ou item
+
+rectangle attaque
+
+rectangle item
+
+test si la souris est sur le bouton retour
+
+regarde si la souris est dans la case des attaques
+
+rectangle attaque 1
+
+rectangle attaque 2
+
+rectangle attaque 3
+
+rectangle attaque 4
+
+test si la souris est sur le bouton retour
+
+regarde si la souris est dans la case de description d\textquotesingle{}attaque
+
+rectangle nom de l\textquotesingle{}attaque
+
+rectangle description
+
+rectangle puissance
+
+rectangle précision
+
+rectangle description
+
+rectangle du logo
+
+rectangle description
+
+test si la souris est sur le bouton retour
+
+regarde si la souris est dans la case des objets
+
+rectangle objet 1
+
+rectangle objet 2
+
+rectangle objet 3
+
+rectangle objet 4
+
+rectangle objet 5
+
+rectangle objet 6
+
+rectangle objet 7
+
+rectangle objet 8
+
+rectangle objet 9
+
+rectangle objet 10
+
+test si la souris est sur le bouton retour
+
+regarde si la souris est dans la case de description d\textquotesingle{}objet
+
+rectangle nom de l\textquotesingle{}objet
+
+rectangle pixel art de l\textquotesingle{}objet
+
+rectangle description
+
+rectangle utiliser
+
+test si la souris est sur le bouton retour
+
+lancer l\textquotesingle{}attaque
+
+utiliser l\textquotesingle{}item
+
+récupération si le bouton de la souris est lâché
+
+regarde si le bouton est relâché sur un des boutons\Hypertarget{combat_8c_ab324596bcabef0cb53fb5ed25e45b8bc}\label{combat_8c_ab324596bcabef0cb53fb5ed25e45b8bc} 
+\index{combat.c@{combat.c}!ReactEventsFight@{ReactEventsFight}}
+\index{ReactEventsFight@{ReactEventsFight}!combat.c@{combat.c}}
+\doxysubsubsection{\texorpdfstring{ReactEventsFight()}{ReactEventsFight()}}
+{\footnotesize\ttfamily void React\+Events\+Fight (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{p,  }\item[{int}]{perso,  }\item[{int}]{obj,  }\item[{int}]{Mouse\+Click,  }\item[{int}]{Mouse\+Over,  }\item[{int \texorpdfstring{$\ast$}{*}}]{menu\+\_\+combat,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{p\+Renderer,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{fond\+\_\+combat,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{team,  }\item[{int}]{imob,  }\item[{int}]{H,  }\item[{int}]{W,  }\item[{int}]{atta,  }\item[{float}]{stat\+Perso\mbox{[}3\mbox{]}\mbox{[}8\mbox{]},  }\item[{\mbox{\hyperlink{type_8h_a476e1636fee40c13f6df3629b5fc8fa6}{scene\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{scene,  }\item[{int \texorpdfstring{$\ast$}{*}}]{pv\+Mob }\end{DoxyParamCaption})}
+
+
+
+fonction React\+Events\+Inv\+Sac qui s\textquotesingle{}occupe de réagir en fonction des événements quand nous sommes sur le menu d\textquotesingle{}inventaire sur le sac 
+
+déclaration de i servant aux boucles for et textwidth, textheight pour les dimensions des textes
+
+longueur du rectangle indiquant le nom des persos
+
+largeur du rectangle indiquant le nom des persos
+
+longueur des rectangles \"{}attaque\"{} et \"{}item\"{}
+
+largeur des rectangles \"{}attaque\"{} et \"{}item\"{}
+
+longueur des rectangles de chaque attaque
+
+largeur des rectangles de chaque attaque
+
+longueur des rectangles de chaque objet
+
+largeur des rectangles de chaque objet
+
+longueur du rectangle du nom de l\textquotesingle{}attaque
+
+largeur du rectangle du nom de l\textquotesingle{}attaque
+
+longueur des rectangles \"{}puissance\"{} et \"{}précision\"{}
+
+largeur des rectangles \"{}puissance\"{} et \"{}précision\"{}
+
+taille du carré dans lequel il y aura le logo représentant le type de l\textquotesingle{}attaque
+
+longueur du rectangle de description de l\textquotesingle{}attaque
+
+largeur du rectangle de description de l\textquotesingle{}attaque
+
+longueur du rectangle du nom de l\textquotesingle{}objet
+
+largeur du rectangle du nom de l\textquotesingle{}objet
+
+taille du carré du pixel art de l\textquotesingle{}objet
+
+longueur du rectangle de description de l\textquotesingle{}objet
+
+largeur du rectangle de description de l\textquotesingle{}objet
+
+longueur du rectangle du bouton \"{}utiliser\"{}
+
+largeur du rectangle du bouton \"{}utiliser\"{}
+
+écart vertical entre les boutons indiquant le nom des persos
+
+écart horizontal entre les boutons indiquant le nom des persos
+
+écart vertical entre les boutons \"{}attaque\"{} et \"{}item\"{}
+
+écart horizontal entre les boutons \"{}attaque\"{} et \"{}item\"{}
+
+écart vertical entre les rectangles de chaque attaque
+
+écart horizontal entre les rectangles de chaque attaque
+
+écart vertical entre les rectangles de chaque objet
+
+écart horizontal entre les rectangles de chaque objet
+
+écart vertical entre les rectangles du nom de l\textquotesingle{}attaque et de description de l\textquotesingle{}attaque
+
+écart horizontal entre les rectangles du nom de l\textquotesingle{}attaque, de la puissance et du logo
+
+écart vertical entre les rectangles du logo et de description
+
+écart vertical entre les rectangles \"{}puissance\"{} et \"{}précision\"{}
+
+écart vertical entre les rectangles du nom, du pixel art, de la description et du bouton \"{}utiliser\"{} de l\textquotesingle{}objet
+
+écart horizontal de chaque côté du rectangle nom de l\textquotesingle{}objet
+
+écart horizontal de chaque côté du pixel art de l\textquotesingle{}objet
+
+écart horizontal de chaque côté du rectangle description de l\textquotesingle{}objet
+
+écart horizontal de chaque côté du bouton \"{}utiliser\"{}
+
+taille du carré du bouton retour
+
+écart entre le bouton retour et le bord
+
+chaîne de caractères utilisée pour l\textquotesingle{}affichage des persos avec leur nb de pv et pm
+
+chaîne de caractères pour la conversion d\textquotesingle{}entiers en caractères
+
+déclaration et calcul des variables des coordonnées des carrés des persos et des mobs
+
+taille du carré du premier perso de la team
+
+taille du carré du 2e perso de la team
+
+taille du carré du 3e perso de la team
+
+écart vertical entre les persos de la team
+
+écart horizontal à gauche du premier perso et à droite du troisieme perso
+
+écart horizontal à droite du premier perso
+
+écart horizontal à gauche et à droite du deuxieme perso
+
+écart horizontal à gauche du troisieme perso
+
+taille du carré du mob
+
+écart vertical au dessus et au dessus du mob
+
+écart horizonral à gauche et à droite du mob
+
+longueur du rectangle du nom des pv
+
+largeur du rectangle du nom des pv
+
+écart horizontal à gauche du 3e perso
+
+écart horizontal à gauche du 2e perso
+
+écart horizontal à gauche du 1er perso
+
+écart vertical au dessus des pv du 3e perso
+
+écart vertical au dessus des pv du 2e perso
+
+écart vertical au dessus des pv du 1er perso
+
+écart vertical entre les pv et le mob
+
+mise en place des coordonnées dans les tableaux correspondants
+
+chargement des textures des boutons de fond et leur version hover (lorsque la souris est dessus)
+
+chargement des textures du bouton retour et de sa version hover (lorsque la souris est dessus)
+
+déclaration des rect correspondant aux coordonnées et dimensions d\textquotesingle{}affichage de toute l\textquotesingle{}interface de combat
+
+grand rectangle qui va contenir tous les rectangles ci-\/dessous
+
+rectangles des persos
+
+rectangles attaque et item
+
+rectangles de chaque objet
+
+rectangles de chaque attaque
+
+rectangles du détail de chaque attaque
+
+rectangles du détail de chaque objet
+
+rectangles de retour
+
+déclaration de la couleur du texte
+
+affichage des fonds à l\textquotesingle{}écran
+
+déclaration et initialisation des rectangles et des textures de chaque perso et de chaque mob
+
+chaque \textquotesingle{}case\textquotesingle{} représente le n-\/ième perso. S\textquotesingle{}il y a 3 persos, je crée le rectangle des 3 persos, s\textquotesingle{}il y en a 2 j\textquotesingle{}en crée que 2 etc
+
+de même pour les textures, je charge leur Idle\+Anim (lorsque le perso bouge sur lui-\/même)
+
+on se décale d\textquotesingle{}une image dans le sprite de l\textquotesingle{}Idle Animation de tous les persos et mobs
+
+déclaration et initialisation des textures des textes de chaque bouton
+
+nom des persos
+
+texture erreur
+
+textures attaque et item
+
+textures de chaque attaque
+
+matrices contenant les 4 attaques de chacun des persos de la team
+
+déclaration et initialisation des textures des objets
+
+lance l\textquotesingle{}attaque
+
+calcul précision de l\textquotesingle{}attaque
+
+utilise l\textquotesingle{}objet
+
+affichage de tous les rectangles selon menu\+\_\+combat
+
+destruction des textures
+
+délai d\textquotesingle{}affichage

@@ -1,0 +1,59 @@
+\doxysection{src/texture.c File Reference}
+\hypertarget{texture_8c}{}\label{texture_8c}\index{src/texture.c@{src/texture.c}}
+
+
+programme gérant les fonctions de chargement de texture.  
+
+
+{\ttfamily \#include \"{}../lib/texture.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{texture_8c_a07fe370bd7efe71535130e0809806901}{load\+Texture}} (const char \texorpdfstring{$\ast$}{*}chemin, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em fonction load\+Texture qui s\textquotesingle{}occupera de charger l\textquotesingle{}image avec une surface puis d\textquotesingle{}utiliser cette surface pour créer une texture la fonction renvoie NULL s\textquotesingle{}il y a une erreur, renvoie la texture créée sinon \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{texture_8c_a6911b19eca656f20372adc07b58554b1}{load\+Texture\+Font}} (const char \texorpdfstring{$\ast$}{*}chemin, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, const char \texorpdfstring{$\ast$}{*}text, int h, SDL\+\_\+\+Color color)
+\begin{DoxyCompactList}\small\item\em fonction load\+Texture\+Font qui s\textquotesingle{}occupera de charger le texte avec une surface puis d\textquotesingle{}utiliser cette surface pour créer une texture la fonction renvoie NULL si il y a une erreur, renvoie la texture créée sinon \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant les fonctions de chargement de texture. 
+
+\begin{DoxyAuthor}{Author}
+Luka Cognard. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+8.\+6 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{texture_8c_a07fe370bd7efe71535130e0809806901}\label{texture_8c_a07fe370bd7efe71535130e0809806901} 
+\index{texture.c@{texture.c}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!texture.c@{texture.c}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} load\+Texture (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{chemin,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+fonction load\+Texture qui s\textquotesingle{}occupera de charger l\textquotesingle{}image avec une surface puis d\textquotesingle{}utiliser cette surface pour créer une texture la fonction renvoie NULL s\textquotesingle{}il y a une erreur, renvoie la texture créée sinon 
+
+déclaration de la fonction load\+Texture qui prend en paramètre le chemin de l\textquotesingle{}image et le renderer déclaration de la fonction load\+Texture\+Font qui prend en paramètre le chemin de la police d\textquotesingle{}écriture, le renderer, le texte à afficher, la taille de police et la couleur du texte crée la surface de l\textquotesingle{}image, renvoie NULL avec une erreur si ça n\textquotesingle{}a pas marché
+
+crée la texture de l\textquotesingle{}image à partir de ça surface puis libère la surface inutiliser renvoie NULL avec une erreur si la texture n\textquotesingle{}est pas créée\Hypertarget{texture_8c_a6911b19eca656f20372adc07b58554b1}\label{texture_8c_a6911b19eca656f20372adc07b58554b1} 
+\index{texture.c@{texture.c}!loadTextureFont@{loadTextureFont}}
+\index{loadTextureFont@{loadTextureFont}!texture.c@{texture.c}}
+\doxysubsubsection{\texorpdfstring{loadTextureFont()}{loadTextureFont()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} load\+Texture\+Font (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{chemin,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{text,  }\item[{int}]{h,  }\item[{SDL\+\_\+\+Color}]{color }\end{DoxyParamCaption})}
+
+
+
+fonction load\+Texture\+Font qui s\textquotesingle{}occupera de charger le texte avec une surface puis d\textquotesingle{}utiliser cette surface pour créer une texture la fonction renvoie NULL si il y a une erreur, renvoie la texture créée sinon 
+
+charge la police d\textquotesingle{}écriture via le chemin entré en paramètre renvoie NULL avec une erreur si ça n\textquotesingle{}a pas marché
+
+crée la surface du texte via le texte entré en paramètre libère la police chargée inutilisée renvoie NULL avec une erreur si ça n\textquotesingle{}a pas marché
+
+crée la texture du texte à partir de sa surface puis libère la surface inutilisée renvoie NULL avec une erreur si la texture n\textquotesingle{}est pas créée

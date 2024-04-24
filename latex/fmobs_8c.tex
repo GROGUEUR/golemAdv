@@ -1,0 +1,166 @@
+\doxysection{src/fmobs.c File Reference}
+\hypertarget{fmobs_8c}{}\label{fmobs_8c}\index{src/fmobs.c@{src/fmobs.c}}
+
+
+programme gérant les mobs  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \"{}../lib/type.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/fmobs.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/fmap.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fmobs_8c_a4b49204a0fca759b15e4a9007edf4e71}{copie\+\_\+fichier\+\_\+mob\+\_\+txt}} (char \texorpdfstring{$\ast$}{*}fichier\+\_\+mob\+\_\+origine, char \texorpdfstring{$\ast$}{*}fichier\+\_\+mob\+\_\+destination)
+\item 
+int \mbox{\hyperlink{fmobs_8c_ae49ad8cca5ced26259e5f864b32fbc65}{charger\+\_\+map\+\_\+mobs}} (char \texorpdfstring{$\ast$}{*}MOBS\+\_\+\+LIGNE, char \texorpdfstring{$\ast$}{*}MOBS\+\_\+\+TXT, char \texorpdfstring{$\ast$}{*}MOBS\+\_\+\+TXT2, char \texorpdfstring{$\ast$}{*}MAP, int collisions\mbox{[}125\mbox{]}\mbox{[}250\mbox{]})
+\item 
+int \mbox{\hyperlink{fmobs_8c_a6fd03180137d91be08493ee178d4126f}{detruire\+\_\+mob}} (int coordo\+\_\+x\+\_\+mob\+\_\+suppr, int coordo\+\_\+y\+\_\+mob\+\_\+suppr, char \texorpdfstring{$\ast$}{*}MOBS\+\_\+\+TXT, int collisions\mbox{[}125\mbox{]}\mbox{[}250\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant les mobs 
+
+programme gérant les fonctions pour les mobs sur la Map
+
+\begin{DoxyAuthor}{Author}
+François Lépine. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+9.\+5 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{fmobs_8c_ae49ad8cca5ced26259e5f864b32fbc65}\label{fmobs_8c_ae49ad8cca5ced26259e5f864b32fbc65} 
+\index{fmobs.c@{fmobs.c}!charger\_map\_mobs@{charger\_map\_mobs}}
+\index{charger\_map\_mobs@{charger\_map\_mobs}!fmobs.c@{fmobs.c}}
+\doxysubsubsection{\texorpdfstring{charger\_map\_mobs()}{charger\_map\_mobs()}}
+{\footnotesize\ttfamily int charger\+\_\+map\+\_\+mobs (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{MOBS\+\_\+\+LIGNE,  }\item[{char \texorpdfstring{$\ast$}{*}}]{MOBS\+\_\+\+TXT,  }\item[{char \texorpdfstring{$\ast$}{*}}]{MOBS\+\_\+\+TXT2,  }\item[{char \texorpdfstring{$\ast$}{*}}]{MAP,  }\item[{int}]{collisions\mbox{[}125\mbox{]}\mbox{[}250\mbox{]} }\end{DoxyParamCaption})}
+
+Ouvre le fichier mobs\+\_\+ligne qui contient les créatures
+
+Gestion de l\textquotesingle{}erreur
+
+Ouvre le fichier de la carte du jeu pour y ajouter les pnj
+
+Gestion de l\textquotesingle{}erreur
+
+Ouvre le fichier de la carte du jeu pour y ajouter les pnj
+
+Gestion de l\textquotesingle{}erreur
+
+Ouvre le fichier de la carte du jeu pour y ajouter les pnj
+
+Gestion de l\textquotesingle{}erreur
+
+Ouvre le fichier de la carte du jeu pour y ajouter les pnj
+
+Gestion de l\textquotesingle{}erreur
+
+Ouvre le fichier de la carte du jeu pour y ajouter les pnj
+
+Gestion de l\textquotesingle{}erreur
+
+Ouvre le fichier de la carte du jeu pour y ajouter les pnj
+
+Gestion de l\textquotesingle{}erreur
+
+Variables pour stocker les nombres
+
+Définir la portion de l\textquotesingle{}image à afficher
+
+Largeur de la portion à afficher
+
+Les monstres ont un sprite contenant 6 animations
+
+Hauteur de la portion à afficher
+
+Définir le rectangle de destination
+
+Utiliser la même largeur que la source
+
+Utiliser la même hauteur que la source
+
+Ouverture du fichier
+
+Récupération de la largeur det de la hauteur
+
+Parcours du fichier contenant la carte en numéro de tuile
+
+Dans le tableau de collisions il y aura 3 créatures, chacune d\textquotesingle{}elles aura une seule et même configuration
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Fermeture du fichier
+
+Sauvegarde de la carte en png
+
+Récupération de la largeur det de la hauteur
+
+Parcours du fichier contenant la carte en numéro de tuile
+
+Dans le tableau de collisions il y aura 3 créatures, chacune d\textquotesingle{}elles aura une seule et même configuration
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Affichage de la tuile
+
+Fermeture du fichier
+
+Sauvegarde de la carte en png\Hypertarget{fmobs_8c_a4b49204a0fca759b15e4a9007edf4e71}\label{fmobs_8c_a4b49204a0fca759b15e4a9007edf4e71} 
+\index{fmobs.c@{fmobs.c}!copie\_fichier\_mob\_txt@{copie\_fichier\_mob\_txt}}
+\index{copie\_fichier\_mob\_txt@{copie\_fichier\_mob\_txt}!fmobs.c@{fmobs.c}}
+\doxysubsubsection{\texorpdfstring{copie\_fichier\_mob\_txt()}{copie\_fichier\_mob\_txt()}}
+{\footnotesize\ttfamily int copie\+\_\+fichier\+\_\+mob\+\_\+txt (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{fichier\+\_\+mob\+\_\+origine,  }\item[{char \texorpdfstring{$\ast$}{*}}]{fichier\+\_\+mob\+\_\+destination }\end{DoxyParamCaption})}
+
+Ouvrir le fichier destination en mode lecture
+
+Ouvrir le fichier destination en mode écriture
+
+Copier le contenu du fichier source vers le fichier destination
+
+Fermer les fichiers\Hypertarget{fmobs_8c_a6fd03180137d91be08493ee178d4126f}\label{fmobs_8c_a6fd03180137d91be08493ee178d4126f} 
+\index{fmobs.c@{fmobs.c}!detruire\_mob@{detruire\_mob}}
+\index{detruire\_mob@{detruire\_mob}!fmobs.c@{fmobs.c}}
+\doxysubsubsection{\texorpdfstring{detruire\_mob()}{detruire\_mob()}}
+{\footnotesize\ttfamily int detruire\+\_\+mob (\begin{DoxyParamCaption}\item[{int}]{coordo\+\_\+x\+\_\+mob\+\_\+suppr,  }\item[{int}]{coordo\+\_\+y\+\_\+mob\+\_\+suppr,  }\item[{char \texorpdfstring{$\ast$}{*}}]{MOBS\+\_\+\+TXT,  }\item[{int}]{collisions\mbox{[}125\mbox{]}\mbox{[}250\mbox{]} }\end{DoxyParamCaption})}
+
+Ouverture du fichier
+
+Ouvrir un fichier temporaire en mode écriture
+
+Lire chaque ligne du fichier source
+
+Extraire les deux derniers chiffres de la ligne
+
+Si les deux derniers chiffres ne correspondent pas à ceux spécifiés, écrire la ligne dans le fichier temporaire
+
+Fermer les fichiers
+
+Supprimer le fichier source
+
+Renommer le fichier temporaire pour qu\textquotesingle{}il devienne le nouveau fichier source

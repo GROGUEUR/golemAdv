@@ -1,0 +1,185 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}arme\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}attaque\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}equipement\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{6}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{6}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Image Struct Reference}{6}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{7}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}inventaire\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{7}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{7}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}mob\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{7}{section.3.6}%
+\contentsline {section}{\numberline {3.7}objet\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{8}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{8}{subsection.3.7.1}%
+\contentsline {section}{\numberline {3.8}perso\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{8}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{9}{subsection.3.8.1}%
+\contentsline {section}{\numberline {3.9}pnj\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{9}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{9}{subsection.3.9.1}%
+\contentsline {section}{\numberline {3.10}team\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{9}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{9}{subsection.3.10.1}%
+\contentsline {chapter}{\numberline {4}File Documentation}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}lib/combat.h File Reference}{11}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{12}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Function Documentation}{12}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}degats\_mob()}{12}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}DetectEventsFight()}{12}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}ReactEventsFight()}{16}{subsubsection.4.1.2.3}%
+\contentsline {section}{\numberline {4.2}combat.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.4.2}%
+\contentsline {section}{\numberline {4.3}lib/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Op.h File Reference}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{21}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Function Documentation}{21}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}achat\_possible()}{21}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}chargement\_barre\_pv()}{22}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}cinematic\_start()}{23}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}DetectEventsInvSac()}{24}{subsubsection.4.3.2.4}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}DetectEventsInvStuff()}{25}{subsubsection.4.3.2.5}%
+\contentsline {subsubsection}{\numberline {4.3.2.6}DetectEventsOp()}{26}{subsubsection.4.3.2.6}%
+\contentsline {subsubsection}{\numberline {4.3.2.7}DetectEventsStats()}{27}{subsubsection.4.3.2.7}%
+\contentsline {subsubsection}{\numberline {4.3.2.8}EventSell()}{28}{subsubsection.4.3.2.8}%
+\contentsline {subsubsection}{\numberline {4.3.2.9}EventShop()}{29}{subsubsection.4.3.2.9}%
+\contentsline {subsubsection}{\numberline {4.3.2.10}ReactEventsInvSac()}{32}{subsubsection.4.3.2.10}%
+\contentsline {subsubsection}{\numberline {4.3.2.11}ReactEventsInvStuff()}{33}{subsubsection.4.3.2.11}%
+\contentsline {subsubsection}{\numberline {4.3.2.12}ReactEventsOp()}{36}{subsubsection.4.3.2.12}%
+\contentsline {subsubsection}{\numberline {4.3.2.13}ReactEventsStats()}{38}{subsubsection.4.3.2.13}%
+\contentsline {subsubsection}{\numberline {4.3.2.14}transitionFondu()}{39}{subsubsection.4.3.2.14}%
+\contentsline {section}{\numberline {4.4}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Op.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{40}{section.4.4}%
+\contentsline {section}{\numberline {4.5}lib/fbibliotheque.h File Reference}{40}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{41}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Function Documentation}{41}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}charger\_map\_biblio()}{41}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}charger\_map\_pnj\_biblio()}{42}{subsubsection.4.5.2.2}%
+\contentsline {section}{\numberline {4.6}fbibliotheque.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.4.6}%
+\contentsline {section}{\numberline {4.7}lib/fmap.h File Reference}{43}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{43}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Function Documentation}{43}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}afficher\_map()}{43}{subsubsection.4.7.2.1}%
+\contentsline {subsubsection}{\numberline {4.7.2.2}charger\_map()}{44}{subsubsection.4.7.2.2}%
+\contentsline {section}{\numberline {4.8}fmap.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{44}{section.4.8}%
+\contentsline {section}{\numberline {4.9}fmobs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{45}{section.4.9}%
+\contentsline {section}{\numberline {4.10}lib/fpnj.h File Reference}{45}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{45}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Function Documentation}{46}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}charger\_map\_pnj()}{46}{subsubsection.4.10.2.1}%
+\contentsline {section}{\numberline {4.11}fpnj.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{46}{section.4.11}%
+\contentsline {section}{\numberline {4.12}lib/init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.h File Reference}{47}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{48}{subsection.4.12.1}%
+\contentsline {subsection}{\numberline {4.12.2}Function Documentation}{48}{subsection.4.12.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.1}menuCredits()}{48}{subsubsection.4.12.2.1}%
+\contentsline {subsubsection}{\numberline {4.12.2.2}menuPause()}{49}{subsubsection.4.12.2.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.3}menuPlay()}{50}{subsubsection.4.12.2.3}%
+\contentsline {subsubsection}{\numberline {4.12.2.4}menuPrincipal()}{51}{subsubsection.4.12.2.4}%
+\contentsline {subsubsection}{\numberline {4.12.2.5}menuSettings()}{51}{subsubsection.4.12.2.5}%
+\contentsline {section}{\numberline {4.13}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{52}{section.4.13}%
+\contentsline {section}{\numberline {4.14}lib/texture.h File Reference}{52}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{53}{subsection.4.14.1}%
+\contentsline {subsection}{\numberline {4.14.2}Function Documentation}{53}{subsection.4.14.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.1}loadTexture()}{53}{subsubsection.4.14.2.1}%
+\contentsline {subsubsection}{\numberline {4.14.2.2}loadTextureFont()}{53}{subsubsection.4.14.2.2}%
+\contentsline {section}{\numberline {4.15}texture.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{section.4.15}%
+\contentsline {section}{\numberline {4.16}lib/type.h File Reference}{54}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Detailed Description}{57}{subsection.4.16.1}%
+\contentsline {subsection}{\numberline {4.16.2}Function Documentation}{57}{subsection.4.16.2}%
+\contentsline {subsubsection}{\numberline {4.16.2.1}afficher\_arme()}{57}{subsubsection.4.16.2.1}%
+\contentsline {subsubsection}{\numberline {4.16.2.2}ajouter\_arme()}{57}{subsubsection.4.16.2.2}%
+\contentsline {subsubsection}{\numberline {4.16.2.3}ajouter\_stuff()}{58}{subsubsection.4.16.2.3}%
+\contentsline {subsubsection}{\numberline {4.16.2.4}creer\_all\_equipement()}{58}{subsubsection.4.16.2.4}%
+\contentsline {subsubsection}{\numberline {4.16.2.5}creer\_all\_sprite\_equipement()}{58}{subsubsection.4.16.2.5}%
+\contentsline {subsubsection}{\numberline {4.16.2.6}creer\_mob()}{58}{subsubsection.4.16.2.6}%
+\contentsline {subsubsection}{\numberline {4.16.2.7}creer\_perso()}{59}{subsubsection.4.16.2.7}%
+\contentsline {subsubsection}{\numberline {4.16.2.8}equiper\_arme()}{59}{subsubsection.4.16.2.8}%
+\contentsline {subsubsection}{\numberline {4.16.2.9}equiper\_stuff()}{59}{subsubsection.4.16.2.9}%
+\contentsline {subsubsection}{\numberline {4.16.2.10}init\_and\_reinit\_inv()}{59}{subsubsection.4.16.2.10}%
+\contentsline {subsubsection}{\numberline {4.16.2.11}jeter\_stuff()}{60}{subsubsection.4.16.2.11}%
+\contentsline {section}{\numberline {4.17}type.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{60}{section.4.17}%
+\contentsline {section}{\numberline {4.18}lib/utils.h File Reference}{62}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Detailed Description}{63}{subsection.4.18.1}%
+\contentsline {subsection}{\numberline {4.18.2}Function Documentation}{63}{subsection.4.18.2}%
+\contentsline {subsubsection}{\numberline {4.18.2.1}chargerSave()}{63}{subsubsection.4.18.2.1}%
+\contentsline {subsubsection}{\numberline {4.18.2.2}entrerNom()}{64}{subsubsection.4.18.2.2}%
+\contentsline {subsubsection}{\numberline {4.18.2.3}nouvelleSave()}{65}{subsubsection.4.18.2.3}%
+\contentsline {subsubsection}{\numberline {4.18.2.4}sauvegarder()}{65}{subsubsection.4.18.2.4}%
+\contentsline {section}{\numberline {4.19}utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{66}{section.4.19}%
+\contentsline {section}{\numberline {4.20}src/combat.c File Reference}{66}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Detailed Description}{67}{subsection.4.20.1}%
+\contentsline {subsection}{\numberline {4.20.2}Function Documentation}{67}{subsection.4.20.2}%
+\contentsline {subsubsection}{\numberline {4.20.2.1}degats\_mob()}{67}{subsubsection.4.20.2.1}%
+\contentsline {subsubsection}{\numberline {4.20.2.2}DetectEventsFight()}{68}{subsubsection.4.20.2.2}%
+\contentsline {subsubsection}{\numberline {4.20.2.3}ReactEventsFight()}{71}{subsubsection.4.20.2.3}%
+\contentsline {section}{\numberline {4.21}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Op.c File Reference}{74}{section.4.21}%
+\contentsline {subsection}{\numberline {4.21.1}Detailed Description}{76}{subsection.4.21.1}%
+\contentsline {subsection}{\numberline {4.21.2}Function Documentation}{76}{subsection.4.21.2}%
+\contentsline {subsubsection}{\numberline {4.21.2.1}achat\_possible()}{76}{subsubsection.4.21.2.1}%
+\contentsline {subsubsection}{\numberline {4.21.2.2}chargement\_barre\_pv()}{77}{subsubsection.4.21.2.2}%
+\contentsline {subsubsection}{\numberline {4.21.2.3}cinematic\_start()}{77}{subsubsection.4.21.2.3}%
+\contentsline {subsubsection}{\numberline {4.21.2.4}DetectEventsInvSac()}{78}{subsubsection.4.21.2.4}%
+\contentsline {subsubsection}{\numberline {4.21.2.5}DetectEventsInvStuff()}{79}{subsubsection.4.21.2.5}%
+\contentsline {subsubsection}{\numberline {4.21.2.6}DetectEventsOp()}{81}{subsubsection.4.21.2.6}%
+\contentsline {subsubsection}{\numberline {4.21.2.7}DetectEventsStats()}{82}{subsubsection.4.21.2.7}%
+\contentsline {subsubsection}{\numberline {4.21.2.8}EventSell()}{82}{subsubsection.4.21.2.8}%
+\contentsline {subsubsection}{\numberline {4.21.2.9}EventShop()}{84}{subsubsection.4.21.2.9}%
+\contentsline {subsubsection}{\numberline {4.21.2.10}ReactEventsInvSac()}{86}{subsubsection.4.21.2.10}%
+\contentsline {subsubsection}{\numberline {4.21.2.11}ReactEventsInvStuff()}{88}{subsubsection.4.21.2.11}%
+\contentsline {subsubsection}{\numberline {4.21.2.12}ReactEventsOp()}{90}{subsubsection.4.21.2.12}%
+\contentsline {subsubsection}{\numberline {4.21.2.13}ReactEventsStats()}{92}{subsubsection.4.21.2.13}%
+\contentsline {subsubsection}{\numberline {4.21.2.14}transitionFondu()}{93}{subsubsection.4.21.2.14}%
+\contentsline {section}{\numberline {4.22}src/fmap.c File Reference}{93}{section.4.22}%
+\contentsline {subsection}{\numberline {4.22.1}Detailed Description}{94}{subsection.4.22.1}%
+\contentsline {subsection}{\numberline {4.22.2}Function Documentation}{94}{subsection.4.22.2}%
+\contentsline {subsubsection}{\numberline {4.22.2.1}afficher\_map()}{94}{subsubsection.4.22.2.1}%
+\contentsline {subsubsection}{\numberline {4.22.2.2}charger\_map()}{95}{subsubsection.4.22.2.2}%
+\contentsline {section}{\numberline {4.23}src/fmobs.c File Reference}{95}{section.4.23}%
+\contentsline {subsection}{\numberline {4.23.1}Detailed Description}{96}{subsection.4.23.1}%
+\contentsline {subsection}{\numberline {4.23.2}Function Documentation}{96}{subsection.4.23.2}%
+\contentsline {subsubsection}{\numberline {4.23.2.1}charger\_map\_mobs()}{96}{subsubsection.4.23.2.1}%
+\contentsline {subsubsection}{\numberline {4.23.2.2}copie\_fichier\_mob\_txt()}{98}{subsubsection.4.23.2.2}%
+\contentsline {subsubsection}{\numberline {4.23.2.3}detruire\_mob()}{98}{subsubsection.4.23.2.3}%
+\contentsline {section}{\numberline {4.24}src/fpnj.c File Reference}{98}{section.4.24}%
+\contentsline {subsection}{\numberline {4.24.1}Detailed Description}{99}{subsection.4.24.1}%
+\contentsline {subsection}{\numberline {4.24.2}Function Documentation}{99}{subsection.4.24.2}%
+\contentsline {subsubsection}{\numberline {4.24.2.1}charger\_map\_pnj()}{99}{subsubsection.4.24.2.1}%
+\contentsline {section}{\numberline {4.25}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Golem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Adventure.c File Reference}{100}{section.4.25}%
+\contentsline {subsection}{\numberline {4.25.1}Detailed Description}{100}{subsection.4.25.1}%
+\contentsline {subsection}{\numberline {4.25.2}Function Documentation}{100}{subsection.4.25.2}%
+\contentsline {subsubsection}{\numberline {4.25.2.1}main()}{100}{subsubsection.4.25.2.1}%
+\contentsline {section}{\numberline {4.26}src/lib\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.c File Reference}{102}{section.4.26}%
+\contentsline {subsection}{\numberline {4.26.1}Detailed Description}{103}{subsection.4.26.1}%
+\contentsline {subsection}{\numberline {4.26.2}Function Documentation}{103}{subsection.4.26.2}%
+\contentsline {subsubsection}{\numberline {4.26.2.1}menuCredits()}{103}{subsubsection.4.26.2.1}%
+\contentsline {subsubsection}{\numberline {4.26.2.2}menuPause()}{104}{subsubsection.4.26.2.2}%
+\contentsline {subsubsection}{\numberline {4.26.2.3}menuPlay()}{105}{subsubsection.4.26.2.3}%
+\contentsline {subsubsection}{\numberline {4.26.2.4}menuPrincipal()}{106}{subsubsection.4.26.2.4}%
+\contentsline {subsubsection}{\numberline {4.26.2.5}menuSettings()}{106}{subsubsection.4.26.2.5}%
+\contentsline {section}{\numberline {4.27}src/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}unit.c File Reference}{107}{section.4.27}%
+\contentsline {subsection}{\numberline {4.27.1}Detailed Description}{107}{subsection.4.27.1}%
+\contentsline {section}{\numberline {4.28}src/texture.c File Reference}{107}{section.4.28}%
+\contentsline {subsection}{\numberline {4.28.1}Detailed Description}{108}{subsection.4.28.1}%
+\contentsline {subsection}{\numberline {4.28.2}Function Documentation}{108}{subsection.4.28.2}%
+\contentsline {subsubsection}{\numberline {4.28.2.1}loadTexture()}{108}{subsubsection.4.28.2.1}%
+\contentsline {subsubsection}{\numberline {4.28.2.2}loadTextureFont()}{109}{subsubsection.4.28.2.2}%
+\contentsline {section}{\numberline {4.29}src/type.c File Reference}{109}{section.4.29}%
+\contentsline {subsection}{\numberline {4.29.1}Detailed Description}{110}{subsection.4.29.1}%
+\contentsline {subsection}{\numberline {4.29.2}Function Documentation}{111}{subsection.4.29.2}%
+\contentsline {subsubsection}{\numberline {4.29.2.1}afficher\_arme()}{111}{subsubsection.4.29.2.1}%
+\contentsline {subsubsection}{\numberline {4.29.2.2}ajouter\_arme()}{111}{subsubsection.4.29.2.2}%
+\contentsline {subsubsection}{\numberline {4.29.2.3}ajouter\_stuff()}{111}{subsubsection.4.29.2.3}%
+\contentsline {subsubsection}{\numberline {4.29.2.4}creer\_all\_equipement()}{112}{subsubsection.4.29.2.4}%
+\contentsline {subsubsection}{\numberline {4.29.2.5}creer\_all\_objet()}{112}{subsubsection.4.29.2.5}%
+\contentsline {subsubsection}{\numberline {4.29.2.6}creer\_all\_sprite\_equipement()}{112}{subsubsection.4.29.2.6}%
+\contentsline {subsubsection}{\numberline {4.29.2.7}creer\_mob()}{112}{subsubsection.4.29.2.7}%
+\contentsline {subsubsection}{\numberline {4.29.2.8}creer\_perso()}{113}{subsubsection.4.29.2.8}%
+\contentsline {subsubsection}{\numberline {4.29.2.9}equiper\_arme()}{113}{subsubsection.4.29.2.9}%
+\contentsline {subsubsection}{\numberline {4.29.2.10}equiper\_stuff()}{113}{subsubsection.4.29.2.10}%
+\contentsline {subsubsection}{\numberline {4.29.2.11}init\_and\_reinit\_inv()}{113}{subsubsection.4.29.2.11}%
+\contentsline {subsubsection}{\numberline {4.29.2.12}jeter\_stuff()}{114}{subsubsection.4.29.2.12}%
+\contentsline {section}{\numberline {4.30}src/utils.c File Reference}{114}{section.4.30}%
+\contentsline {subsection}{\numberline {4.30.1}Detailed Description}{114}{subsection.4.30.1}%
+\contentsline {subsection}{\numberline {4.30.2}Function Documentation}{115}{subsection.4.30.2}%
+\contentsline {subsubsection}{\numberline {4.30.2.1}chargerSave()}{115}{subsubsection.4.30.2.1}%
+\contentsline {subsubsection}{\numberline {4.30.2.2}entrerNom()}{115}{subsubsection.4.30.2.2}%
+\contentsline {subsubsection}{\numberline {4.30.2.3}nouvelleSave()}{116}{subsubsection.4.30.2.3}%
+\contentsline {subsubsection}{\numberline {4.30.2.4}sauvegarder()}{117}{subsubsection.4.30.2.4}%
+\contentsline {chapter}{Index}{119}{section*.40}%

@@ -1,0 +1,241 @@
+\doxysection{src/type.c File Reference}
+\hypertarget{type_8c}{}\label{type_8c}\index{src/type.c@{src/type.c}}
+
+
+programme gérant les types  
+
+
+{\ttfamily \#include \"{}../lib/type.\+h\"{}}\newline
+{\ttfamily \#include \"{}../lib/texture.\+h\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{type_8c_af9bcf9d05db7fca1bed5a2b4654bcf0d}\label{type_8c_af9bcf9d05db7fca1bed5a2b4654bcf0d} 
+\mbox{\hyperlink{structattaque__s}{attaque\+\_\+t}} {\bfseries creer\+\_\+attaque} (char nom\mbox{[}TAILLE\+\_\+\+NOM\mbox{]}, type\+\_\+att\+\_\+t type\+\_\+att, char desc\mbox{[}100\mbox{]}, effet\+\_\+t effet, int qte\+\_\+effet, int duree\+\_\+effet, int nb\+\_\+cible, int precision)
+\begin{DoxyCompactList}\small\item\em declaration de la fonction creer\+\_\+attaque \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmob__s}{mob\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{type_8c_af10515f14bad7b9fba5d0d2f950b77a9}{creer\+\_\+mob}} (char \texorpdfstring{$\ast$}{*}nom, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}ecran, int lvl)
+\begin{DoxyCompactList}\small\item\em déclaration des fonctions en rapport avec les mobs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{type_8c_a18eb900cdf900bd1c3d175da8851942a}{afficher\+\_\+arme}} (\mbox{\hyperlink{structarme__s}{arme\+\_\+t}} \texorpdfstring{$\ast$}{*}arme)
+\begin{DoxyCompactList}\small\item\em fonction qui affiche les armes \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a95f520656fda7c4e11c7037ffe627a4d}\label{type_8c_a95f520656fda7c4e11c7037ffe627a4d} 
+void {\bfseries creer\+\_\+all\+\_\+arme} (\mbox{\hyperlink{structarme__s}{arme\+\_\+t}} armes\mbox{[}ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}ecran)
+\begin{DoxyCompactList}\small\item\em fonction qui crée toutes les armes \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_aba24d449d2c35165fe953d8aa1646c50}\label{type_8c_aba24d449d2c35165fe953d8aa1646c50} 
+void {\bfseries creer\+\_\+all\+\_\+att\+\_\+arme} (\mbox{\hyperlink{structarme__s}{arme\+\_\+t}} armes\mbox{[}ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em fonction qui crée les attaques de chaque arme \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{type_8c_a5f71758cece871ff13f159816f0c119d}{equiper\+\_\+arme}} (\mbox{\hyperlink{structarme__s}{arme\+\_\+t}} \texorpdfstring{$\ast$}{*}arme, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso)
+\begin{DoxyCompactList}\small\item\em fonction qui équipe un équipement d\textquotesingle{}un personnage \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a89eaa235a99b57a993c2f737acb6ee5a}\label{type_8c_a89eaa235a99b57a993c2f737acb6ee5a} 
+int {\bfseries desequiper\+\_\+arme} (\mbox{\hyperlink{structarme__s}{arme\+\_\+t}} \texorpdfstring{$\ast$}{*}arme, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso)
+\begin{DoxyCompactList}\small\item\em fonction qui déséquipe un équipement d\textquotesingle{}un personnage \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{type_8c_a85cef7eb2e928ef7b91c4cf98868b5f7}{ajouter\+\_\+arme}} (\mbox{\hyperlink{structarme__s}{arme\+\_\+t}} all\+Armes\mbox{[}ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]}, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, int ind\+Arm)
+\begin{DoxyCompactList}\small\item\em fonction qui ajoute une arme dans l\textquotesingle{}inventaire \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a9dd85d3177d05eb68f51a0149f107b7a}\label{type_8c_a9dd85d3177d05eb68f51a0149f107b7a} 
+int {\bfseries jeter\+\_\+arme} (\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}Inv, \mbox{\hyperlink{structarme__s}{arme\+\_\+t}} \texorpdfstring{$\ast$}{*}arme)
+\begin{DoxyCompactList}\small\item\em fonction qui supprime une arme de l\textquotesingle{}inventaire \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{type_8c_a0935b7baebd166db0feb43f2f1759fd4}{creer\+\_\+perso}} (\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso, char \texorpdfstring{$\ast$}{*}nom, char \texorpdfstring{$\ast$}{*}classe, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}ecran, float \texorpdfstring{$\ast$}{*}stat\+Perso)
+\begin{DoxyCompactList}\small\item\em fonction créer un perso, renvoie NULL si la création n\textquotesingle{}a pas fonctionné \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a959690d7fdce86dc35f5cd9b2aae1097}\label{type_8c_a959690d7fdce86dc35f5cd9b2aae1097} 
+void {\bfseries lvl\+\_\+up} (\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso, float \texorpdfstring{$\ast$}{*}stat\+Perso)
+\begin{DoxyCompactList}\small\item\em met a jour le perso quand il a assez d\textquotesingle{}xp pour lvl up \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{type_8c_a4601a22039fb69d561bf0510749394d6}{creer\+\_\+all\+\_\+objet}} (\mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}} all\+Obj\mbox{[}9\mbox{]}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}ecran)
+\begin{DoxyCompactList}\small\item\em fonction qui va créer un objet\+\_\+t avec sa texture entrée en paramètre \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a1890ba3e647d24c320bff58474716ecb}\label{type_8c_a1890ba3e647d24c320bff58474716ecb} 
+void {\bfseries utiliser\+\_\+obj} (\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}Inv, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso, int i\+Obj)
+\begin{DoxyCompactList}\small\item\em fonction qui va utiliser l\textquotesingle{}objet et le retirer de l\textquotesingle{}inventaire \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a63a32839ef637411a7ec6c2a538ffb90}\label{type_8c_a63a32839ef637411a7ec6c2a538ffb90} 
+int {\bfseries jeter\+\_\+obj} (\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}Inv, int i\+Obj)
+\begin{DoxyCompactList}\small\item\em fonction supprime un objet de l\textquotesingle{}inventaire \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a7f9ec62641559fc17d36b129c5cb7f76}\label{type_8c_a7f9ec62641559fc17d36b129c5cb7f76} 
+int {\bfseries ajouter\+\_\+obj} (\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}Inv, \mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}} \texorpdfstring{$\ast$}{*}all\+Obj, int i\+Obj)
+\begin{DoxyCompactList}\small\item\em fonction ajoute un objet dans l\textquotesingle{}inventaire \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{type_8c_ae1e7839ef429a608e34886b8ee8c3d1b}{init\+\_\+and\+\_\+reinit\+\_\+inv}} (\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv)
+\begin{DoxyCompactList}\small\item\em fonction qui initialise l\textquotesingle{}inventaire et permet de le réinitialiser \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_ae55d5b49ada63e414deb8ced907e124d}\label{type_8c_ae55d5b49ada63e414deb8ced907e124d} 
+void {\bfseries aff\+\_\+perso} (\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} perso)
+\begin{DoxyCompactList}\small\item\em affichage d\textquotesingle{}un perso pour des tests ou autre (effaçable une fois inutile) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{type_8c_aa7988041b6b91e81bd92a4e2ae3495ce}{creer\+\_\+all\+\_\+sprite\+\_\+equipement}} (SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}all\+Sprite\mbox{[}ALL\+\_\+\+EQUIPEMENTS\mbox{]}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}ecran)
+\begin{DoxyCompactList}\small\item\em charge toutes les textures de chaque équipement \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{type_8c_a0a51cf11af4fa5ccb8a4dd51330730dd}{creer\+\_\+all\+\_\+equipement}} (\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}} all\+Stuff\mbox{[}ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]}, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}all\+Sprite\mbox{[}ALL\+\_\+\+EQUIPEMENTS\mbox{]})
+\begin{DoxyCompactList}\small\item\em créer le tableau avec tous les équipements en 3 fois pour éviter qu\textquotesingle{}un personnage soit équipé d\textquotesingle{}exactement le même équipement \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{type_8c_af51041988f58ae5833480ca964c46f5a}{ajouter\+\_\+stuff}} (\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}} all\+Stuff\mbox{[}ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]}, \mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}inv, int i\+Stuff)
+\begin{DoxyCompactList}\small\item\em fonction qui ajoute un équipement dans l\textquotesingle{}inventaire \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{type_8c_a892805a520c19a5c8eb99775dbee4842}{equiper\+\_\+stuff}} (\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}} \texorpdfstring{$\ast$}{*}equipement, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso)
+\begin{DoxyCompactList}\small\item\em fonction qui équipe un équipement d\textquotesingle{}un personnage \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a01ea98b0d084adcba638980a668f6881}\label{type_8c_a01ea98b0d084adcba638980a668f6881} 
+int {\bfseries desequiper\+\_\+stuff} (int i\+Stuff, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}perso)
+\begin{DoxyCompactList}\small\item\em fonction qui déséquipe un équipement d\textquotesingle{}un personnage \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{type_8c_a3f5db8a1974a2f5c9ed356e6bbb6f141}{jeter\+\_\+stuff}} (\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}Inv, int i\+Stuff)
+\begin{DoxyCompactList}\small\item\em fonction qui supprime un équipement de l\textquotesingle{}inventaire \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_a500ef2bdf19329056a0fd2cd076f7a9d}\label{type_8c_a500ef2bdf19329056a0fd2cd076f7a9d} 
+int {\bfseries join\+\_\+team} (\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}team, \mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}all\+Perso)
+\begin{DoxyCompactList}\small\item\em déclaration des fonctions liées à l\textquotesingle{}équipe du joueur \end{DoxyCompactList}\item 
+\Hypertarget{type_8c_acf4c74801367c90892a2d79381fddbc6}\label{type_8c_acf4c74801367c90892a2d79381fddbc6} 
+void {\bfseries init\+\_\+reinit\+\_\+\+\_\+team} (\mbox{\hyperlink{type_8h_aaae062356783d193f58677fc3de7a946}{team\+\_\+t}} \texorpdfstring{$\ast$}{*}team)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+programme gérant les types 
+
+\begin{DoxyAuthor}{Author}
+Luka Cognard, Lenny Borry. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+9.\+5 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12 Avril 2024. 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{type_8c_a18eb900cdf900bd1c3d175da8851942a}\label{type_8c_a18eb900cdf900bd1c3d175da8851942a} 
+\index{type.c@{type.c}!afficher\_arme@{afficher\_arme}}
+\index{afficher\_arme@{afficher\_arme}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_arme()}{afficher\_arme()}}
+{\footnotesize\ttfamily void afficher\+\_\+arme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structarme__s}{arme\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{arme }\end{DoxyParamCaption})}
+
+
+
+fonction qui affiche les armes 
+
+declaration des fonctions en rapport avec les armes et les attaques \Hypertarget{type_8c_a85cef7eb2e928ef7b91c4cf98868b5f7}\label{type_8c_a85cef7eb2e928ef7b91c4cf98868b5f7} 
+\index{type.c@{type.c}!ajouter\_arme@{ajouter\_arme}}
+\index{ajouter\_arme@{ajouter\_arme}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{ajouter\_arme()}{ajouter\_arme()}}
+{\footnotesize\ttfamily int ajouter\+\_\+arme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structarme__s}{arme\+\_\+t}}}]{all\+Armes\mbox{[}\+ALL\+\_\+\+ARMES\mbox{]}\mbox{[}3\mbox{]},  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{int}]{ind\+Arm }\end{DoxyParamCaption})}
+
+
+
+fonction qui ajoute une arme dans l\textquotesingle{}inventaire 
+
+regarde si l\textquotesingle{}inventaire n\textquotesingle{}est pas plein
+
+regarde combien de fois il possède cet équipement, impossible d\textquotesingle{}ajouter l\textquotesingle{}objet s\textquotesingle{}il l\textquotesingle{}a 3 fois
+
+ajoute l\textquotesingle{}équipement avec le num\+Id qui n\textquotesingle{}est pas présent
+
+renvoie 2 s\textquotesingle{}il a déja 3 fois l\textquotesingle{}équipement voulu
+
+renvoie 1 si l\textquotesingle{}inventaire est plein\Hypertarget{type_8c_af51041988f58ae5833480ca964c46f5a}\label{type_8c_af51041988f58ae5833480ca964c46f5a} 
+\index{type.c@{type.c}!ajouter\_stuff@{ajouter\_stuff}}
+\index{ajouter\_stuff@{ajouter\_stuff}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{ajouter\_stuff()}{ajouter\_stuff()}}
+{\footnotesize\ttfamily int ajouter\+\_\+stuff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}}}]{all\+Stuff\mbox{[}\+ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]},  }\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv,  }\item[{int}]{i\+Stuff }\end{DoxyParamCaption})}
+
+
+
+fonction qui ajoute un équipement dans l\textquotesingle{}inventaire 
+
+regarde si l\textquotesingle{}inventaire n\textquotesingle{}est pas plein
+
+regarde combien de fois il possède cet équipement, impossible d\textquotesingle{}ajouter l\textquotesingle{}objet s\textquotesingle{}il l\textquotesingle{}a 3 fois
+
+ajoute l\textquotesingle{}équipement avec le num\+Id qui n\textquotesingle{}est pas présent
+
+renvoie 2 s\textquotesingle{}il a déja 3 fois l\textquotesingle{}équipement voulu
+
+renvoie 1 si l\textquotesingle{}inventaire est plein\Hypertarget{type_8c_a0a51cf11af4fa5ccb8a4dd51330730dd}\label{type_8c_a0a51cf11af4fa5ccb8a4dd51330730dd} 
+\index{type.c@{type.c}!creer\_all\_equipement@{creer\_all\_equipement}}
+\index{creer\_all\_equipement@{creer\_all\_equipement}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{creer\_all\_equipement()}{creer\_all\_equipement()}}
+{\footnotesize\ttfamily void creer\+\_\+all\+\_\+equipement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}}}]{all\+Stuff\mbox{[}\+ALL\+\_\+\+EQUIPEMENTS\mbox{]}\mbox{[}3\mbox{]},  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{all\+Sprite\mbox{[}\+ALL\+\_\+\+EQUIPEMENTS\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+créer le tableau avec tous les équipements en 3 fois pour éviter qu\textquotesingle{}un personnage soit équipé d\textquotesingle{}exactement le même équipement 
+
+créer tout les casques, plastrons et bottes par biome
+
+créer les talismans\Hypertarget{type_8c_a4601a22039fb69d561bf0510749394d6}\label{type_8c_a4601a22039fb69d561bf0510749394d6} 
+\index{type.c@{type.c}!creer\_all\_objet@{creer\_all\_objet}}
+\index{creer\_all\_objet@{creer\_all\_objet}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{creer\_all\_objet()}{creer\_all\_objet()}}
+{\footnotesize\ttfamily void creer\+\_\+all\+\_\+objet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_ad0efc27a29533dbf784e717262509caa}{objet\+\_\+t}}}]{all\+Obj\mbox{[}9\mbox{]},  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{ecran }\end{DoxyParamCaption})}
+
+
+
+fonction qui va créer un objet\+\_\+t avec sa texture entrée en paramètre 
+
+toutes les valeurs des différents objets dans des tableaux
+
+création des objets\Hypertarget{type_8c_aa7988041b6b91e81bd92a4e2ae3495ce}\label{type_8c_aa7988041b6b91e81bd92a4e2ae3495ce} 
+\index{type.c@{type.c}!creer\_all\_sprite\_equipement@{creer\_all\_sprite\_equipement}}
+\index{creer\_all\_sprite\_equipement@{creer\_all\_sprite\_equipement}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{creer\_all\_sprite\_equipement()}{creer\_all\_sprite\_equipement()}}
+{\footnotesize\ttfamily void creer\+\_\+all\+\_\+sprite\+\_\+equipement (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{all\+Sprite\mbox{[}\+ALL\+\_\+\+EQUIPEMENTS\mbox{]},  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{ecran }\end{DoxyParamCaption})}
+
+
+
+charge toutes les textures de chaque équipement 
+
+déclaration des fonctions liées aux équipements \Hypertarget{type_8c_af10515f14bad7b9fba5d0d2f950b77a9}\label{type_8c_af10515f14bad7b9fba5d0d2f950b77a9} 
+\index{type.c@{type.c}!creer\_mob@{creer\_mob}}
+\index{creer\_mob@{creer\_mob}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{creer\_mob()}{creer\_mob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmob__s}{mob\+\_\+t}} \texorpdfstring{$\ast$}{*} creer\+\_\+mob (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nom,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{ecran,  }\item[{int}]{lvl }\end{DoxyParamCaption})}
+
+
+
+déclaration des fonctions en rapport avec les mobs 
+
+change les stats de base selon la classe du perso\Hypertarget{type_8c_a0935b7baebd166db0feb43f2f1759fd4}\label{type_8c_a0935b7baebd166db0feb43f2f1759fd4} 
+\index{type.c@{type.c}!creer\_perso@{creer\_perso}}
+\index{creer\_perso@{creer\_perso}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{creer\_perso()}{creer\_perso()}}
+{\footnotesize\ttfamily int creer\+\_\+perso (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{perso,  }\item[{char \texorpdfstring{$\ast$}{*}}]{nom,  }\item[{char \texorpdfstring{$\ast$}{*}}]{classe,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{ecran,  }\item[{float \texorpdfstring{$\ast$}{*}}]{stat\+Perso }\end{DoxyParamCaption})}
+
+
+
+fonction créer un perso, renvoie NULL si la création n\textquotesingle{}a pas fonctionné 
+
+déclaration des fonctions liées aux personnages (équiper un équipement/arme ou utiliser un objet, lvl up) change les stats de base selon la classe du perso
+
+initialise les tableaux de pointeurs
+
+copie les stats des persos\Hypertarget{type_8c_a5f71758cece871ff13f159816f0c119d}\label{type_8c_a5f71758cece871ff13f159816f0c119d} 
+\index{type.c@{type.c}!equiper\_arme@{equiper\_arme}}
+\index{equiper\_arme@{equiper\_arme}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{equiper\_arme()}{equiper\_arme()}}
+{\footnotesize\ttfamily void equiper\+\_\+arme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structarme__s}{arme\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{arme,  }\item[{\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{perso }\end{DoxyParamCaption})}
+
+
+
+fonction qui équipe un équipement d\textquotesingle{}un personnage 
+
+si l\textquotesingle{}arme est équipée sur un personnage, on la déséquipe\Hypertarget{type_8c_a892805a520c19a5c8eb99775dbee4842}\label{type_8c_a892805a520c19a5c8eb99775dbee4842} 
+\index{type.c@{type.c}!equiper\_stuff@{equiper\_stuff}}
+\index{equiper\_stuff@{equiper\_stuff}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{equiper\_stuff()}{equiper\_stuff()}}
+{\footnotesize\ttfamily void equiper\+\_\+stuff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_a1682f7190e6109de6bb4b058d8658fc1}{equipement\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{equipement,  }\item[{\mbox{\hyperlink{type_8h_a550089442e996a6b42d393992dbc5436}{perso\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{perso }\end{DoxyParamCaption})}
+
+
+
+fonction qui équipe un équipement d\textquotesingle{}un personnage 
+
+le déséquipe si l\textquotesingle{}équipement est équipé sur un personnage
+
+le déséquipe de cet objet si un équipement du même type est déjà équipé\Hypertarget{type_8c_ae1e7839ef429a608e34886b8ee8c3d1b}\label{type_8c_ae1e7839ef429a608e34886b8ee8c3d1b} 
+\index{type.c@{type.c}!init\_and\_reinit\_inv@{init\_and\_reinit\_inv}}
+\index{init\_and\_reinit\_inv@{init\_and\_reinit\_inv}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{init\_and\_reinit\_inv()}{init\_and\_reinit\_inv()}}
+{\footnotesize\ttfamily void init\+\_\+and\+\_\+reinit\+\_\+inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{inv }\end{DoxyParamCaption})}
+
+
+
+fonction qui initialise l\textquotesingle{}inventaire et permet de le réinitialiser 
+
+déclaration des fonction liées à l\textquotesingle{}inventaire avec le sac d\textquotesingle{}objets, les équipements et les armes \Hypertarget{type_8c_a3f5db8a1974a2f5c9ed356e6bbb6f141}\label{type_8c_a3f5db8a1974a2f5c9ed356e6bbb6f141} 
+\index{type.c@{type.c}!jeter\_stuff@{jeter\_stuff}}
+\index{jeter\_stuff@{jeter\_stuff}!type.c@{type.c}}
+\doxysubsubsection{\texorpdfstring{jeter\_stuff()}{jeter\_stuff()}}
+{\footnotesize\ttfamily int jeter\+\_\+stuff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_a31cf26aebd1ef1d0c10bd0340472da6a}{inventaire\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Inv,  }\item[{int}]{i\+Stuff }\end{DoxyParamCaption})}
+
+
+
+fonction qui supprime un équipement de l\textquotesingle{}inventaire 
+
+si l\textquotesingle{}équipement est équipé sur un personnage le déséquipe avant de jeter l\textquotesingle{}équipement
