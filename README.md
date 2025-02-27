@@ -26,6 +26,7 @@ Golem Adventure est un RPG dans lequel le joueur incarne un golem qui cherche à
   rentrez cette commande "chmod +x install_run_game.sh" dans le terminal, dans le même répertoire que le fichier.
   Cela installera tous les fichiers nécessaires, puis compilera et lancera le jeu.
   Voilà, vous pouvez désormais partir à l'aventure accompagné de votre Golem préféré !
+  (Nécessite d'avoir installer SDL2.)
 
 # Commande du makefile
  - La commande make run dans votre terminal téléchargera, les images nécessaires, compilera et lancera le jeu.
