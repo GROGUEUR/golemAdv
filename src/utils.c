@@ -1,7 +1,7 @@
 /**
 * \file utils.c
 * \brief programme gérant le menu pour rentrer un pseudo, ainsi que les sauvegardes.
-* \author Warrick Bonga.
+* \author Un mec random.
 * \version 1.9.8
 * \date 12 Avril 2024.
 */
