@@ -8,7 +8,7 @@ Golem Adventure est un RPG dans lequel le joueur incarne un golem qui cherche à
 
 - Luka Cognard [(@Ge0mega)](https://github.com/Ge0mega).
 
-- [@XevBW](https://github.com/XevBW).
+- Un gars random.
 
 - Lenny Borry [(@LennyB972)](https://github.com/LennyB972).
 
