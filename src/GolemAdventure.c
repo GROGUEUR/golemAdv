@@ -1,7 +1,7 @@
 /**
 * \file GolemAdventure.c
 * \brief programme principale gérant tout le jeux.
-* \author Cognard Luka, Bonga Warrick, François Lépine, Lenny Borry.
+* \author Cognard Luka, un mec random, François Lépine, Lenny Borry.
 * \version 1.9.5
 * \date 16 Avril 2024.
 */
