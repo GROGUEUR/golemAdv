@@ -1,7 +1,7 @@
 /**
 * \file lib_menu.c
 * \brief programme gérant les Menus.
-* \author Warrick Bonga.
+* \author Un mec random.
 * \version 1.8.6
 * \date 12 Avril 2024.
 */
