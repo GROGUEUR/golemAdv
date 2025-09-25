@@ -1,7 +1,7 @@
 /**
 * \file utils.h
 * \brief programme gérant les fonctions pour les sauvegardes et l'entrer du pseudo du joueur.
-* \author Warrick Bonga.
+* \author Un mec random.
 * \version 1.9.8
 * \date 16 Avril 2024.
 */
